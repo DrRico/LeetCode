@@ -39,13 +39,12 @@ public class SolutionAddBinary {
 
     public static String addBinary_2(String a, String b) {
         int len1 = a.length(),len2 = b.length();
-        int n = Math.max(len1,len2);
         StringBuilder s = new StringBuilder();
         int carry = 0;
         for (int i= len1 - 1,j =len2 - 1; i>=0||j>=0; j--,i--){
-            carry += i>=0 ? a.charAt(i)-'0': 0;
+            carry += i>=0 ? a.charAt(i)-'0' : 0;
             carry += j>=0 ? b.charAt(j)-'0' : 0;
-            s.append(carry%2);
+            s.append(carry % 2);
             carry = carry >>1;
         }
         s.append(carry==1?carry:"");
