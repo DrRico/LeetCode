@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c6b5a1f9-65ed-4500-a8f3-a767cb10223a" name="Default Changelist" comment="增加案例SolutionSovle.java和SolutionIntegerBreak.java">
-      <change afterPath="$PROJECT_DIR$/src/com/rico/hard/SolutionMatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rico/hard/SolutionPermutation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rico/medium/SolutionFindNumsAppearOnce.java" afterDir="false" />
+    <list default="true" id="c6b5a1f9-65ed-4500-a8f3-a767cb10223a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/rico/hard/SolutionFind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/hard/SolutionPrintMinNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/hard/SolutionReOrderArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/medium/SolutionFindNumbersWithSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/medium/SolutionMoreThanHalfNum_Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/tester/MainSolution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,65 +36,31 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="22" />
+          <entry key="java" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="22" />
+          <entry key="JAVA" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="19" />
-          <entry key="java" value="3812" />
-          <entry key="txt" value="76" />
+          <entry key="java" value="5665" />
+          <entry key="txt" value="78" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3812" />
-          <entry key="PLAIN_TEXT" value="95" />
+          <entry key="JAVA" value="5665" />
+          <entry key="PLAIN_TEXT" value="97" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/SolutionIntegerBreak.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-              <folding>
-                <element signature="e#511#512#0" expanded="true" />
-                <element signature="e#559#560#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/rico/tester/SolutionSovle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="42" column="56" lean-forward="true" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
-              <folding>
-                <element signature="method#sovle#0;class#SolutionSovle#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionStrToInt.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-450">
-              <caret line="6" column="29" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionreplaceSpace.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -101,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionPermutation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="-225">
               <caret column="11" selection-start-column="11" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -116,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionMatch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="100">
+              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -125,11 +94,77 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rico/medium/SolutionFindNumsAppearOnce.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="241">
+              <caret line="60" column="41" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="41" />
               <folding>
                 <element signature="e#1059#1060#0" expanded="true" />
                 <element signature="e#1110#1111#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/tester/MainSolution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/medium/SolutionFindNumbersWithSum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="e#412#421#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/medium/SolutionMoreThanHalfNum_Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="16" column="27" selection-start-line="12" selection-start-column="61" selection-end-line="29" selection-end-column="5" />
+              <folding>
+                <element signature="e#349#366#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionPrintMinNumber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionReOrderArray.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionFind.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="50" column="32" lean-forward="true" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+              <folding>
+                <element signature="method#Find_1#0;class#SolutionFind#0" />
               </folding>
             </state>
           </provider>
@@ -179,6 +214,12 @@
         <option value="$PROJECT_DIR$/src/com/rico/hard/SolutionMatch.java" />
         <option value="$PROJECT_DIR$/src/com/rico/medium/SolutionFindNumsAppearOnce.java" />
         <option value="$PROJECT_DIR$/src/com/rico/hard/SolutionPermutation.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/tester/MainSolution.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/medium/SolutionFindNumbersWithSum.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/medium/SolutionMoreThanHalfNum_Solution.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/hard/SolutionPrintMinNumber.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/hard/SolutionReOrderArray.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/hard/SolutionFind.java" />
       </list>
     </option>
   </component>
@@ -246,13 +287,6 @@
               <item name="rico" type="462c0819:PsiDirectoryNode" />
               <item name="hard" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="rico" type="462c0819:PsiDirectoryNode" />
-              <item name="medium" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -264,7 +298,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1596197901826" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1596458824617" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -282,48 +316,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SolutionFindNumsAppearOnce">
-    <configuration name="SolutionAddBinary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.lceasy.SolutionAddBinary" />
-      <module name="LeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.rico.lceasy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SolutionFindNumsAppearOnce" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.medium.SolutionFindNumsAppearOnce" />
-      <module name="LeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.rico.medium.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SolutionIntegerBreak" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.lcmedium.SolutionIntegerBreak" />
-      <module name="LeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.rico.lcmedium.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SolutionPermutation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.hard.SolutionPermutation" />
+  <component name="RunManager" selected="Application.SolutionFind">
+    <configuration name="SolutionFind" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.hard.SolutionFind" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
@@ -335,12 +330,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SolutionSovle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.tester.SolutionSovle" />
+    <configuration name="SolutionFindNumbersWithSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.medium.SolutionFindNumbersWithSum" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.rico.tester.*" />
+          <option name="PATTERN" value="com.rico.medium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolutionMoreThanHalfNum_Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.medium.SolutionMoreThanHalfNum_Solution" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rico.medium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolutionPrintMinNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.hard.SolutionPrintMinNumber" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rico.hard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolutionReOrderArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.hard.SolutionReOrderArray" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rico.hard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -349,19 +383,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.SolutionAddBinary" />
-      <item itemvalue="Application.SolutionIntegerBreak" />
-      <item itemvalue="Application.SolutionSovle" />
-      <item itemvalue="Application.SolutionPermutation" />
-      <item itemvalue="Application.SolutionFindNumsAppearOnce" />
+      <item itemvalue="Application.SolutionFindNumbersWithSum" />
+      <item itemvalue="Application.SolutionMoreThanHalfNum_Solution" />
+      <item itemvalue="Application.SolutionPrintMinNumber" />
+      <item itemvalue="Application.SolutionReOrderArray" />
+      <item itemvalue="Application.SolutionFind" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SolutionFindNumsAppearOnce" />
-        <item itemvalue="Application.SolutionPermutation" />
-        <item itemvalue="Application.SolutionSovle" />
-        <item itemvalue="Application.SolutionIntegerBreak" />
-        <item itemvalue="Application.SolutionAddBinary" />
+        <item itemvalue="Application.SolutionFind" />
+        <item itemvalue="Application.SolutionReOrderArray" />
+        <item itemvalue="Application.SolutionPrintMinNumber" />
+        <item itemvalue="Application.SolutionMoreThanHalfNum_Solution" />
+        <item itemvalue="Application.SolutionFindNumbersWithSum" />
       </list>
     </recent_temporary>
   </component>
@@ -384,7 +418,7 @@
       <workItem from="1594887098589" duration="1892000" />
       <workItem from="1595248821996" duration="4644000" />
       <workItem from="1595662663295" duration="1236000" />
-      <workItem from="1595855154389" duration="36888000" />
+      <workItem from="1595855154389" duration="55472000" />
     </task>
     <task id="LOCAL-00001" summary="增加案例快速幂算法和动态规划实现斐波那锲数列">
       <created>1595379904878</created>
@@ -435,17 +469,24 @@
       <option name="project" value="LOCAL" />
       <updated>1596157291275</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="增加案例SSolutionFindNumsAppearOnce.java和SolutionPermutation.java和SolutionMatch.java">
+      <created>1596197947968</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1596197947968</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56685000" />
+    <option name="totallyTimeSpent" value="75269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19906166" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19906166" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -454,8 +495,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22269504" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.31914893" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22269504" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.06241135" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -487,7 +528,8 @@
     <MESSAGE value="修改案例SolutionStrToInt，优化代码并添加注释" />
     <MESSAGE value="增加案例SolutionAddBinary和SolutionStringMultiply" />
     <MESSAGE value="增加案例SolutionSovle.java和SolutionIntegerBreak.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加案例SolutionSovle.java和SolutionIntegerBreak.java" />
+    <MESSAGE value="增加案例SSolutionFindNumsAppearOnce.java和SolutionPermutation.java和SolutionMatch.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加案例SSolutionFindNumsAppearOnce.java和SolutionPermutation.java和SolutionMatch.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -629,6 +671,54 @@
           <line>57</line>
           <properties />
           <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/tester/MainSolution.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/tester/MainSolution.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/medium/SolutionFindNumbersWithSum.java</url>
+          <line>16</line>
+          <properties />
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/medium/SolutionMoreThanHalfNum_Solution.java</url>
+          <line>16</line>
+          <properties />
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/medium/SolutionMoreThanHalfNum_Solution.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/hard/SolutionPrintMinNumber.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/hard/SolutionReOrderArray.java</url>
+          <line>16</line>
+          <properties />
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/hard/SolutionFind.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/rico/lcmedium/SolutionStringMultiply.java</url>
@@ -773,17 +863,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionPermutation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225">
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionMatch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="100">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/medium/SolutionFindNumsAppearOnce.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="241">
+          <caret line="60" column="41" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="41" />
           <folding>
             <element signature="e#1059#1060#0" expanded="true" />
             <element signature="e#1110#1111#0" expanded="true" />
@@ -791,12 +891,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionPermutation.java">
+    <entry file="file://$PROJECT_DIR$/src/com/rico/tester/MainSolution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
+        <state relative-caret-position="355">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/medium/SolutionFindNumbersWithSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#412#421#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/medium/SolutionMoreThanHalfNum_Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="16" column="27" selection-start-line="12" selection-start-column="61" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="e#349#366#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionPrintMinNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionReOrderArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionFind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="50" column="32" lean-forward="true" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+          <folding>
+            <element signature="method#Find_1#0;class#SolutionFind#0" />
           </folding>
         </state>
       </provider>
