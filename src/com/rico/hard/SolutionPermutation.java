@@ -1,12 +1,47 @@
 //太难了，先不去管它
 package com.rico.hard;
+
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Collections;
+import java.util.List;
+
 public class SolutionPermutation {
     public static void main(String[] args) {
         SolutionPermutation p = new SolutionPermutation();
-        System.out.println(p.Permutation("abc").toString());
+        System.out.println(p.Permutation_1("abc").toString());
+    }
+
+    public ArrayList<String> Permutation_1(String str) {
+        //使用dfs进行解答
+        ArrayList<String> res = new ArrayList<String>();
+        if (str.equals("") || str.length() == 0){
+            return res;
+        }
+        StringBuilder s = new StringBuilder(str);
+        dfs(s,0,new StringBuilder(),res);
+        return res;
+    }
+    //dfs函数
+    public static void dfs(StringBuilder s, int index, StringBuilder sb, ArrayList<String> res){
+        //1、边界条件
+        if(index == s.length()){
+            if(!res.contains(sb.toString())){
+                res.add(sb.toString());
+            }
+            return;
+        }
+        //2、筛选候选
+        for (int i = 0; i < s.length(); i ++){
+            char c = s.charAt(i);
+            //判断
+            if (c!='0'){
+                sb.append(c);
+                s.setCharAt(i,'0');
+                dfs(s, index + 1, sb, res);
+                sb.deleteCharAt(sb.length() - 1);
+                s.setCharAt(i,c);
+            }
+        }
     }
 
     public ArrayList<String> Permutation(String str) {
@@ -18,7 +53,6 @@ public class SolutionPermutation {
         Collections.sort(resultList);
         return (ArrayList)resultList;
     }
-
     private void fun(char[] ch,List<String> list,int i){
         //这是递归的终止条件，就是i下标已经移到char数组的末尾的时候，考虑添加这一组字符串进入结果集中
         if(i == ch.length-1){
@@ -87,9 +121,7 @@ public class SolutionPermutation {
             }
         }
     }
-
-    //交换数组的两个下标的元素
-    private void swap(char[] str, int i, int j) {
+    private void swap(char[] str, int i, int j) {    //交换数组的两个下标的元素
         if (i != j) {
             char t = str[i];
             str[i] = str[j];
