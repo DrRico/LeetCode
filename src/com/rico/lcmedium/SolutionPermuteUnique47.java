@@ -3,6 +3,7 @@ package com.rico.lcmedium;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author Rico_dds
@@ -18,12 +19,18 @@ public class SolutionPermuteUnique47 {
         int len = map.size();
         int[] p = new int[len];
         int[] pb = new int[len];
-        int[] index = new int[1];
-        map.forEach((k,v)->{
-            p[index[0]] = k;
-            pb[index[0]] = v;
-            index[0] ++;
-        });
+        int index = 0;
+        Set<Integer> set = map.keySet();
+        for (Integer s : set) {
+            p[index] = s;
+            pb[index ++] = map.get(s);
+        }
+//        int[] index = new int[1];
+//        map.forEach((k,v)->{
+//            p[index[0]] = k;
+//            pb[index[0]] = v;
+//            index[0] ++;
+//        });
         dfs(nums.length, p, pb, new ArrayList<>(), res);
         return res;
 
