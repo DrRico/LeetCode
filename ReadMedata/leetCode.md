@@ -1,4 +1,4 @@
-## 基础知识
+﻿## 基础知识
 
 - Java获取数据长度：
 
@@ -833,6 +833,32 @@ public class Solution {
 >  java代码如下：
 
 
+```java
+public class Solution {
+    public TreeLinkNode GetNext(TreeLinkNode pNode){
+        if (pNode == null){
+            return pNode;
+        }
+        if (pNode.right != null){
+            pNode = pNode.right;
+            while(pNode.left != null){
+                pNode = pNode.left;
+            }
+            return pNode;
+        } else if (pNode.next != null && pNode ==  pNode.next.left){
+            return pNode.next;
+        } else if (pNode.next != null && pNode ==  pNode.next.right){
+            while(pNode.next != null && pNode !=  pNode.next.left){
+                pNode = pNode.next;
+            }
+            return pNode.next;
+        } else {
+            return pNode.next;
+        }
+    }
+}
+
+```
 
 
 
