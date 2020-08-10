@@ -862,9 +862,66 @@ public class Solution {
 
 
 
+### 22、机器人的运动范围
 
+- 地上有一个m行和n列的方格。一个机器人从坐标0,0的格子开始移动，每一次只能向左，右，上，下四个方向移动一格，但是不能进入行坐标和列坐标的数位之和大于k的格子。 例如，当k为18时，机器人能够进入方格（35,37），因为3+5+3+7 = 18。但是，它不能进入方格（35,38），因为3+5+3+8 = 19。请问该机器人能够达到多少个格子？
 
+| （0，0） |      |      |      |      |             |
+| :------: | ---- | ---- | ---- | ---- | :---------: |
+|          |      |      |      |      |             |
+|          |      |      |      |      |             |
+|          |      |      |      |      |             |
+|          |      |      |      |      |             |
+|          |      |      |      |      | （m-1,n-1） |
 
+> 分析：
+
+矩阵路径的求解方法可以归结为图或树的遍历/搜索方法，而图的通用搜索算法就是BFS(广度优先搜索)和DFS(优先搜索)。
+
+1.深度优先算法
+
+DFS遍历节点时，满足本题条件则计数符加1，并设置该节点标志为true，同时判断该节点的子节点是否也满足本题条件，进行递归操作。
+
+> Java代码实现如下：
+
+```java
+public class Solution {
+    public int movingCount(int threshold, int rows, int cols){
+        //定义一个标志位二维数组
+        boolean[][] isVisted = new boolean[rows][cols];
+        //定义一个计数结果变量,定义为数组型才可以
+        int[] count = new int[1];
+        //进行DFS
+        dfs(threshold, rows, cols, 0, 0,count, isVisted);
+        //返回结果
+        return count[0];
+    }
+   void dfs(int k, int m, int n, int i, int j, int[] count, boolean[][] isVisted){
+       // 判断行坐标和列坐标的数位之和是否大于k
+        if (sum(i) + sum(j) <= k){
+       // 满足要求，则处理标志位和计数结果变量
+        count[0] ++;
+        isVisted[i][j] = true;
+       // 继续判断并且向下遍历，当i + 1 < m 且 isVisted[i + 1][j]不为true时则继续
+        if(i + 1 < m && isVisted[i + 1][j] != true){
+            dfs(k, m, n, i + 1, j, count, isVisted);
+        }
+       // 继续判断并且向右遍历，当j + 1 < n 且 isVisted[i][j + 1]不为true时则继续
+        if(j + 1 < n && isVisted[i][j + 1] != true){
+            dfs(k, m, n, i, j + 1, count, isVisted);
+        }
+       }
+   }
+    int sum(int i){
+        int sum = 0;
+        while(i > 0){
+            sum += i % 10;
+            i /= 10;
+        }
+        return sum;
+    }
+}
+```
 
 
 
