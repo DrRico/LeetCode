@@ -124,6 +124,7 @@ public class TreeNodeTest {
         postTraversal(node.getRight());
         System.out.print(node.getValue()+" ");
     }
+
     public static void preOrderTraversalbyLoop(Node node){
         // 我这里使用了栈这个数据结构，用来保存已经遍历过但是没有遍历完全的父节点
         // 之后再进行回滚。基本的原理就是当循环中的p不为空时，就读取p的值，并不断更

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="640460a3-c62c-4989-a7c6-97c7594f60b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+    <list default="true" id="640460a3-c62c-4989-a7c6-97c7594f60b9" name="Default Changelist" comment="2020.08.10 - update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMedata/leetCode.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/leetCode.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCode/com/rico/hard/SolutionMovingCount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCode/com/rico/hard/SolutionMovingCount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rico/tester/TreeNodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rico/tester/TreeNodeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,35 +21,38 @@
     <session id="-1627830408">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="599" />
+          <entry key="java" value="600" />
+          <entry key="txt" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="599" />
+          <entry key="JAVA" value="600" />
+          <entry key="PLAIN_TEXT" value="26" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/rico/tester/TreeNodeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="88">
+              <caret line="208" column="34" lean-forward="true" selection-start-line="208" selection-start-column="34" selection-end-line="208" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="class#Node#0;class#TreeNodeTest#0" />
                 <element signature="e#499#500#0" expanded="true" />
                 <element signature="e#535#536#0" expanded="true" />
                 <element signature="e#578#579#0" expanded="true" />
@@ -72,7 +77,10 @@
                 <element signature="e#1212#1213#0" expanded="true" />
                 <element signature="docComment;method#create#0;class#TreeNodeTest#0" />
                 <element signature="method#create#0;class#TreeNodeTest#0" />
+                <element signature="method#preTraversal#0;class#TreeNodeTest#0" />
                 <element signature="method#MidTraversal#0;class#TreeNodeTest#0" />
+                <element signature="method#postTraversal#0;class#TreeNodeTest#0" />
+                <element signature="method#preOrderTraversalbyLoop#0;class#TreeNodeTest#0" />
                 <element signature="docComment;method#main#0;class#TreeNodeTest#0" />
               </folding>
             </state>
@@ -104,14 +112,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionMovingCount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            <state relative-caret-position="449">
+              <caret line="45" column="19" lean-forward="true" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
               <folding>
                 <element signature="e#1260#1261#0" expanded="true" />
                 <element signature="e#1296#1297#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/tester/reverseTime.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="17" column="35" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="35" />
+              <folding>
+                <element signature="e#348#349#0" expanded="true" />
+                <element signature="e#395#396#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,6 +154,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/rico/hard/SolutionMovingCount.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/tester/TreeNodeTest.java" />
       </list>
     </option>
   </component>
@@ -178,6 +200,13 @@
               <item name="rico" type="462c0819:PsiDirectoryNode" />
               <item name="hard" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="rico" type="462c0819:PsiDirectoryNode" />
+              <item name="tester" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -187,7 +216,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597045279771" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597156432222" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -316,7 +345,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.TreeNodeTest">
     <configuration name="SolutionMovingCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.rico.hard.SolutionMovingCount" />
       <module name="LeetCode" />
@@ -330,8 +359,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TreeNodeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.tester.TreeNodeTest" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rico.tester.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="reverseTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.tester.reverseTime" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rico.tester.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.SolutionMovingCount" />
+      <item itemvalue="Application.reverseTime" />
+      <item itemvalue="Application.TreeNodeTest" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TreeNodeTest" />
+        <item itemvalue="Application.reverseTime" />
         <item itemvalue="Application.SolutionMovingCount" />
       </list>
     </recent_temporary>
@@ -355,14 +417,14 @@
       <workItem from="1594887098589" duration="1892000" />
       <workItem from="1595248821996" duration="4644000" />
       <workItem from="1595662663295" duration="1236000" />
-      <workItem from="1595855154389" duration="81834000" />
+      <workItem from="1595855154389" duration="84328000" />
     </task>
-    <task id="LOCAL-00001" summary="update gitignore">
-      <created>1597022103454</created>
+    <task id="LOCAL-00001" summary="2020.08.10 - update">
+      <created>1597045346323</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1597022103454</updated>
+      <updated>1597045346323</updated>
     </task>
     <task id="LOCAL-00002" summary="增加案例快速幂算法和动态规划实现斐波那锲数列">
       <created>1595380330445</created>
@@ -455,10 +517,11 @@
       <option name="project" value="LOCAL" />
       <updated>1596878767763</updated>
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2207000" />
+    <option name="totallyTimeSpent" value="4701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -494,6 +557,10 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2020.08.10 - update" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020.08.10 - update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -704,7 +771,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/rico/tester/TreeNodeTest.java</url>
-          <line>131</line>
+          <line>132</line>
           <properties />
           <option name="timeStamp" value="102" />
         </line-breakpoint>
@@ -721,6 +788,14 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/rico/tester/TreeNodeTest.java</url>
+          <line>103</line>
+          <properties class="com.rico.tester.TreeNodeTest" method="preTraversal">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="104" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -743,11 +818,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionMovingCount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        <state relative-caret-position="449">
+          <caret line="45" column="19" lean-forward="true" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
           <folding>
             <element signature="e#1260#1261#0" expanded="true" />
             <element signature="e#1296#1297#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/tester/reverseTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="35" />
+          <folding>
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/tester/TreeNodeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="208" column="34" lean-forward="true" selection-start-line="208" selection-start-column="34" selection-end-line="208" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#Node#0;class#TreeNodeTest#0" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#730#731#0" expanded="true" />
+            <element signature="e#770#771#0" expanded="true" />
+            <element signature="e#803#804#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+            <element signature="e#954#955#0" expanded="true" />
+            <element signature="e#990#991#0" expanded="true" />
+            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1076#1077#0" expanded="true" />
+            <element signature="e#1109#1110#0" expanded="true" />
+            <element signature="e#1144#1145#0" expanded="true" />
+            <element signature="e#1186#1187#0" expanded="true" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1132#1133#0" expanded="true" />
+            <element signature="e#1212#1213#0" expanded="true" />
+            <element signature="docComment;method#create#0;class#TreeNodeTest#0" />
+            <element signature="method#create#0;class#TreeNodeTest#0" />
+            <element signature="method#preTraversal#0;class#TreeNodeTest#0" />
+            <element signature="method#MidTraversal#0;class#TreeNodeTest#0" />
+            <element signature="method#postTraversal#0;class#TreeNodeTest#0" />
+            <element signature="method#preOrderTraversalbyLoop#0;class#TreeNodeTest#0" />
+            <element signature="docComment;method#main#0;class#TreeNodeTest#0" />
           </folding>
         </state>
       </provider>

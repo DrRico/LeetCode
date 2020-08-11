@@ -923,33 +923,332 @@ public class Solution {
 }
 ```
 
+2.广度优先算法
+
+BFS算法使用队列实现，当队列不为空，即取出队列的队首节点，并计数符加1，同时判断该节点的子节点是否满足题目条件，如果满足则push到队列的队尾，循环继续。本题从(0,0)开始，所以只需考虑向右(x+1,y)和向下(x,y+1)。
+
+> java实现如下：
+
+```java
+import java.util.*;
+public class Solution {
+    // 使用宽度优先遍历，BFS，基于队列实现
+    public int movingCount(int threshold, int rows, int cols){
+        // 定义队列和标志二维数组以及结果
+        Queue<int[]> queue = new LinkedList<>();
+        boolean[][] isVisted = new boolean[rows][cols];
+        int[] count = new int[1];
+        // 非法输入的判断
+        if(threshold < 0 || rows < 0 || cols < 0){
+            return count[0];
+        }
+        // 现将坐标原点放入队列中
+        queue.add(new int[]{0,0});
+        // 进行宽度优先遍历
+        bfs(threshold, rows, cols, count, queue, isVisted);
+        // 返回结果
+        return count[0];
+    }
+    void bfs(int k, int m, int n, int[] count, Queue<int[]> queue,boolean[][] isVisted){
+        int [] node;
+        int i , j;
+        // 若队列非空，则继续进行循环
+        while(!queue.isEmpty()){
+            // 将队列头部的值取出，并赋值,并且对计数的结果加1
+            node = queue.poll();
+            i = node[0];
+            j = node[1];
+            count[0] ++;
+            // 判断i + 1是否满足要求，若满足则添加到队列中来
+            if(i + 1 < m && isVisted[i + 1][j] != true && (sum(i + 1) + sum(j) <= k)){
+                isVisted[i + 1][j] = true;
+                queue.add(new int[]{i + 1,j});
+            }
+            // 判断j + 1是否满足要求，若满足则添加到队列中来
+            if(j + 1 < n && isVisted[i][j + 1] != true && (sum(i) + sum(j + 1) <= k)){
+                isVisted[i][j + 1] = true;
+                queue.add(new int[]{i,j + 1});
+            }
+        }
+    }
+     int sum(int i){
+         int res = 0;
+         while(i > 0){
+             res += i % 10;
+             i /= 10;
+         }
+         return res;
+     }
+}
+```
+
+### 23、从上往下打印二叉树
+
+- 从上往下打印出二叉树的每个节点，同层节点从左至右打印。
+
+> 思路 (宽搜思想)
 
 
 
+- 思路是用arraylist模拟一个队列来存储相应的TreeNode,每一次打印一个节点的时候，如果该节点有子节点，则把该节点的子节点放到一个队列的尾部。接下来到对队列的头部取出最早进入队列的节点放到ArrayList 中，重复前面的操作，直至队列中所有的节点都存到ArrayList中。
+
+  在Java中Queue是和List、Map同等级别的接口，LinkedList中也实现了Queue接口，该接口中的主要函数有：
+
+  - 容量不够或队列为空时不会抛异常：offer（添加队尾元素）、peek（访问队头元素）、poll（访问队头元素并移除）
+
+  - 容量不够或队列为空时抛异常：add、element（访问队列元素）、remove（访问队头元素并移除）
+
+```java
+public class Solution {
+    public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
+        ArrayList<Integer> res = new ArrayList<Integer>();
+        if(root == null)return res;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            TreeNode node = queue.poll();
+            res.add(node.val);
+            if(node.left != null)queue.add(node.left);
+            if(node.right != null)queue.add(node.right);
+        }
+        return res;
+    }
+}
+```
 
 
 
+### 24、把二叉树打印成多行
+
+- 从上到下按层打印二叉树，同一层结点从左至右输出。每一层输出一行。
+
+>  分析：
+
+和上一题类似，只是把每一层做为一个列表储存，返回一个大的列表。
+
+- 按层次输出二叉树
+- 访问根节点，并将根节点入队。
+- 当队列不空的时候，重复以下操作。
+- 1、弹出一个元素。作为当前的根节点，未保存到小列表的节点数进行 --。
+- 2、如果根节点有左孩子，访问左孩子，并将左孩子入队，（下层节点数）++。
+- 3、如果根节点有右孩子，访问右孩子，并将右孩子入队，（下层节点数）++。
+- 4、当（未保存到小列表的节点数toSave） ==  （下层节点数nextLevel），则将当前小列表添加到大列表当中去。
+
+- 其中用两个变量，变量toSave表示还未保存到小列表的节点数，nextLevel表示下一层节点数
+
+  */
+
+```java
+import java.util.*;
+/*
+public class TreeNode {
+    int val = 0;
+    TreeNode left = null;
+    TreeNode right = null;
+    public TreeNode(int val) {
+        this.val = val;
+    }
+}
+*/
+public class Solution {
+    ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        if(pRoot == null)return res;
+        Queue<TreeNode> queue = new LinkedList<>();
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        queue.add(pRoot);
+        int toSave = 1;
+        int nextLevel = 0;
+        while(!queue.isEmpty()){
+            TreeNode node = queue.poll();
+            list.add(node.val);
+            if(node.left != null){
+                queue.add(node.left);
+                nextLevel ++;
+            }
+            if(node.right != null){
+                queue.add(node.right);
+                nextLevel ++;
+            }
+            toSave --;
+            if(toSave == 0){
+                toSave = nextLevel;
+                nextLevel = 0;
+                res.add(new ArrayList(list));
+                list.clear();
+            }
+        }
+        return res;
+    }
+}
+```
 
 
 
+### 25、按之字型顺序打印二叉树
+
+> 题目：请实现一个函数按照之字形打印二叉树，即第一行按照从左到右的顺序打印，第二层按照从右至左的顺序打印，第三行按照从左到右的顺序打印，其他行以此类推。
+
+思路，根据23、24题的思路，主要是24题的思路，只需加入个翻转标志位的判断，应该不难~
+
+- 我来放一个招面试官鄙视的写法，都能想得到就是使用一个队列来实现：和牛客中[把二叉树打印成多行](https://www.nowcoder.com/practice/445c44d982d04483b04a54f298796288?tpId=13&&tqId=11213&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking),思路是一样的，只是多了个翻转而已，所以我们只需要设置标志位，在偶数层进行翻转，基数层正常输出即可，代码如下：
+
+> java代码如下：
 
 
 
+```java
+/*
+public class TreeNode {
+    int val = 0;
+    TreeNode left = null;
+    TreeNode right = null;
+    public TreeNode(int val) {
+        this.val = val;
+    }
+}
+*/
+import java.util.*;
+public class Solution {
+    ArrayList> Print(TreeNode pRoot) {
+        ArrayList> res = new ArrayList>();//需要返回的结果
+        if (pRoot == null) return res;//返回非法输入
+        ArrayList list = new ArrayList();//保存每一层的节点
+        Queue queue = new LinkedList();//队列
+        queue.add(pRoot);    //先把队首添加进队列
+        int toSave = 1, nodeNum = 0; //判断什么时候保存每一层的节点，以及每一层节点的个数
+        boolean reverseFlag = false;    //翻转的标志位
+        while(!queue.isEmpty()){//进行遍历，队列非空则循环
+            TreeNode node = queue.poll();//将队首的节点取出，做进一步的处理
+            list.add(node.val);//将队首节点添加到小列表保存
+            if (node.left != null){//判断队首节点是否有左节点，有则放入队列，并且下层节点数+1
+                queue.add(node.left);
+                nodeNum ++;
+            }
+            if (node.right != null){//判断队首节点是否有右节点，有则放入队列，并且下层节点数+1
+                queue.add(node.right);
+                nodeNum ++;
+            }
+            toSave --;//每取一次队首元素，都要进行-1
+            if (toSave == 0){//当减到0之后，则说明这一层遍历完毕，可以保存到最终的结果数组
+                toSave = nodeNum;//更新每一层的节点数
+                nodeNum = 0; //节点数清零
+                if (reverseFlag){ //翻转
+                    reverseList(list);
+                }
+                reverseFlag = !reverseFlag;
+                res.add(new ArrayList(list));//添加到结果
+                list.clear();// 清零列表，以便进行下一层的操作
+            }
+        }
+        return res;
+    }
+    void reverseList(ArrayList list){//翻转操作函数，时间O(n)，空间O(1)
+        int len = list.size();
+        for(int i = 0; i < len / 2; i ++){
+            int temp = list.get(i);
+            list.set(i, list.get(len - i - 1));
+            list.set(len - i - 1,temp);
+        }
+    }
+}
+```
 
 
 
+> ==这个是推荐的解法：==
+
+- 使用两个栈来实现：栈1放奇数层的节点，并且先放右节点，栈2存放偶数层的节点，并且先存放左节点。（想要先打印某个节点，就得让他最后入栈，反之想最后再打印某个节点，就得让他最先入栈）这样根据栈先进后出的特点，就能在遍历的时候，奇数层是从左往右输出节点，偶数层的从右往左输出节点的了
+
+```java
+import java.util.*;
+public class Solution {
+    public ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
+        // 返回参数
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        if (pRoot == null) return res;// 非法判断
+        ArrayList<Integer> list = new ArrayList<Integer>();// 保存每一层的节点值
+        Stack<TreeNode> s1 = new Stack<>();// 建立两个栈来分别保存奇数和偶数层的节点
+        Stack<TreeNode> s2 = new Stack<>();// 并且奇数层先保存右节点，偶数层先保存左节点
+        s1.add(pRoot);    // 将根节点添加，从这步可以看出来，s1存放的是奇，s2存放偶
+        while(!s1.isEmpty() || !s2.isEmpty()){
+            while(!s1.isEmpty()){
+                TreeNode node = s1.pop();// 取出s1的节点，去获取s1的下一层，为偶数
+                list.add(node.val);
+                if(node.left != null)s2.add(node.left);// 所以这里拿s2来保存偶数的节点，
+                if(node.right != null)s2.add(node.right);// 并且是先保存left
+            }
+            if(!list.isEmpty()){
+                // 当遍历完本层之后，可以将本层节点值添加到list中，并且将下层的节点添加到另外的栈中去了
+                res.add(new ArrayList(list));// 保存本层节点值到结果中
+                list.clear();
+            }
+            while(!s2.isEmpty()){// 开始进行另外一个栈的遍历，偶数层节点的遍历
+                TreeNode node = s2.pop();// 取出栈顶节点，去获取s2的下一层，为奇数
+                list.add(node.val);
+                if(node.right != null)s1.add(node.right);// 所以这里拿s2来保存奇数的节点，
+                if(node.left != null)s1.add(node.left);// 并且是先保存right
+            }
+            if(!list.isEmpty()){// 当遍历完本层之后，可以将本层节点值添加到list中
+                res.add(new ArrayList(list));
+                list.clear();
+            }
+        }
+        return res;
+    }
+}
+```
 
 
 
+### 26、平衡二叉树
+
+> 题目：输入一棵二叉树，判断该二叉树是否是平衡二叉树。在这里，我们只需要考虑其平衡性，不需要考虑其是不是排序二叉树
 
 
 
+- 平衡二叉树的定义是左右子树高度差不超过1，同时左右子树也是平衡二叉树，于是代码逻辑可以如下
+  - 1、判断树是否为空，空则返回true
+  - 2、判断左右子树深度差，其中，求树深度的函数在上一题中“二叉树的深度中”已实现，差超过1，返回false
+  - 3、若通过2的判断，对左右子树也判断是否都是平衡二叉树，判断函数为函数自身，递归调用
 
+```java
+public class Solution {
+    
+    public boolean IsBalanced_Solution(TreeNode root) {
+        if(root == null) return true;
+        if(Math.abs(getDepth(root.left) - getDepth(root.right)) > 1)return false;
+        return IsBalanced_Solution(root.left) && IsBalanced_Solution(root.right);
+    }
+    
+    public int getDepth(TreeNode root){
+        if(root == null) return 0;
+        if(root.left == null && root.right == null)return 1;
+        return Math.max(getDepth(root.left), getDepth(root.right)) + 1;
+    }
+}
+```
 
+> 或者思路二：上述做法的缺点是，当在某个子树不满足条件，被判断不是平衡二叉树后，还会进行很多次计算，直到计算到根节点的最大深度为止。这是因为上面的做法需要遍历所有的节点。因此使用剪枝。
+> 给出大佬的写法,思路就是进行剪枝。其实就是多加两个判断，不符合条件的，直接一直向上返回，没必要还去计算深度
 
+- 使用后续遍历的方式遍历整颗二叉树。在遍历某个节点的左、右节点之后，我们可以根据他的左、右节点的深度去判断他是不是平衡的，并且得到当前节点的深度，当最后遍历到数的根节点时，也就判断了整颗二叉树是不是平衡二叉树
 
-
-
+```java
+public class Solution {
+    public boolean IsBalanced_Solution(TreeNode root) {
+        return getDepth(root) != -1;
+    }
+    public int getDepth(TreeNode root){
+        if(root == null)return 0;
+        int left = getDepth(root.left);
+        int right = getDepth(root.right);
+//根据定义，左子树不是AVLTree或右子树不是AVLTree或自己本身就算不是AVLTree,直接返回-1
+        if (left == -1 || right == -1 || Math.abs(left - right) > 1) return -1;
+        return 1 + (left > right ? left : right);
+    }
+}
+```
 
 
 
