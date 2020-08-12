@@ -1250,6 +1250,179 @@ public class Solution {
 }
 ```
 
+### 27、二叉数中和为某一值的路径
+
+> 输入一颗二叉树的根节点和一个整数，按字典序打印出二叉树中结点值的和为输入整数的所有路径。路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。
+
+- 思路一：利用前序遍历的思想去做，即==（根-左-右）==的方式去遍历二叉树，当每当遍历一个节点，先将节点添加到小列表当中去，然后再用target减去当前节点的值，当遍历到叶子节点时并且target刚好为0，则说明路径，满足要求，就将小列表添加到结果当中，并且回退到上一个节点继续遍历（即前序遍历）即可
+
+```java
+import java.util.*;
+public class Solution {
+    public ArrayList<ArrayList<Integer>> FindPath(TreeNode root,int target) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();//定义一个结果
+        if(root == null)return res;// 对空树的判断
+        int cSum = 0;		//定义当前路径的和
+        dfs(root,target,cSum,new ArrayList<Integer>(),res);//开始计算
+        return res;			//返回结果
+    }
+    void dfs(TreeNode root,int target, int cSum, ArrayList<Integer> list, ArrayList<ArrayList<Integer>> res){
+        cSum += root.val;//对当前节点走过的路径节点值进行累加
+        list.add(root.val);//将节点放入到小列表中
+        if(cSum == target && root.left ==null && root.right == null){
+            res.add(new ArrayList(list));//要是到叶子节点并且和刚刚满足则添加进结果
+        }
+        if(root.left != null){
+            dfs(root.left,target,cSum,list,res);//进行左子树判断
+        }
+        if(root.right != null){
+            dfs(root.right,target,cSum,list,res);//进行右子树判断
+        }
+//无论当前路径是否加出了target，必须去掉最后一个，然后返回父节点，去查找另一条路径，最终的path肯定为null        
+        list.remove(list.size() - 1);//最后不满足的节点要从末尾删除，才能进行另外节点的计算，前序遍历
+    }
+}
+```
+
+这两种差差不多，只是少了一个参数：
+
+```java
+import java.util.*;
+public class Solution {
+    public ArrayList<ArrayList<Integer>> FindPath(TreeNode root,int target) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        if(root == null)return res;
+        loop(root, target, new ArrayList<Integer>(), res);
+        return res;
+    }
+    void loop(TreeNode root, int target, ArrayList<Integer> list, ArrayList<ArrayList<Integer>> res){
+        target -= root.val;    
+        list.add(root.val);
+        if(root.left == null && root.right == null && target == 0){
+            res.add(new ArrayList(list));
+        }
+        
+        if(root.left != null){
+            loop(root.left, target, list, res);
+        }
+        if(root.right != null){
+            loop(root.right, target, list, res);
+        }
+        list.remove(list.size() - 1);
+    }
+}
+```
+
+### 28、反转链表
+
+> 输入一个链表，反转链表后，输出新链表的表头。
+
+思路：可以有很多种方法，比如使用栈实现，新建一个链表实现。但主要要考察的还是以下这种：
+
+- 1、当只有一个节点的时候，直接返回当前节点
+
+- 2、当当前节点不为空时，我们可以设置使用两个变量保存当前节点和当前节点的下一节点，记录为curNode 和 nextNode
+
+- 3、循环遍历，条件是当nextNode不为空时，使用第三个中间变量tempNode来记录nextNode的下一个节点nextNode.next，接着便进行反转操作，反转之后，curNode 和 nextNode继续往下一位移动，直到nextNode为空，此时curNode 便是反转链表的表头
+
+- 4、需要注意的是，此时headNode为反转链表的最后一个节点，但是headNode.next为反转链表的倒数第二个节点，而反转链表的倒数第二个节点又为headNode。故造成环形，此时只要将headNode.next指向null即可，最后返回curNode完成反转。
+
+  > java代码如下：
+
+```java
+/*
+public class ListNode {
+    int val;
+    ListNode next = null;
+    ListNode(int val) {
+        this.val = val;
+    }
+}*/
+public class Solution {
+    public ListNode ReverseList(ListNode head) {
+        if(head == null || head.next == null) return head;
+        ListNode curNode = head;
+        ListNode nextNode = head.next;
+        while(nextNode != null){
+            ListNode tempNode = nextNode.next;//；利用中间变量保存下下个节点，防止断链
+            nextNode.next = curNode; //将下一节点指向当前节点，完成反转操作；
+            curNode = nextNode;//这两步是移位操作，继续遍历链表后面的节点
+            nextNode = tempNode;
+        }
+        head.next = null;	//如上边第四步所说的，防止成环的操作
+        return curNode;
+    }
+}
+```
+
+
+
+- 法二：
+
+```java
+headNodepublic class Solution {
+    public ListNode ReverseList(ListNode head) {
+      
+        if(head==null)
+            return null;
+        //head为当前节点，如果当前节点为空的话，那就什么也不做，直接返回null；
+    	ListNode pre = null;
+        ListNode next = null;
+        //当前节点是head，pre为当前节点的前一节点，next为当前节点的下一节点
+        //需要pre和next的目的是让当前节点从pre->head->next1->next2变成pre<-head next1->next2
+        //即pre让节点可以反转所指方向，但反转之后如果不用next节点保存next1节点的话，此单链表就此断开了
+        //所以需要用到pre和next两个节点
+        //1->2->3->4->5
+        //1<-2<-3 4->5
+        while(head!=null){
+            //做循环，如果当前节点不为空的话，始终执行此循环，此循环的目的就是让当前节点从指向next到指向pre
+            //如此就可以做到反转链表的效果
+            //先用next保存head的下一个节点的信息，保证单链表不会因为失去head节点的原next节点而就此断裂
+            next = head.next;
+            //保存完next，就可以让head从指向next变成指向pre了，代码如下
+            head.next = pre;
+            //head指向pre后，就继续依次反转下一个节点
+            //让pre，head，next依次向后移动一个节点，继续下一次的指针反转
+            pre = head;
+            head = next;
+        }
+        //如果head为null的时候，pre就为最后一个节点了，但是链表已经反转完毕，pre就是反转后链表的第一个节点
+        //直接输出pre就是我们想要得到的反转后的链表
+        return pre;
+    }
+}
+```
+
+
+
+法三：使用栈：
+
+
+
+```java
+import java.util.*;
+public class Solution {
+    public ListNode ReverseList(ListNode head) {
+        if(head == null || head.next == null)return head;
+        Stack<ListNode> stack = new Stack<>();
+        while(head != null){
+            stack.push(head);
+            head = head.next;
+        }
+        ListNode nextNode = stack.pop(); // 创建新的链表，需要创建一个新的引用
+        ListNode ans = nextNode;
+        nextNode.next = null;		// 初始化
+        while(!stack.isEmpty()){
+            ListNode x = stack.pop(); // 取出栈顶节点元素，然后初始化节点元素的next值
+            x.next = null;
+            nextNode.next = x; // 指向下一节点，
+            nextNode = x; // 并且进行更新
+        }
+        return ans;
+    }
+}
+```
+
 
 
 

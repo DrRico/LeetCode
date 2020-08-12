@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="640460a3-c62c-4989-a7c6-97c7594f60b9" name="Default Changelist" comment="2020.08.10 - update">
+    <list default="true" id="640460a3-c62c-4989-a7c6-97c7594f60b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ReadMedata/链表和DFS和BFS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/LeetCode/com/rico/medium/SolutionGetNext$TreeLinkNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/LeetCode/com/rico/medium/SolutionGetNext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMedata/leetCode.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/leetCode.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCode/com/rico/hard/SolutionMovingCount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCode/com/rico/hard/SolutionMovingCount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rico/tester/TreeNodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rico/tester/TreeNodeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMedata/链表.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,13 +34,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="600" />
-          <entry key="txt" value="26" />
+          <entry key="txt" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="600" />
-          <entry key="PLAIN_TEXT" value="26" />
+          <entry key="PLAIN_TEXT" value="38" />
         </counts>
       </usages-collector>
     </session>
@@ -48,8 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/rico/tester/TreeNodeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="208" column="34" lean-forward="true" selection-start-line="208" selection-start-column="34" selection-end-line="208" selection-end-column="34" />
+            <state relative-caret-position="238">
+              <caret line="214" column="35" lean-forward="true" selection-start-line="214" selection-start-column="35" selection-end-line="214" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#Node#0;class#TreeNodeTest#0" />
@@ -216,7 +218,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597156432222" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597223547742" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -417,7 +419,7 @@
       <workItem from="1594887098589" duration="1892000" />
       <workItem from="1595248821996" duration="4644000" />
       <workItem from="1595662663295" duration="1236000" />
-      <workItem from="1595855154389" duration="84328000" />
+      <workItem from="1595855154389" duration="85567000" />
     </task>
     <task id="LOCAL-00001" summary="2020.08.10 - update">
       <created>1597045346323</created>
@@ -426,12 +428,12 @@
       <option name="project" value="LOCAL" />
       <updated>1597045346323</updated>
     </task>
-    <task id="LOCAL-00002" summary="增加案例快速幂算法和动态规划实现斐波那锲数列">
-      <created>1595380330445</created>
+    <task id="LOCAL-00002" summary="2020.08.11 - update readme">
+      <created>1597156915266</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1595380330445</updated>
+      <updated>1597156915266</updated>
     </task>
     <task id="LOCAL-00003" summary="增加案例快速幂算法和动态规划实现斐波那锲数列">
       <created>1595380338557</created>
@@ -517,11 +519,11 @@
       <option name="project" value="LOCAL" />
       <updated>1596878767763</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4701000" />
+    <option name="totallyTimeSpent" value="5940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -560,7 +562,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2020.08.10 - update" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020.08.10 - update" />
+    <MESSAGE value="2020.08.11 - update readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020.08.11 - update readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -840,8 +843,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/tester/TreeNodeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="208" column="34" lean-forward="true" selection-start-line="208" selection-start-column="34" selection-end-line="208" selection-end-column="34" />
+        <state relative-caret-position="238">
+          <caret line="214" column="35" lean-forward="true" selection-start-line="214" selection-start-column="35" selection-end-line="214" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#Node#0;class#TreeNodeTest#0" />
