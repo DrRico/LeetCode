@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="640460a3-c62c-4989-a7c6-97c7594f60b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ReadMedata/链表和DFS和BFS.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/LeetCode/com/rico/medium/SolutionGetNext$TreeLinkNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/LeetCode/com/rico/medium/SolutionGetNext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/tester/Game01OfCows.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMedata/leetCode.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/leetCode.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMedata/链表.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCode/com/rico/tester/TreeNodeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCode/com/rico/tester/TreeNodeTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,31 +21,31 @@
     <session id="-1627830408">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="2" />
+          <entry key="java" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="2" />
+          <entry key="JAVA" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="600" />
-          <entry key="txt" value="38" />
+          <entry key="java" value="918" />
+          <entry key="txt" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="600" />
-          <entry key="PLAIN_TEXT" value="38" />
+          <entry key="JAVA" value="918" />
+          <entry key="PLAIN_TEXT" value="39" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rico/tester/TreeNodeTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
@@ -84,6 +82,20 @@
                 <element signature="method#postTraversal#0;class#TreeNodeTest#0" />
                 <element signature="method#preOrderTraversalbyLoop#0;class#TreeNodeTest#0" />
                 <element signature="docComment;method#main#0;class#TreeNodeTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Game01OfCows.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#862#863#0" expanded="true" />
+                <element signature="e#915#916#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,6 +169,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/rico/hard/SolutionMovingCount.java" />
         <option value="$PROJECT_DIR$/src/com/rico/tester/TreeNodeTest.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/tester/Game01OfCows.java" />
       </list>
     </option>
   </component>
@@ -218,7 +231,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597223547742" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597331637150" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -347,7 +360,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TreeNodeTest">
+  <component name="RunManager" selected="Application.Game01OfCows">
+    <configuration name="Game01OfCows" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.tester.Game01OfCows" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rico.tester.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SolutionMovingCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.rico.hard.SolutionMovingCount" />
       <module name="LeetCode" />
@@ -391,9 +417,11 @@
       <item itemvalue="Application.SolutionMovingCount" />
       <item itemvalue="Application.reverseTime" />
       <item itemvalue="Application.TreeNodeTest" />
+      <item itemvalue="Application.Game01OfCows" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Game01OfCows" />
         <item itemvalue="Application.TreeNodeTest" />
         <item itemvalue="Application.reverseTime" />
         <item itemvalue="Application.SolutionMovingCount" />
@@ -419,7 +447,7 @@
       <workItem from="1594887098589" duration="1892000" />
       <workItem from="1595248821996" duration="4644000" />
       <workItem from="1595662663295" duration="1236000" />
-      <workItem from="1595855154389" duration="85567000" />
+      <workItem from="1595855154389" duration="89291000" />
     </task>
     <task id="LOCAL-00001" summary="2020.08.10 - update">
       <created>1597045346323</created>
@@ -435,12 +463,12 @@
       <option name="project" value="LOCAL" />
       <updated>1597156915266</updated>
     </task>
-    <task id="LOCAL-00003" summary="增加案例快速幂算法和动态规划实现斐波那锲数列">
-      <created>1595380338557</created>
+    <task id="LOCAL-00003" summary="2020.08.12 - update readme">
+      <created>1597238440393</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1595380338557</updated>
+      <updated>1597238440393</updated>
     </task>
     <task id="LOCAL-00004" summary="增加案例">
       <created>1596015682966</created>
@@ -519,14 +547,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596878767763</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5940000" />
+    <option name="totallyTimeSpent" value="9664000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19906166" />
@@ -539,7 +567,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2212766" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.21606949" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.34893617" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -547,7 +575,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3257329" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3248227" />
       <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3297587" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -563,7 +591,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2020.08.10 - update" />
     <MESSAGE value="2020.08.11 - update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020.08.11 - update readme" />
+    <MESSAGE value="2020.08.12 - update readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020.08.12 - update readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -784,6 +813,12 @@
           <properties />
           <option name="timeStamp" value="103" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/tester/Game01OfCows.java</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/rico/lcmedium/SolutionStringMultiply.java</url>
           <line>71</line>
@@ -802,11 +837,6 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="s" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionPrintListFromTailToHead.java">
@@ -877,6 +907,18 @@
             <element signature="method#postTraversal#0;class#TreeNodeTest#0" />
             <element signature="method#preOrderTraversalbyLoop#0;class#TreeNodeTest#0" />
             <element signature="docComment;method#main#0;class#TreeNodeTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Game01OfCows.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
           </folding>
         </state>
       </provider>

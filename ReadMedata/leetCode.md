@@ -1,4 +1,4 @@
-﻿## 基础知识
+﻿###  基础知识
 
 - Java获取数据长度：
 
@@ -1205,6 +1205,16 @@ public class Solution {
 
 > 题目：输入一棵二叉树，判断该二叉树是否是平衡二叉树。在这里，我们只需要考虑其平衡性，不需要考虑其是不是排序二叉树
 
+- 概念：（来源于百度[文章](https://baijiahao.baidu.com/s?id=1651427207567199156&wfr=spider&for=pc)）（1）它的左子树和右子树的深度之差(平衡因子)的绝对值不超过1，（2）它的左子树和右子树都是一颗平衡二叉树。也就是说以上两条规则，只要破坏了一个就不是平衡二叉树了。比如说下面这张图：
+
+![img](https://pics5.baidu.com/feed/d788d43f8794a4c2696f07a51979cad0ac6e3906.jpeg?token=cbf10bf2bf0a14a27bd58ac71d04425c&s=8DB4EC128F304D805AC1A8DA000070B3)
+
+上面这张图就是破坏了二叉查找树这一条规则。当然了还有一条规则。也就是他的高度只差不能超过1、下面这张45节点左右子树深度差超过1，故不是平衡二叉树。
+
+
+
+![img](https://pics4.baidu.com/feed/4a36acaf2edda3cc1ea6a67c1b64e804203f92ba.jpeg?token=a32a91b0d4c0785f833639a41c4d06ba&s=C6B4AC621BD45DC042D1D8DA0000A0B1)
+
 
 
 - 平衡二叉树的定义是左右子树高度差不超过1，同时左右子树也是平衡二叉树，于是代码逻辑可以如下
@@ -1355,7 +1365,7 @@ public class Solution {
 }
 ```
 
-
+![img](https://uploadfiles.nowcoder.com/images/20200812/35674416_1597241925374_7A90CCA2048080AA97B9FACCFE29DF2C)
 
 - 法二：
 
@@ -1422,6 +1432,434 @@ public class Solution {
     }
 }
 ```
+
+### 29、两个链表的第一个公共结点
+
+> 输入两个链表，找出它们的第一个公共结点。（注意因为传入数据是链表，所以错误测试数据的提示是用其他方式显示的，保证传入数据是正确的）
+
+- 思路，用两个指针，分别去遍历两个链表；比如指针一遍历链表一后，再去遍历链表二，指针二遍历链表二后再去遍历链表一；当指针一等于指针二后，循环结束，此时两个指针都在公共节点上了；
+
+![](https://uploadfiles.nowcoder.com/images/20200813/35674416_1597281432325_69C3CC4ED42377F5BC92344711C9A867)
+
+> java实现
+
+```java
+public class Solution {
+    public ListNode FindFirstCommonNode(ListNode pHead1, ListNode pHead2) {
+        ListNode p = pHead1,q = pHead2; // 创立俩指针
+        while(p != q){ // 当俩指针不相等时，循环继续，即没有指向同一节点
+            if(p != null)p = p.next; // 当没有遍历完链表1时，继续遍历
+            else p = pHead2;		 // 遍历完链表1，则遍历链表2
+            
+            if(q != null)q = q.next; // 当没有遍历完链表2时，继续遍历
+            else q = pHead1; 		 // 遍历完链表2，则遍历链表1
+// 所以这while循环必然能找到当p 和 q都指向同一个节点的情况，故能找到答案
+        }
+        return q;// 最后返回q或者p都可以
+    }
+}
+```
+
+
+
+### 30、链表中环的入口结点
+
+> 题目：给一个链表，若其中包含环，请找出该链表的环的入口结点，否则，输出null。
+
+==**方法一**==
+
+- 我的思路，遍历一遍链表，要是链表p的下一节点为null则返回null，即不存在环，遍历的时候吧节点添加到HashMap里边，要是出现重复的直接返回该节点。
+
+**java实现：**
+
+```java
+import java.util.*;
+public class Solution {
+    public ListNode EntryNodeOfLoop(ListNode pHead){
+        if(pHead == null && pHead.next == null) return null;
+        HashMap<Integer,Integer> map = new HashMap<>();
+        ListNode p = pHead;
+        while (p != null){
+            if(map.containsKey(p.val)){	// 要是一条链上有两个相同的节点，说明有环
+                return p;// 直接返回该节点即可
+            }else{
+                map.put(p.val,1);
+            }
+            p = p.next;	// 链表后移
+        }
+        return null;// 当循环结束了，说明链表最后一个指针为null，没有环，则返回null
+    }
+}
+```
+
+
+
+==**方法二：**==
+
+- 以上思路可以是可以，但是花费了额外的空间，不是面试官想要的，新思路：
+  - 使用两个指针，一快一慢，即快指针p1一次走两步，满指针p2一次走一步，并使慢指针指向pHead，使快指针指向pHead.next。当快指针p1到null还没有赶上p2，则链表无环；当快指针p1赶上p2，即在某个循环中有p1 == p2，则链表有环，我们记这里使用的循环次数为count；
+  - 循环次数为count有什么用呢？这是因为我们在开始令慢指针指向pHead，使快指针指向pHead.next，满指针p2一次走一步，快指针p1一次走两步，当他们相遇的时候，p2走过的步数肯定为count，而此p2肯定在环中，这里很关键，在下一步中，我们又借助两个指针，这时让他们的速度是一样的，每次走一步，但是得先让一个指针走count + 1步，先入环；接着两个指针同时走，当他们相遇的时候所在的节点就是环的入口节点了。
+
+![](https://uploadfiles.nowcoder.com/images/20200813/35674416_1597303628334_0B9439C52CFBF2E21D4D1424EA99208A)
+
+java代码如下：
+
+```java
+public class Solution {
+    public ListNode EntryNodeOfLoop(ListNode pHead){
+        if(pHead == null || pHead.next == null)return null;//对空链表的判断
+        ListNode p = pHead, q = pHead.next;// 借助这两个指针进行
+        int count = 0;// 计数变量，记录循环的次数
+        while(q != p){// 当p不等于q时，则继续执行
+            count ++; // 计数 + 1
+            if(q.next == null || q.next.next == null)return null;// 要是为null则说明wu环，返回null
+            q = q.next.next;// q为快指针，走两步
+            if(p.next == null)return null;// 要是为null则说明wu环，返回null
+            p = p.next;// p为慢指针，走一步
+        }
+        // 当以上循环结束，说明有环存在，此时我们得到循环的次数count变量，故再借助两个指针，让一个指针先走count+1步，另一个指针不动，接着让两个指针循环，每次走一步，当两个指针指向同一个节点时，此节点就是环入口。
+        p = pHead;// 指针p清零，指向链表头
+        q = pHead;// 指针q清零，指向链表头
+        while(count-- >= 0){// 让指针q先走count+1步
+            q = q.next;
+        }
+        while(q != p){  // 当q和p指向不同的指针，则循环
+            p = p.next; // 以相同的速度遍历
+            q = q.next;
+        }
+        // 当循环结束，则两个指针都指向环入口节点，返回其中一个指针即可
+        return q;
+    }
+}
+```
+
+
+
+### 31、 链表中倒数第k个结点
+
+>  输入一个链表，输出该链表中倒数第k个结点。
+
+**==方法一：==**
+
+- 思路：先遍历一遍得到链表的长度n，之后第二次遍历n - k次得到倒数第k个节点
+
+java代码如下：
+
+```java
+public class Solution {
+    public ListNode FindKthToTail(ListNode head,int k) {
+        if(head == null || head.next == null) return head;
+        int n = 0;
+        ListNode p = head;
+        while(p != null){// 计算链表的长度
+            n ++;
+            p = p.next;
+        }
+        if(n < k)return null;// 要是长度小于k，出入非法，则返回null
+        p = head;
+        int i = n - k;// 倒数第k个，正着数就是第n-k个，n就是长度，
+        while(i-- > 0){
+            p = p.next; // 取值
+        }
+        return p;
+    }
+}
+```
+
+****
+
+
+
+**==方法二：==**
+
+> 面试官要求我们只遍历一遍，就能得到答案。这个时候得借助两个指针去进行了
+
+- 思路：定义两个指针，先让指针1走k-1步，接着指针2再从头和指针1一起遍历，当指针一遍历到尾部的时候，指针2的位置就是倒数第k个节点的位置了、（注意对非法输入的判断）
+
+java代码实现如下：
+
+```java
+public class Solution {
+    public ListNode FindKthToTail(ListNode head,int k) {
+        if(head == null || k == 0) return null;// 对非法输入的判断，当k=0时也认为不合法，因为书上说是从1开始计数的
+        ListNode p = head, q = head;
+        int i = k - 1;
+        while (i-- > 0){// 先让p指针走k-1步
+            if(p.next == null) return null;// 防止k的值大于链表长度的情况，要是大于直接返回null即可
+            p = p.next;
+        }
+        while(p.next != null){// 接着再一起遍历，当p指针遍历到尾部的时候，此时q指针的位置就是倒数第k个节点的位置了，因为他们的相对距离就是k - 1（从1开始计数）
+            p = p.next;
+            q = q.next;
+        }
+        return q;// 返回q即可
+    }
+}
+```
+
+
+
+### 32、包含min函数的栈
+
+> 定义栈的数据结构，请在该类型中实现一个能够得到栈中所含最小元素的min函数（时间复杂度应为O（1））。
+
+- **思路： 看到这个问题, 我们最开始可能会想, 添加一个成员变量用于保存最小元素, 每次压栈时如果压栈元素比当前最小元素更小, 就更新最小元素.  但是这样会有一个问题, 如果最小元素被弹出了呢, 如何获得下一个最小元素呢? 分析到这里可以发现, 仅仅添加一个成员变量存放最小元素是不够的, 我们需要在最小元素弹出后还能得到次小元素, 次小的弹出后, 还要能得到次次小的.  因此, 用另一个栈来保存这些元素是再合适不过的了. 我们叫它最小元素栈.   每次压栈操作时, 如果压栈元素比当前最小元素更小, 就把这个元素压入最小元素栈, 原本的最小元素就成了次小元素. 同理, 弹栈时, 如果弹出的元素和最小元素栈的栈顶元素相等, 就把最小元素的栈顶弹出.**
+
+> java实现
+
+```java
+import java.util.Stack;
+
+public class Solution {
+    // 定义两个栈，一个栈s用来正常存取数据，另一个栈sMin用来存取最小元素
+    Stack<Integer> s = new Stack<>();
+    Stack<Integer> sMin = new Stack<>();
+
+    // 这个push比较关键
+    public void push(int node) {
+        s.push(node); // 对于s栈来说，正常的push即可；
+        if (sMin.isEmpty()){ // 对于最小元素栈sMin，当为空时，存入第一个元素
+            sMin.push(node);
+        } else if (node <= sMin.peek()){ // 当发现有比当前栈顶元素小的时候，这个再把此元素压入栈顶，此时栈顶元素变成最小的元素，所以无论何时，sMin的栈顶元素就是最小值
+            sMin.push(node);
+        }
+    }
+    
+    public void pop() {// 当出栈的时候，要是s中的最小元素弹出去了，我们也得相应的更新sMin栈的栈顶，即弹出sMIn的栈顶元素，让次小值成为栈顶元素，以此类推即可
+        if (s.peek() == sMin.peek())sMin.pop();
+        s.pop();// 对于s，正常的弹出即可；
+    }
+    
+    public int top() {
+        return s.peek();// 返回s栈的栈顶
+    }
+    
+    public int min() {
+        return sMin.peek(); // 直接返回最小元素栈的栈顶，即找到最小元素。
+    }
+}
+```
+
+### 33、简单的变换
+
+> 给你一个正整数n，重复进行以下操作： 
+>
+> 1.如果n是奇数，令n=n−3n=n-3n=n−3  
+>
+> 2.如果n是偶数，令n=n/2n=n/2n=n/2
+>
+>   重复上述直至n=0停止，请输出进行操作的次数，如果n永远无法变成零，输出-1
+
+示例1
+
+输入
+
+```
+2
+```
+
+输出
+
+```
+-1
+```
+
+说明
+
+```
+1:2->1(2/2=1)
+2:1->-2(1-3=-2)
+3:-2->-1((-2)/2=(-1))
+4.-1->-4(-1-3=-4)
+5.-4->-2((-4)/2=(-2))
+6.-2->-1((-2)/2=(-1))
+.......开始进入第三步操作到第五步操作的循环，n永远无法等于0，所以返回-1。
+```
+
+示例2
+
+输入
+
+```
+9
+```
+
+输出
+
+```
+3
+```
+
+说明
+
+```
+1.9->6(9-3=6)
+2.6->3(6/2=3)
+3.3->0(3-3=0)
+三步操作后n变为0，所以返回3。
+```
+
+备注:
+
+```
+对于30%30\%30%的数据，1≤n≤1e61\leq n\leq 1e61≤n≤1e6
+
+对于100%100\%100%的数据，1≤n≤1e181\leq n\leq 1e181≤n≤1e18
+请返回最少操作数或者-1
+```
+
+- 思路：
+
+
+
+```java
+import java.util.*;
+
+public class Solution {
+    /**
+     * 
+     * @param n long长整型 
+     * @return int整型
+     */
+    public int Numberofoperations (long n) {
+        int count = 0;
+        if (n < 0)return -1;
+        if (n == 0)return 0;
+        while(n != 0){
+            count ++;
+            if(n % 2 == 0){ // 偶数
+               n = n >> 1;
+            } else {     // 奇数
+                n -= 3;
+            }
+            if (n == 1 || n == 2 || n == -2)return -1;
+        }
+        return count;
+    }
+}
+```
+
+
+
+### 34、牛牛的01游戏
+
+> 牛牛最近迷上了小游戏，于是他也想对他的01字符串进行一些操作，01字符串上的0和0相邻时会变成1，而1和1相邻时会在字符串上消失，而0和1相邻时什么都不会发生，牛牛现在把初始的字符串给你，你能告诉牛牛这个字符串最后会变成什么样吗。[题目链接](https://ac.nowcoder.com/acm/contest/6911/B)
+
+ 输入
+
+```
+"00110001"
+```
+
+输出
+
+```
+"01"
+```
+
+说明
+
+```
+00110001→1110001→10001→1101→01
+```
+
+备注:
+
+```
+1≤∣str∣≤1061\leq |str|\leq10^61≤∣str∣≤106，字符串上的合并消失应优先与左边进行，例如000，中间的0优先与左边的0合并变为10，消失同理
+```
+
+------------
+
+
+
+- 思路：使用栈来实现就好
+
+```java
+import java.util.*;
+public class Solution {
+    /**
+     * 
+     * @param str string字符串 初始字符串
+     * @return string字符串
+     */
+    public String solve (String str) {
+        // write code here
+        Stack<Character> stack = new Stack<Character>();// 创建一个栈
+        for(char c : str.toCharArray()){ // 开始遍历
+            if(!stack.isEmpty() && stack.peek() == '0' && c == '0'){//00->1
+                stack.pop();
+                if(!stack.isEmpty() && stack.peek() == '1'){// 要是此时的栈顶元素为1则与上边00得到的1相互抵消，直接pop即可
+                    stack.pop();
+                }else{// 要是不是1，则将00得到的1压入栈
+                    stack.push('1');
+                }
+            }else if (!stack.isEmpty() && stack.peek() == '1' && c == '1'){
+                stack.pop();// 要是栈顶元素和遍历到的元素都为1，则直接将栈顶元素pop
+            }else{
+                stack.push(c); // 要是以上都不符合，则将此元素压入栈即可
+            }
+        }
+        StringBuilder sb = new StringBuilder();// 创建一个sb去接收
+        while(!stack.isEmpty()){	// 循环遍历栈，取出元素
+            sb.append(stack.pop());
+        }
+        return sb.reverse().toString();// 栈的先进后出，所以得翻转再输出。
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
