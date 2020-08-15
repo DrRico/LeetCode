@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="640460a3-c62c-4989-a7c6-97c7594f60b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/rico/tester/Game01OfCows.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/medium/SolutionLastRemaining.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMedata/leetCode.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/leetCode.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCode/com/rico/tester/TreeNodeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCode/com/rico/tester/TreeNodeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rico/hard/SolutionPrintListFromTailToHead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rico/hard/SolutionPrintListFromTailToHead.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,24 +21,24 @@
     <session id="-1627830408">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="3" />
+          <entry key="java" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="3" />
+          <entry key="JAVA" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="918" />
-          <entry key="txt" value="39" />
+          <entry key="java" value="1217" />
+          <entry key="txt" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="918" />
-          <entry key="PLAIN_TEXT" value="39" />
+          <entry key="JAVA" value="1217" />
+          <entry key="PLAIN_TEXT" value="41" />
         </counts>
       </usages-collector>
     </session>
@@ -87,15 +87,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Game01OfCows.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+            <state relative-caret-position="309">
+              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#862#863#0" expanded="true" />
                 <element signature="e#915#916#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/medium/SolutionLastRemaining.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+              <folding>
+                <element signature="e#778#779#0" expanded="true" />
+                <element signature="e#814#815#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,8 +130,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionPrintListFromTailToHead.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+            <state relative-caret-position="291">
+              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -170,6 +183,8 @@
         <option value="$PROJECT_DIR$/src/com/rico/hard/SolutionMovingCount.java" />
         <option value="$PROJECT_DIR$/src/com/rico/tester/TreeNodeTest.java" />
         <option value="$PROJECT_DIR$/src/com/rico/tester/Game01OfCows.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/hard/SolutionPrintListFromTailToHead.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/medium/SolutionLastRemaining.java" />
       </list>
     </option>
   </component>
@@ -213,14 +228,7 @@
               <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="rico" type="462c0819:PsiDirectoryNode" />
-              <item name="hard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="rico" type="462c0819:PsiDirectoryNode" />
-              <item name="tester" type="462c0819:PsiDirectoryNode" />
+              <item name="medium" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -231,7 +239,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597331637150" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597412973554" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -360,13 +368,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Game01OfCows">
+  <component name="RunManager" selected="Application.SolutionLastRemaining">
     <configuration name="Game01OfCows" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.rico.tester.Game01OfCows" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.rico.tester.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolutionLastRemaining" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.medium.SolutionLastRemaining" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rico.medium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -418,9 +439,11 @@
       <item itemvalue="Application.reverseTime" />
       <item itemvalue="Application.TreeNodeTest" />
       <item itemvalue="Application.Game01OfCows" />
+      <item itemvalue="Application.SolutionLastRemaining" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SolutionLastRemaining" />
         <item itemvalue="Application.Game01OfCows" />
         <item itemvalue="Application.TreeNodeTest" />
         <item itemvalue="Application.reverseTime" />
@@ -447,7 +470,7 @@
       <workItem from="1594887098589" duration="1892000" />
       <workItem from="1595248821996" duration="4644000" />
       <workItem from="1595662663295" duration="1236000" />
-      <workItem from="1595855154389" duration="89291000" />
+      <workItem from="1595855154389" duration="93367000" />
     </task>
     <task id="LOCAL-00001" summary="2020.08.10 - update">
       <created>1597045346323</created>
@@ -470,12 +493,12 @@
       <option name="project" value="LOCAL" />
       <updated>1597238440393</updated>
     </task>
-    <task id="LOCAL-00004" summary="增加案例">
-      <created>1596015682966</created>
+    <task id="LOCAL-00004" summary="2020.08.13 - update readme">
+      <created>1597331653185</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1596015682966</updated>
+      <updated>1597331653185</updated>
     </task>
     <task id="LOCAL-00005" summary="修改案例SolutionStrToInt，优化代码并添加注释">
       <created>1596016443150</created>
@@ -547,15 +570,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596878767763</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9664000" />
+    <option name="totallyTimeSpent" value="13740000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19906166" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -592,7 +614,8 @@
     <MESSAGE value="2020.08.10 - update" />
     <MESSAGE value="2020.08.11 - update readme" />
     <MESSAGE value="2020.08.12 - update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020.08.12 - update readme" />
+    <MESSAGE value="2020.08.13 - update readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020.08.13 - update readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -819,6 +842,12 @@
           <properties />
           <option name="timeStamp" value="107" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/medium/SolutionLastRemaining.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/rico/lcmedium/SolutionStringMultiply.java</url>
           <line>71</line>
@@ -839,16 +868,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionPrintListFromTailToHead.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionMovingCount.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
@@ -913,12 +932,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Game01OfCows.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+        <state relative-caret-position="309">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#862#863#0" expanded="true" />
             <element signature="e#915#916#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionPrintListFromTailToHead.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="93" column="27" selection-start-line="93" selection-start-column="22" selection-end-line="93" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/medium/SolutionLastRemaining.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
           </folding>
         </state>
       </provider>

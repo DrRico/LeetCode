@@ -7,7 +7,7 @@ import java.util.Stack;
  * @author Rico_dds
  * @date 2020/8/6 22:33
  *
- *     从尾到头打印链表
+ *      cong尾到头打印链表
  */
 public class SolutionPrintListFromTailToHead {
 

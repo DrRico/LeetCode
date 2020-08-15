@@ -270,7 +270,7 @@ class Solution {
 
 ### 3. 无重复字符的最长子串
 
-```jav
+```java
 class Solution {
     public int lengthOfLongestSubstring(String s) {
 		int len = s.length();//定义长度，作为遍历的边界
@@ -600,9 +600,6 @@ public class Solution {
 ### 19、数组中只出现一次的数字
 
 > 题型一：一个整型数组里除了两个数字之外，其他的数字都出现了两次。请写程序找出这两个只出现一次的数字。
-
-链接：https://www.nowcoder.com/questionTerminal/e02fdb54d7524710a7d664d082bb7811?f=discussion
-来源：牛客网
 
 
 
@@ -1732,7 +1729,7 @@ public class Solution {
             } else {     // 奇数
                 n -= 3;
             }
-            if (n == 1 || n == 2 || n == -2)return -1;
+            if (n == 1 || n == 2 || n == -2)return -1;// 遇到这几种情况肯定是不能得到0的了，故直接返回-1即可、
         }
         return count;
     }
@@ -1809,33 +1806,196 @@ public class Solution {
 }
 ```
 
+### 35、新集合
+
+> - 题意
+>
+>   集合 s 中有整数 111 到 nnn，牛牛想从中挑几个整数组成一个新的集合。 
+>
+>   现在牛妹给牛牛加了 mmm 个限制 ，每个限制包含两个整数 uuu 和 vvv ( u≠vu\neq vu=v)，且 uuu 和 vvv 不能同时出现在新集合中 。 
+>
+>   请问牛牛能组成的新集合多少种。 
+>
+>   *可以选 0 个数* 
+>
+> -  输入
+>
+>   第一个参数为 nnn。 
+>
+>   第二个参数为 mmm 。 
+>
+>   第三个参数为 mmm 对 (u, v) 。 
+>
+>   1<n≤20  1≤m≤400  1≤u,v≤n1 < n \leq 20 \quad 1\leq m \leq 400\quad 1 \leq u, v\leq n1<n≤201≤m≤4001≤u,v≤n  
+>
+>   返回 
+>
+>   一个整数，即新集合的种类数。
+>
+> 
+>
+> 示例1
+>
+> - 输入
+>
+> ```
+> 3,2,[(1,2),(2,3)]
+> ```
+>
+> - 输出
+>
+> ```
+> 5
+> ```
+>
+> - 说明
+>
+> ```
+> 当 n = 3 时，共有 8 个子集，当加上限制 (1, 2), (2, 3) 后，合法的自己有 [], [1], [2], [3], [1, 3] 共 5 个
+> ```
 
 
 
+-------
 
 
 
+```java
+import java.util.*;
+
+/*
+ * public class Point {
+ *   int x;
+ *   int y;
+ * }
+ */
+
+public class Solution {
+    /**
+     * 返回新集合的种类数
+     * @param n int整型 集合大小
+     * @param m int整型 限制数量
+     * @param limit Point类一维数组 不能同时出现的(u,v)集合
+     * @return int整型
+     */
+    int res = 0; boolean[] v;
+    public int solve (int n, int m, Point[] limit) {
+        // write code here
+        v = new boolean[n+1];
+        dfs(limit,1,n);
+        return res;
+    }
+    public void dfs(Point[] limit,int x, int n) {
+        if(x>n) {
+            for(Point lim:limit)
+                if(v[lim.x]&&v[lim.y]) return;
+            res++;
+            return;
+        }
+        v[x] = true;
+        dfs(limit,x+1,n);
+        v[x] = false;
+        dfs(limit,x+1,n);
+    }
+}
+```
+
+### 36、删除链表中重复的结点
+
+> 在一个排序的链表中，存在重复的结点，请删除该链表中重复的结点，重复的结点不保留，返回链表头指针。 例如，链表1->2->3->3->4->4->5 处理后为 1->2->5
+
+- 思路：
+- 1. 首先添加一个头节点，以方便碰到第一个，第二个节点就相同的情况
+  2. 设置 pre ，next指针， pre指针指向当前确定不重复的那个节点，而next指针相当于工作指针，一直往后面搜索。
 
 
 
+```java
+public class Solution {
+    public ListNode deleteDuplication(ListNode pHead){
+        if(pHead == null || pHead.next == null) return pHead;// 非法输入判断
+        ListNode node = new ListNode(0);// 创建一个头结点，避免第一个元素就被删除的情况
+        node.next = pHead;// 将头结点的下一节点指向输入链表的头
+        ListNode pre = node;// 保存不重复的值的指针
+        ListNode next = node.next;// 这个指针一直向后移动，用于判断重复的结点元素
+        while(next != null){    // 遍历这个链表
+            if(next.next != null && next.val == next.next.val){// 要是遇到重复的元素
+                while(next.next != null && next.val == next.next.val){
+                    next = next.next;// 则跳过当前的重复元素
+                }
+                next = next.next;// 并且把本身的重复的值也去掉
+                pre.next = next; // 更新保存指向不重复值的指针
+            } else {// 要是没有遇到重复的值，则往下遍历即可
+                next = next.next;
+                pre = pre.next;
+            }
+        }
+        return node.next;    // 返回，不能直接返回node，因为node的头结点为0，我们不需要
+    }
+}
+```
 
 
 
+### 37、孩子们的游戏(圆圈中最后剩下的数)
+
+> 每年六一儿童节,牛客都会准备一些小礼物去看望孤儿院的小朋友,今年亦是如此。HF作为牛客的资深元老,自然也准备了一些小游戏。其中,有个游戏是这样的:首先,让小朋友们围成一个大圈。然后,他随机指定一个数m,让编号为0的小朋友开始报数。每次喊到m-1的那个小朋友要出列唱首歌,然后可以在礼品箱中任意的挑选礼物,并且不再回到圈中,从他的下一个小朋友开始,继续0...m-1报数....这样下去....直到剩下最后一个小朋友,可以不用表演,并且拿到牛客名贵的“名侦探柯南”典藏版(名额有限哦!!^_^)。请你试着想下,哪个小朋友会得到这份礼品呢？(注：小朋友的编号是从0到n-1)
+>
+> 如果没有小朋友，请返回-1
+
+- 思路：用数组来模拟环
+
+```java
+public class Solution {
+    public int LastRemaining_Solution(int n, int m) {
+        if(n < 1 || m < 1)return -1;
+        int[] arr = new int[n];// 定义一个数组
+        int i = -1, step = 0, count = n;
+        while(count > 0){
+            i++;
+            if(i >= n) i = 0;
+            if(arr[i] == -1) continue; // 要是已经被遍历过了，则跳过
+            step ++; // 步数加1
+            if(step == m){ // 刚好等于m时。则说明到达目标
+                count --;	// 对目标的数目减1
+                step = 0;	// 重新初始化步数
+                arr[i] = -1;//设置标志位
+            }
+        }
+        return i; // 返回最后的i
+    }
+}
+```
 
 
 
+- 思路二:使用列表list去做：先把节点添加到列表当中，模拟游戏去删除节点，主要是index的计算` index = (m - 1 + index) % list.size()`，因为每删除一个节点，list的大小就会发生改变，而我们要模拟环的话就应该对list.size取余即可。
+- java实现如下：
+
+```java
+import java.util.*;
+public class Solution {
+    public int LastRemaining_Solution(int n, int m) {
+        if(n < 1 || m < 1)return -1;
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < n; i ++){// 将节点添加到列表中来
+            list.add(i);
+        }
+        int index = 0;// 设置初始下标
+        while (list.size() > 1){// 遍历，条件是当列表只有一个元素就停止
+            index = (m - 1 + index) % list.size(); // 这一步最关键
+            list.remove(index);
+        }
+        return list.get(0);// 返回仅剩的元素即可
+    }
+}
+```
 
 
 
+### 38、复杂链表的复制
 
-
-
-
-
-
-
-
-
+> 输入一个复杂链表（每个节点中有节点值，以及两个指针，一个指向下一个节点，另一个特殊指针random指向一个随机节点），请对此链表进行深拷贝，并返回拷贝后的头结点。（注意，输出结果中请不要返回参数中的节点引用，否则判题程序会直接返回空）
 
 
 
