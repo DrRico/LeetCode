@@ -1998,6 +1998,51 @@ public class Solution {
 > 输入一个复杂链表（每个节点中有节点值，以及两个指针，一个指向下一个节点，另一个特殊指针random指向一个随机节点），请对此链表进行深拷贝，并返回拷贝后的头结点。（注意，输出结果中请不要返回参数中的节点引用，否则判题程序会直接返回空）
 
 
+- 思路：先将链表的每个节点复制一份再插入到旧节点的后面，再处理ramdon的链接，最后再进行链表的分离就可以得到复制的链表了
+
+```java
+public class Solution {
+    public RandomListNode Clone(RandomListNode pHead){
+        // 1、进行非法的判断
+        if(pHead == null) return null;
+        // 2、复制节点
+        RandomListNode curNode = pHead;
+        while(curNode != null){
+            // 复制节点的值
+            RandomListNode tempNode = new RandomListNode(curNode.label);
+            // 将新节点的值指向源节点的下一个节点
+            tempNode.next = curNode.next;
+            // 将源节点指向新复制的节点
+            curNode.next = tempNode;
+            // 继续往下一位遍历
+            curNode = tempNode.next;
+        }
+        // 3、节点ramdon的连接
+        curNode = pHead;
+        while(curNode != null){
+            // 处理新复制节点的ramdon
+            curNode.next.random = curNode.random == null ? null : curNode.random.next;
+            // 继续往下一位遍历
+            curNode = curNode.next.next;
+        }
+        // 4、拆分链表
+        curNode = pHead;
+        RandomListNode pResHead = pHead.next;
+        while(curNode != null){
+            // 保存新节点的头为tempNode
+            RandomListNode tempNode = curNode.next;
+            // 分离，将curNode指向原来的下一节点
+            curNode.next = tempNode.next;
+            // 处理新复制节点的下一节点
+            tempNode.next = tempNode.next == null ? null : tempNode.next.next;
+            // 继续往下一位遍历
+            curNode = curNode.next;
+        }
+        // 5、返回结果
+        return pResHead;
+    }
+}
+```
 
 
 
