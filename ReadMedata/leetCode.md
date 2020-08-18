@@ -2381,3 +2381,272 @@ public class Solution {
 }
 ```
 
+
+
+### 44、树的子结构
+
+> 输入两棵二叉树A，B，判断B是不是A的子结构。（ps：我们约定空树不是任意一个树的子结构）
+
+- 思路：思路其实是有的，第一想到的就是用前序遍历的方式去遍历树，然后判断子树遍历的结果是否在大二叉树中即可。（感觉使用到KMP算法、查找算法）
+
+- java实现，这可能不是面试官需要考察的答案，我中乱想出来的：
+
+```java
+public class Solution {
+    public boolean HasSubtree(TreeNode root1,TreeNode root2) {
+        if(root2 == null || root1 == null) return false;
+        StringBuffer s1 = new StringBuffer();
+        StringBuffer s2 = new StringBuffer();
+        Helper(root1,s1);// 引用传递，对root1前序遍历后写入s1
+        Helper(root2,s2);
+        return s1.toString().contains(s2.toString());// 判断是否包含子串
+    }
+    void Helper(TreeNode p,StringBuffer s){// 这个函数的左右主要是前序遍历二叉树
+        if(p == null)return;
+        s.append(p.val);
+        if(p.left !=null)Helper(p.left,s);
+        if(p.right != null)Helper(p.right,s);
+    }
+}
+
+```
+
+- 这应该是正确的打开方式：
+
+```java
+public class Solution {
+    public static boolean HasSubtree(TreeNode root1, TreeNode root2) {
+		boolean result = false;
+		//当Tree1和Tree2都不为零的时候，才进行比较。否则直接返回false
+		if (root2 != null && root1 != null) {
+			//如果找到了对应Tree2的根节点的点
+			if(root1.val == root2.val){
+				//以这个根节点为为起点判断是否包含Tree2
+				result = doesTree1HaveTree2(root1,root2);
+			}
+			//如果找不到，那么就再去root的左儿子当作起点，去判断时候包含Tree2
+			if (!result) {
+				result = HasSubtree(root1.left,root2);
+			}
+			
+			//如果还找不到，那么就再去root的右儿子当作起点，去判断时候包含Tree2
+			if (!result) {
+				result = HasSubtree(root1.right,root2);
+			   }
+			}
+		    //返回结果
+		return result;
+	}
+
+	public static boolean doesTree1HaveTree2(TreeNode node1, TreeNode node2) {
+		//如果Tree2已经遍历完了都能对应的上，返回true
+		if (node2 == null) {
+			return true;
+		}
+		//如果Tree2还没有遍历完，Tree1却遍历完了。返回false
+		if (node1 == null) {
+			return false;
+		}
+		//如果其中有一个点没有对应上，返回false
+    	if (node1.val != node2.val) {	
+				return false;
+		}
+    	
+    	//如果根节点对应的上，那么就分别去子节点里面匹配
+    	return doesTree1HaveTree2(node1.left,node2.left) && doesTree1HaveTree2(node1.right,node2.right);
+    }
+```
+
+- 精简版的java代码
+
+```java
+public boolean HasSubtree(TreeNode root1,TreeNode root2) {
+    if(root1==null || root2==null)  return false;
+    return doesTree1HasTree2(root1, root2)|| HasSubtree(root1.left, root2)
+            ||HasSubtree(root1.right, root2);
+}
+
+private boolean doesTree1HasTree2(TreeNode root1,TreeNode root2) {
+    if(root2==null)  return true;
+    if(root1==null)  return false;
+    return root1.val==root2.val && doesTree1HasTree2(root1.left, root2.left)
+            && doesTree1HasTree2(root1.right, root2.right);
+}
+```
+
+### 45、二叉搜索树与双向链表
+
+> 输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的双向链表。要求不能创建任何新的结点，只能调整树中结点指针的指向。
+
+- 思路，二叉搜索树、排序等关键词，应该用中序遍历。
+- java实现
+
+```java
+/**
+解题思路：
+1.核心是中序遍历的非递归算法。
+2.修改当前遍历节点与前一遍历节点的指针指向。
+*/
+import java.util.*;
+public class Solution {
+    public TreeNode Convert(TreeNode pRootOfTree) {
+        if(pRootOfTree == null) return null;
+        Stack<TreeNode> stack = new Stack<>();
+        boolean isFirst = true;
+        TreeNode p = pRootOfTree;
+        TreeNode pre = null;// 用于保存中序遍历序列的上一节点
+        while(p != null || !stack.isEmpty()){
+            while(p != null){
+                stack.push(p);
+                p = p.left;
+            }
+            p = stack.pop();
+            if(isFirst){
+                pRootOfTree = p; //第一次执行，则先将中序遍历序列中的第一个节点记为pRootOfTree
+                pre = p;
+                isFirst = false;
+            }else{
+                p.left = pre;// p的左指向pre，pre <- p
+                pre.right = p;// 而pre的右指向p，pre -> p,故形成双链
+                pre = p;    // 后移一个
+            }
+            p = p.right;
+        }
+        return pRootOfTree;
+    }
+}
+```
+
+- 解法二
+
+```java
+public class Solution {
+    TreeNode pre=null;
+    public TreeNode Convert(TreeNode pRootOfTree) {
+        if(pRootOfTree==null)
+            return null;
+        Convert(pRootOfTree.right);
+        if(pre==null)
+            pre=pRootOfTree;
+        else{
+            pRootOfTree.right=pre;
+            pre.left=pRootOfTree;
+            pre=pRootOfTree;
+        }
+        Convert(pRootOfTree.left);
+        return pre;
+    }
+}
+```
+
+
+
+### 46、最小的K个数
+
+> 输入n个整数，找出其中最小的K个数。例如输入4,5,1,6,2,7,3,8这8个数字，则最小的4个数字是1,2,3,4。
+
+思路一：很容易想到的就是将数组排序，再去取前面k个数字就可以了
+
+```java
+import java.util.*;
+public class Solution {
+    public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k){
+        ArrayList<Integer> res = new ArrayList<Integer>();
+        if(k > input.length)return res;
+        Arrays.sort(input);
+        for(int i = 0; i < k; i ++){
+            res.add(input[i]);
+        }
+        return res;
+    }
+}
+```
+
+- 思路二：用最大堆保存这k个数，每次只和堆顶比，如果比堆顶小，删除堆顶，新数入堆。
+- java实现：
+
+```java
+import java.util.ArrayList;
+import java.util.PriorityQueue;
+import java.util.Comparator;
+public class Solution {
+   public ArrayList<Integer> GetLeastNumbers_Solution(int[] input, int k) {
+       ArrayList<Integer> result = new ArrayList<Integer>();
+       int length = input.length;
+       if(k > length || k == 0){
+           return result;
+       }
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(k, new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o2.compareTo(o1);
+            }
+        });
+        for (int i = 0; i < length; i++) {
+            if (maxHeap.size() != k) {
+                maxHeap.offer(input[i]);
+            } else if (maxHeap.peek() > input[i]) {
+                Integer temp = maxHeap.poll();
+                temp = null;
+                maxHeap.offer(input[i]);
+            }
+        }
+        for (Integer integer : maxHeap) {
+            result.add(integer);
+        }
+        return result;
+    }
+}
+```
+
+
+
+### 47、顺时针打印矩阵
+
+> 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.
+
+- 思路：旋转打印有点难，不过也是有办法的。我们可以把矩阵想象为一个魔方，我读完第一行之后，我就把魔方左转90度，再读取第一行，这样循环，直到最后一行结束。具体看代码中注释。
+- java代码
+
+```java
+import java.util.ArrayList;
+public class Solution {
+    public ArrayList<Integer> printMatrix(int [][] matrix) {
+        //作为存放结果的容器
+        ArrayList<Integer> list = new ArrayList<>();
+        //拿到出事数组的行数
+        int row = matrix.length;
+        while(row != 0){
+            //将数组的第一行先添加进容器中
+            for(int i=0;i<matrix[0].length;i++)
+                list.add(matrix[0][i]);
+            //当行数等于1时就没有必要再继续执行了，在上面打印完之后就可以停止了
+            if(row == 1)
+                break;
+            //删除上面遍历的数组的第一行，然后旋转这个数组并返回
+            matrix = revert(matrix);
+            //更新行数
+            row = matrix.length;
+        }
+        //返回
+        return list;
+    }
+ 
+    private int[][] revert(int[][] matrix){
+        //拿到matrix的行数和列数
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+ //因为我们要将原数组遍历过的第一行删除，然后旋转变成一个新的数组，所以先初始化一下这个新数组
+        int[][] newMatrix = new int[cols][rows-1];
+        //对这个新数组进行赋值
+        for(int j=cols-1;j>=0;j--){
+            for(int i=1;i<rows;i++){
+                newMatrix[cols-j-1][i-1] = matrix[i][j];
+            }
+        }
+        //返回新数组
+        return newMatrix;
+    }
+}
+```
+
