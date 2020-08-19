@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6b5a1f9-65ed-4500-a8f3-a767cb10223a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Image/剑指offer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/力扣.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/力扣2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rico/hard/SolutionGetLeastNumbers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMedata/leetCode.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/leetCode.md" afterDir="false" />
     </list>
@@ -38,13 +34,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="1637" />
-          <entry key="txt" value="42" />
+          <entry key="txt" value="63" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="1637" />
-          <entry key="PLAIN_TEXT" value="42" />
+          <entry key="PLAIN_TEXT" value="63" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -91,8 +87,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionGetLeastNumbers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="11" column="83" selection-start-line="11" selection-start-column="83" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="380">
+              <caret line="23" column="75" lean-forward="true" selection-start-line="23" selection-start-column="75" selection-end-line="23" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -176,7 +172,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597758289031" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597826021667" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -300,7 +296,7 @@
       <workItem from="1595248821996" duration="4644000" />
       <workItem from="1595662663295" duration="1236000" />
       <workItem from="1595855154389" duration="93367000" />
-      <workItem from="1597627257933" duration="7894000" />
+      <workItem from="1597627257933" duration="8050000" />
     </task>
     <task id="LOCAL-00001" summary="2020.08.10 - update">
       <created>1597045346323</created>
@@ -337,12 +333,12 @@
       <option name="project" value="LOCAL" />
       <updated>1597677533013</updated>
     </task>
-    <task id="LOCAL-00006" summary="增加案例SolutionAddBinary和SolutionStringMultiply">
-      <created>1596095895074</created>
+    <task id="LOCAL-00006" summary="2020.08.18 - update readme and add SolutionGetLeastNumbers &amp;&amp; Image">
+      <created>1597763803418</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1596095895074</updated>
+      <updated>1597763803418</updated>
     </task>
     <task id="LOCAL-00007" summary="增加案例SolutionSovle.java和SolutionIntegerBreak.java">
       <created>1596157291275</created>
@@ -400,11 +396,11 @@
       <option name="project" value="LOCAL" />
       <updated>1596878767763</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24979000" />
+    <option name="totallyTimeSpent" value="25135000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -484,7 +480,8 @@
     <MESSAGE value="2020.08.12 - update readme" />
     <MESSAGE value="2020.08.13 - update readme" />
     <MESSAGE value="2020.08.17 - update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020.08.17 - update readme" />
+    <MESSAGE value="2020.08.18 - update readme and add SolutionGetLeastNumbers &amp;&amp; Image" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020.08.18 - update readme and add SolutionGetLeastNumbers &amp;&amp; Image" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -904,8 +901,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionGetLeastNumbers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="11" column="83" selection-start-line="11" selection-start-column="83" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="380">
+          <caret line="23" column="75" lean-forward="true" selection-start-line="23" selection-start-column="75" selection-end-line="23" selection-end-column="75" />
         </state>
       </provider>
     </entry>

@@ -2650,3 +2650,164 @@ public class Solution {
 }
 ```
 
+### 48、合并两个排序的链表
+
+> 输入两个单调递增的链表，输出两个链表合成后的链表，当然我们需要合成后的链表满足单调不减规则。
+
+- 我的思路：我先将表头小的元素作为新链表的头结点，接着只要比价头结点的元素即可完成合并
+
+> 代码一实现：
+
+```java
+/*
+public class ListNode {
+    int val;
+    ListNode next = null;
+    ListNode(int val) {
+        this.val = val;
+    }
+}*/
+public class Solution {
+    public ListNode Merge(ListNode list1,ListNode list2) {
+        if(list1 == null) return list2;
+        if(list2 == null) return list1;
+        // 新建一个头节点，用来存合并的链表
+        ListNode node = new ListNode(-1);;
+        node.next = null;
+        ListNode res = node;
+        while(list2 != null && list1 !=null){
+            if(list1.val < list2.val){
+                node.next = list1;
+                node = list1;
+                list1 = list1.next;
+                
+            }else{
+                node.next = list2;
+                node = list2;
+                list2 = list2.next;
+            }
+        }
+		// 把未结束的链表连接到合并后的链表尾部
+        if(list1!=null){
+            node.next=list1;
+        }
+        if(list2!=null){
+            node.next=list2;
+        }
+        return res.next;
+    }
+}
+```
+
+> 代码二实现：
+
+```java
+public class Solution {
+    public ListNode Merge(ListNode list1,ListNode list2) {
+        if(list1 == null) return list2;
+        if(list2 == null) return list1;
+        ListNode Head;
+        ListNode p;
+        //取较小值作头结点
+        if(list1.val <= list2.val){
+            Head = list1;
+            list1 = list1.next;
+        }
+        else{
+            Head = list2;
+            list2 = list2.next;
+        }
+        //p为合并后的链表的工作指针
+        p = Head;
+        //开始遍历合并
+        while(list2 != null && list1 != null){
+            //当有一个链表到结尾时，循环结束
+            if(list1.val <= list2.val){//如果链表1的结点小于链表2的结点
+                p.next = list1;//取这个结点加入合并链表
+                list1 = list1.next; //链表1后移一位
+                p = p.next;//工作指针后移一位
+            }
+            else{//否则取链表2的结点
+                p.next = list2;
+                list2 = list2.next;
+                p = p.next;
+            }
+        }
+        if(list1 == null)  //链表1遍历完了
+            p.next = list2;  //如果链表2也遍历完了，则pHead2=NULL
+        if(list2 == null) //链表2遍历完了
+            p.next = list1;         ///如果链表1也遍历完了，则pHead1=NULL
+        return Head;
+    }
+}
+```
+
+- 我自己的代码：
+
+```java
+public class Solution {
+    public ListNode Merge(ListNode list1,ListNode list2) {
+        if(list1 == null) return list2;// 判断输入
+        if(list2 == null) return list1;
+        ListNode node; // 工作节点指针
+        ListNode res;  // 返回的指针
+        if(list1.val < list2.val){// 头结点的处理，取小者作为头结点。
+            node = list1;
+            list1 = list1.next;
+        } else {
+            node = list2;
+            list2 = list2.next;
+        }
+        res = node;// 保存结果的头结点
+        while(list2 != null && list1 != null){ // 要是都不为空时遍历
+            if(list1.val < list2.val){  // 取小者作为下一节点
+                node.next = list1; // 添加下一节点 
+                list1 = list1.next;	// 后移
+                node = node.next;	// 后移
+            }else{
+                node.next = list2;
+                list2 = list2.next;
+                node = node.next;
+            }
+        }
+        // 要是list2遍历完了，则将list2剩余的全部节点添加到node的后面
+        if(list2 == null)node.next = list1;
+        // 要是list1遍历完了，则将list1剩余的全部节点添加到node的后面
+        if(list1 == null)node.next = list2;
+        return res;
+    }
+}
+```
+
+
+
+- 别人的思路：
+
+
+
+```java
+/*
+public class ListNode {
+    int val;
+    ListNode next = null;
+    ListNode(int val) {
+        this.val = val;
+    }
+}*/
+public class Solution {
+    public ListNode Merge(ListNode list1,ListNode list2) {
+        if(list1 == null) return list2;
+        if(list2 == null) return list1;
+        ListNode node = null;
+        if(list1.val < list2.val){
+            node = list1;
+            node.next = Merge(list1.next,list2);
+        } else {
+            node = list2;
+            node.next = Merge(list1,list2.next);
+        }
+        return node;
+    }
+}
+```
+
