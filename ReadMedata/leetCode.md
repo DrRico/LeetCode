@@ -2811,3 +2811,5 @@ public class Solution {
 }
 ```
 
+### 49、和为S的连续正数序列
+
