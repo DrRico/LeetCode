@@ -2813,3 +2813,274 @@ public class Solution {
 
 ### 49、和为S的连续正数序列
 
+> 小明很喜欢数学,有一天他在做数学作业时,要求计算出9~16的和,他马上就写出了正确答案是100。但是他并不满足于此,他在想究竟有多少种连续的正数序列的和为100(至少包括两个数)。没多久,他就得到另一组连续正数和为100的序列:18,19,20,21,22。现在把问题交给你,你能不能也很快的找出所有和为S的连续正数序列? Good Luck!(输出所有和为S的连续正数序列。序列内按照从小至大的顺序，序列间按照开始数字从小到大的顺序)
+
+- 思路：采用滑动窗口，具体就看代码：
+
+
+
+```java
+/**
+[1    2]    3    4    5    6    7    8    9
+滑动窗口思想，不断去扩大右窗口、或者减小左窗口去计算窗口中和的值
+也可以理解为双指针法
+**/
+import java.util.*;
+public class Solution {
+    public ArrayList<ArrayList<Integer>> FindContinuousSequence(int sum) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();// 结果数组
+        int left = 1, right = 2;// 初始值
+        if(sum < left + right)return res; // 当sum小于3是不满足要求的，直接返回
+        int cur = left + right;        // 记录当前窗口中的值
+        while(right > left && sum > right){ // 主循环
+            while(cur < sum && sum > right){ // 小循环，当窗口和小于目标，则不断向右扩大
+                right ++;    // 移动右边，扩大窗口
+                cur += right;// 更新窗口内值的和
+            }
+            if(sum == cur){  // 满足要求，添加到结果数组
+                res.add(getResList(left, right));
+            }
+            cur -= left;    // 减去最左边窗口的元素值
+            left ++;        // 左窗口移动
+        }
+        return res;
+    }
+    public ArrayList<Integer> getResList(int left, int right){
+        ArrayList<Integer> res = new ArrayList<Integer>();
+        for(int i = left; i <= right; i ++){
+            res.add(i);
+        }
+        return res;
+    }
+}
+```
+
+
+
+### 50、数据流中的中位数
+
+> 如何得到一个数据流中的中位数？如果从数据流中读出奇数个数值，那么中位数就是所有数值排序之后位于中间的数值。如果从数据流中读出偶数个数值，那么中位数就是所有数值排序之后中间两个数的平均值。我们使用Insert()方法读取数据流，使用GetMedian()方法获取当前读取数据的中位数。
+
+- 思路一：使用数组保存数据流中的每一位数据，排序后，分奇数和偶数情况进行取数据即可
+- 思路二：使用一个小顶堆和一个大顶堆；大顶堆用来保存**较小**的数，**从大到小排列**、小顶堆保存**较大**的数，**从小到大排列**，故显然中位数就是**大顶堆的根节点与小顶堆的根节点和的平均数**。
+
+- 大顶堆，根节点最大，需要重写compare方法；小顶堆，根节点最小 ，java中默认的PriorityQueue就是小顶堆。
+
+- ⭐保证：**小顶堆中的元素**都==大于等于==**大顶堆中的元素**，所以每次塞值，并不是直接塞进去，而是从另一个堆中poll出一个最大（最小）的塞值
+- ⭐当数目为偶数的时候，将这个值插入大顶堆中，再将大顶堆中根节点（即最大值）插入到小顶堆中；
+- ⭐当数目为奇数的时候，将这个值插入小顶堆中，再讲小顶堆中根节点（即最小值）插入到大顶堆中；
+- ⭐取中位数的时候，如果当前个数为偶数，显然是取小顶堆和大顶堆根结点的平均值；如果当前个数为奇数，显然是取小顶堆的根节点
+
+```JAVA
+import java.util.PriorityQueue;
+import java.util.Comparator;
+public class Solution {
+    //小顶堆
+    private PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
+    //大顶堆
+    private PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(5, new Comparator<Integer>() {
+        @Override
+        public int compare(Integer o1, Integer o2) {
+            return o2 - o1;
+        }
+    });
+    //记录偶数个还是奇数个
+    int count = 0;
+    //每次插入小顶堆的是当前大顶堆中最大的数
+    //每次插入大顶堆的是当前小顶堆中最小的数
+    //这样保证小顶堆中的数永远大于等于大顶堆中的数
+    //中位数就可以方便地从两者的根结点中获取了
+    public void Insert(Integer num) {
+        if(count % 2 == 0){
+            if(!maxHeap.isEmpty() && maxHeap.peek() > num){
+                int old = maxHeap.poll();
+                maxHeap.offer(num);
+                num = old;
+            }
+            minHeap.offer(num);
+        }else{
+            if(!minHeap.isEmpty() && minHeap.peek() < num){
+                int old = minHeap.poll();
+                minHeap.offer(num);
+                num = old;
+            }
+            maxHeap.offer(num);
+        }
+        count ++;
+    }
+    public Double GetMedian() {
+        //当前为偶数个，则取小顶堆和大顶堆的堆顶元素求平均
+        if(count % 2 == 0){
+            return (minHeap.peek() + maxHeap.peek()) / 2.0;
+        }else{
+            //当前为奇数个，则直接从小顶堆中取元素即可
+            return Double.valueOf(minHeap.peek());
+        }
+    }
+}
+
+```
+
+或者：
+
+```java
+import java.util.PriorityQueue;
+import java.util.Comparator;
+public class Solution {
+    //小顶堆
+    private PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
+    
+    //大顶堆,使用lmabda表达式
+    private PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>((o1,o2)->(o2-o1));
+    
+    //记录偶数个还是奇数个
+    int count = 0;
+    //每次插入小顶堆的是当前大顶堆中最大的数
+    //每次插入大顶堆的是当前小顶堆中最小的数
+    //这样保证小顶堆中的数永远大于等于大顶堆中的数
+    //中位数就可以方便地从两者的根结点中获取了
+    public void Insert(Integer num) {
+        //个数为偶数的话，则先插入到大顶堆，然后将大顶堆中最大的数插入小顶堆中
+        if(count % 2 == 0){
+            maxHeap.offer(num);
+            int max = maxHeap.poll();
+            minHeap.offer(max);
+        }else{
+            //个数为奇数的话，则先插入到小顶堆，然后将小顶堆中最小的数插入大顶堆中
+            minHeap.offer(num);
+            int min = minHeap.poll();
+            maxHeap.offer(min);
+        }
+        count++;
+    }
+    public Double GetMedian() {
+        //当前为偶数个，则取小顶堆和大顶堆的堆顶元素求平均
+        if(count % 2 == 0){
+            return new Double(minHeap.peek() + maxHeap.peek())/2;
+        }else{
+            //当前为奇数个，则直接从小顶堆中取元素即可
+            return new Double(minHeap.peek());
+        }
+    }
+}
+
+```
+
+### 51、矩阵中的路径
+
+> ![图片说明](https://uploadfiles.nowcoder.com/images/20200320/1687_1584718756308_1FC457B1436BF74A67E17C2127AA478C)
+
+思路：回溯、dfs、bfs
+
+```java
+
+class Solution {
+public boolean hasPath(char[] matrix, int rows, int cols, char[] str){
+        char[][] board = new char[rows][cols];
+        int index = 0;
+        for (int i = 0; i < rows; i ++){
+            for (int j = 0; j < cols; j ++){
+                board[i][j] = matrix[index ++];
+            }
+        }
+        // 以上为处理字符串数组一维变成二维的，以下为LeetCode中的代码格式
+        boolean[][] vis = new boolean[board.length][board[0].length];
+        for (int i = 0; i < board.length; i ++){
+            for (int j = 0; j < board[i].length; j ++){
+                if(dfs(board, new String(str), vis, i, j, 0)){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    
+    boolean dfs(char[][] board, String word, boolean[][] vis, int x, int y, int index){
+        // 以下if为截止条件
+        // 越界处理和判断每个方格的访问标志
+        if (x < 0 || x > board.length - 1 || y < 0 || y > board[0].length - 1 || vis[x][y]){
+            return false;
+        }
+        // 当匹配到某个字符不满足条件
+        if (word.charAt(index) != board[x][y]){
+            return false;
+        }
+        // 要是以上两个if都不进入，说明都成功匹配，则判断匹配的长度是否等于字符串的长度
+        if (index == word.length() - 1){
+            return true;
+        }
+        vis[x][y] = true;// 标志位设置
+        boolean flag = dfs(board, word, vis, x + 1, y, index + 1) ||
+                       dfs(board, word, vis, x - 1, y, index + 1) ||
+                       dfs(board, word, vis, x, y + 1, index + 1) ||
+                       dfs(board, word, vis, x, y - 1, index + 1);
+        vis[x][y] = false;// 标志位恢复现场
+        return flag;
+    }
+
+}
+```
+
+
+
+### 52、丑数
+
+> 把只包含质因子2、3和5的数称作丑数（Ugly Number）。例如6、8都是丑数，但14不是，因为它包含质因子7。 习惯上我们把1当做是第一个丑数。求按从小到大的顺序的第N个丑数。
+
+- 思路：**要注意，后面的丑数是有前一个丑数乘以2，3，5中的一个得来。因此可以用动态规划去解**,**同时注意一下，题目意思应该是质数因此，而不是因子，因为8的因子有1，2，4，8**
+
+- 所有的丑数分为三种类型 2*i,3*i,5*i   其中 i是数组中的元素，一开始只有1
+
+  **2\*1** 3*1  5*1
+
+  2*2  **3\*1** 5*1
+  **2\*2** 3*2  5*1
+  2*3  3*2  **5\*1**
+  **2\*3** 3*2  5*2
+  **2\*4** 3*3  5*2
+  2*5  **3\*3** 5*2
+  **2\*5** 3*4  5*2
+  **2\*6** 3*4  5*3
+  2*8  **3\*5** 5*3
+  **2\*8** 3*6  5*4
+
+- 代码一：
+
+```java
+public class Solution {
+    public int GetUglyNumber_Solution(int index) {
+        if(index <= 0) return 0;
+        int[] a = new int[index];
+        a[0] = 1;
+        int index1 = 0, index2 = 0, index3 = 0;
+        for (int i = 1; i < index; i++){
+            a[i] = Math.min(Math.min(a[index1] * 2,a[index2] * 3),a[index3] * 5);
+            if(a[i] == a[index1] * 2) index1 ++;
+            if(a[i] == a[index2] * 3) index2 ++;
+            if(a[i] == a[index3] * 5) index3 ++;
+        }
+        return a[index - 1];
+    }
+}
+```
+
+- 代码二：
+
+```java
+    private static int GetUglyNumber_Solution(int index) {
+        if (index < 0) return 0;
+        int[] uglyArr = new int[index];
+        uglyArr[0] = 1;
+        int p2 = 0, p3 = 0, p5 = 0;
+        for (int i = 1; i < index; i ++){
+            int lastMaxUgly = uglyArr[i - 1];
+            while (lastMaxUgly >= uglyArr[p2] * 2) p2 ++;
+            while (lastMaxUgly >= uglyArr[p3] * 3) p3 ++;
+            while (lastMaxUgly >= uglyArr[p5] * 5) p5 ++;
+            uglyArr[i] = Math.min( Math.min(uglyArr[p2] * 2,uglyArr[p3] * 3),uglyArr[p5] * 5);
+
+        }
+        return uglyArr[index - 1];
+    }
+```
+
