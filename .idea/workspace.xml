@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c6b5a1f9-65ed-4500-a8f3-a767cb10223a" name="Default Changelist" comment="2020.08.20 - update readme">
-      <change afterPath="$PROJECT_DIR$/src/com/rico/hard/GetUglyNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rico/lcmedium/existPaths.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rico/medium/GetMedian.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rico/medium/SolutionFindContinuousSequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMedata/leetCode.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/leetCode.md" afterDir="false" />
-    </list>
+    <list default="true" id="c6b5a1f9-65ed-4500-a8f3-a767cb10223a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,18 +34,19 @@
         <counts>
           <entry key="java" value="3173" />
           <entry key="md" value="10" />
-          <entry key="txt" value="66" />
+          <entry key="txt" value="102" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="3173" />
           <entry key="Markdown" value="10" />
-          <entry key="PLAIN_TEXT" value="66" />
+          <entry key="PLAIN_TEXT" value="102" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -133,8 +127,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/rico/hard/GetUglyNumber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="14" selection-start-line="14" selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="124">
+              <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
               <folding>
                 <element signature="method#GetUglyNumber_Solution_1#0;class#GetUglyNumber#0" />
                 <element signature="method#isUgly#0;class#GetUglyNumber#0" />
@@ -234,7 +228,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598025236913" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598066540333" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
@@ -359,7 +353,7 @@
       <workItem from="1595248821996" duration="4644000" />
       <workItem from="1595662663295" duration="1236000" />
       <workItem from="1595855154389" duration="93367000" />
-      <workItem from="1597627257933" duration="21581000" />
+      <workItem from="1597627257933" duration="22308000" />
     </task>
     <task id="LOCAL-00001" summary="2020.08.10 - update">
       <created>1597045346323</created>
@@ -417,12 +411,12 @@
       <option name="project" value="LOCAL" />
       <updated>1597936181299</updated>
     </task>
-    <task id="LOCAL-00009" summary="一天能刷几道题呢目前5道">
-      <created>1596458883911</created>
+    <task id="LOCAL-00009" summary="2020.08.21 -add GetUglyNumber,existPaths,GetMedian and SolutionFindContinuousSequence,update readme">
+      <created>1598025466896</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1596458883911</updated>
+      <updated>1598025466896</updated>
     </task>
     <task id="LOCAL-00010" summary="3道hard">
       <created>1596593164573</created>
@@ -459,15 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596878767763</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38666000" />
+    <option name="totallyTimeSpent" value="39393000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49886876" visible="true" weight="0.21045576" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -478,7 +471,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.50113124" side_tool="true" weight="0.20171674" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2539007" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2539007" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34751773" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -546,7 +539,8 @@
     <MESSAGE value="2020.08.18 - update readme and add SolutionGetLeastNumbers &amp;&amp; Image" />
     <MESSAGE value="2020.08.19 - update readme" />
     <MESSAGE value="2020.08.20 - update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020.08.20 - update readme" />
+    <MESSAGE value="2020.08.21 -add GetUglyNumber,existPaths,GetMedian and SolutionFindContinuousSequence,update readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020.08.21 -add GetUglyNumber,existPaths,GetMedian and SolutionFindContinuousSequence,update readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1092,8 +1086,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/hard/GetUglyNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="14" selection-start-line="14" selection-end-line="28" selection-end-column="5" />
+        <state relative-caret-position="124">
+          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
           <folding>
             <element signature="method#GetUglyNumber_Solution_1#0;class#GetUglyNumber#0" />
             <element signature="method#isUgly#0;class#GetUglyNumber#0" />
