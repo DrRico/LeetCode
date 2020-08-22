@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6b5a1f9-65ed-4500-a8f3-a767cb10223a" name="Default Changelist" comment="" />
+<<<<<<< HEAD
+=======
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,24 +21,37 @@
     <session id="-1627830408">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="5" />
+          <entry key="java" value="20" />
+          <entry key="jpg" value="1" />
+          <entry key="md" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="5" />
+          <entry key="Image" value="1" />
+          <entry key="JAVA" value="20" />
+          <entry key="Markdown" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1217" />
-          <entry key="txt" value="41" />
+          <entry key="java" value="3173" />
+          <entry key="md" value="10" />
+          <entry key="txt" value="102" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1217" />
-          <entry key="PLAIN_TEXT" value="41" />
+          <entry key="JAVA" value="3173" />
+          <entry key="Markdown" value="10" />
+          <entry key="PLAIN_TEXT" value="102" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -71,6 +89,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ReadMedata/leetCode.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -79,15 +98,63 @@
                 <caret line="2039" column="9" lean-forward="true" selection-start-line="2039" selection-start-column="9" selection-end-line="2039" selection-end-column="9" />
               </first_editor>
               <second_editor />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/medium/SolutionFindContinuousSequence.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+              <folding>
+                <element signature="e#565#585#0" expanded="true" />
+                <element signature="e#1076#1085#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/medium/GetMedian.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-304">
+              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+              <folding>
+                <element signature="e#176#185#0" expanded="true" />
+                <element signature="e#274#283#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/existPaths.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-484">
+              <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+              <folding>
+                <element signature="e#394#418#0" expanded="true" />
+              </folding>
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Answerofjudge.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
               <caret line="6" column="44" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="44" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/hard/GetUglyNumber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+              <folding>
+                <element signature="method#GetUglyNumber_Solution_1#0;class#GetUglyNumber#0" />
+                <element signature="method#isUgly#0;class#GetUglyNumber#0" />
+              </folding>
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
             </state>
           </provider>
         </entry>
@@ -101,6 +168,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Entry</find>
+      <find>put</find>
+      <find>Node</find>
+      <find>getNode</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -112,8 +187,13 @@
         <option value="$PROJECT_DIR$/src/com/rico/tester/Game01OfCows.java" />
         <option value="$PROJECT_DIR$/src/com/rico/hard/SolutionPrintListFromTailToHead.java" />
         <option value="$PROJECT_DIR$/src/com/rico/medium/SolutionLastRemaining.java" />
-        <option value="$PROJECT_DIR$/ReadMedata/leetCode.md" />
         <option value="$PROJECT_DIR$/src/com/rico/tester/Answerofjudge.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/hard/SolutionGetLeastNumbers.java" />
+        <option value="$PROJECT_DIR$/ReadMedata/leetCode.md" />
+        <option value="$PROJECT_DIR$/src/com/rico/medium/SolutionFindContinuousSequence.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/medium/GetMedian.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/lcmedium/existPaths.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/hard/GetUglyNumber.java" />
       </list>
     </option>
   </component>
@@ -124,16 +204,20 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="461" />
-    <option name="y" value="28" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="460" />
+    <option name="y" value="27" />
+    <option name="width" value="1383" />
+    <option name="height" value="745" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="PackagesPane" />
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -144,25 +228,50 @@
             <path>
               <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="ReadMedata" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="rico" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="rico" type="462c0819:PsiDirectoryNode" />
+              <item name="hard" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+<<<<<<< HEAD
       <pane id="PackagesPane" />
+=======
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597591153316" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598066540333" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjectData\LeetCode\Image" />
       <recent name="E:\LeetCode\Image" />
       <recent name="D:\IdeaProjectData\LeetCode\src\com\rico\tester" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
     <UpdatedFiles>
       <FILE-GROUP>
@@ -4732,6 +4841,8 @@
       </FILE-GROUP>
     </UpdatedFiles>
   </component>
+=======
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -4744,6 +4855,7 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Application.Answerofjudge">
     <configuration name="Answerofjudge" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.rico.tester.Answerofjudge" />
@@ -4751,6 +4863,15 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.rico.tester.*" />
+=======
+  <component name="RunManager" selected="Application.GetUglyNumber">
+    <configuration name="GetMedian" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.medium.GetMedian" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rico.medium.*" />
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -4758,12 +4879,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="Game01OfCows" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.rico.tester.Game01OfCows" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.rico.tester.*" />
+=======
+    <configuration name="GetUglyNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.hard.GetUglyNumber" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rico.hard.*" />
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -4771,8 +4901,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="SolutionLastRemaining" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.rico.medium.SolutionLastRemaining" />
+=======
+    <configuration name="SolutionFindContinuousSequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.medium.SolutionFindContinuousSequence" />
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
@@ -4784,8 +4919,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="SolutionPrintListFromTailToHead" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.rico.hard.SolutionPrintListFromTailToHead" />
+=======
+    <configuration name="SolutionGetLeastNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.hard.SolutionGetLeastNumbers" />
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
@@ -4797,12 +4937,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="TreeNodeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.rico.tester.TreeNodeTest" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.rico.tester.*" />
+=======
+    <configuration name="existPaths" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.lcmedium.existPaths" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rico.lcmedium.*" />
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -4811,6 +4960,7 @@
       </method>
     </configuration>
     <list>
+<<<<<<< HEAD
       <item itemvalue="Application.TreeNodeTest" />
       <item itemvalue="Application.Game01OfCows" />
       <item itemvalue="Application.SolutionLastRemaining" />
@@ -4824,6 +4974,21 @@
         <item itemvalue="Application.SolutionLastRemaining" />
         <item itemvalue="Application.Game01OfCows" />
         <item itemvalue="Application.TreeNodeTest" />
+=======
+      <item itemvalue="Application.SolutionGetLeastNumbers" />
+      <item itemvalue="Application.SolutionFindContinuousSequence" />
+      <item itemvalue="Application.GetMedian" />
+      <item itemvalue="Application.existPaths" />
+      <item itemvalue="Application.GetUglyNumber" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GetUglyNumber" />
+        <item itemvalue="Application.existPaths" />
+        <item itemvalue="Application.GetMedian" />
+        <item itemvalue="Application.SolutionFindContinuousSequence" />
+        <item itemvalue="Application.SolutionGetLeastNumbers" />
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
       </list>
     </recent_temporary>
   </component>
@@ -4847,6 +5012,10 @@
       <workItem from="1595248821996" duration="4644000" />
       <workItem from="1595662663295" duration="1236000" />
       <workItem from="1595855154389" duration="93367000" />
+<<<<<<< HEAD
+=======
+      <workItem from="1597627257933" duration="22308000" />
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
     </task>
     <task id="LOCAL-00001" summary="2020.08.10 - update">
       <created>1597045346323</created>
@@ -4876,6 +5045,7 @@
       <option name="project" value="LOCAL" />
       <updated>1597331653185</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00005" summary="修改案例SolutionStrToInt，优化代码并添加注释">
       <created>1596016443150</created>
       <option name="number" value="00005" />
@@ -4910,6 +5080,42 @@
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
       <updated>1596458883911</updated>
+=======
+    <task id="LOCAL-00005" summary="2020.08.17 - update readme">
+      <created>1597677533013</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1597677533013</updated>
+    </task>
+    <task id="LOCAL-00006" summary="2020.08.18 - update readme and add SolutionGetLeastNumbers &amp;&amp; Image">
+      <created>1597763803418</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597763803418</updated>
+    </task>
+    <task id="LOCAL-00007" summary="2020.08.19 - update readme">
+      <created>1597851208189</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1597851208189</updated>
+    </task>
+    <task id="LOCAL-00008" summary="2020.08.20 - update readme">
+      <created>1597936181299</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1597936181299</updated>
+    </task>
+    <task id="LOCAL-00009" summary="2020.08.21 -add GetUglyNumber,existPaths,GetMedian and SolutionFindContinuousSequence,update readme">
+      <created>1598025466896</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1598025466896</updated>
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
     </task>
     <task id="LOCAL-00010" summary="3道hard">
       <created>1596593164573</created>
@@ -4946,6 +5152,7 @@
       <option name="project" value="LOCAL" />
       <updated>1596878767763</updated>
     </task>
+<<<<<<< HEAD
     <option name="localTasksCounter" value="5" />
     <servers />
   </component>
@@ -4956,6 +5163,18 @@
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49886876" visible="true" weight="0.1443133" />
+=======
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="39393000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49886876" visible="true" weight="0.21045576" />
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -4964,8 +5183,13 @@
       <window_info id="Favorites" order="6" sideWeight="0.50113124" side_tool="true" weight="0.20171674" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1979638" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3484163" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2539007" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.34751773" />
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -5017,12 +5241,23 @@
       <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3297587" />
     </layout-to-restore>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2020.08.10 - update" />
     <MESSAGE value="2020.08.11 - update readme" />
     <MESSAGE value="2020.08.12 - update readme" />
     <MESSAGE value="2020.08.13 - update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020.08.13 - update readme" />
+    <MESSAGE value="2020.08.17 - update readme" />
+    <MESSAGE value="2020.08.18 - update readme and add SolutionGetLeastNumbers &amp;&amp; Image" />
+    <MESSAGE value="2020.08.19 - update readme" />
+    <MESSAGE value="2020.08.20 - update readme" />
+    <MESSAGE value="2020.08.21 -add GetUglyNumber,existPaths,GetMedian and SolutionFindContinuousSequence,update readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020.08.21 -add GetUglyNumber,existPaths,GetMedian and SolutionFindContinuousSequence,update readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -5255,6 +5490,54 @@
           <properties />
           <option name="timeStamp" value="110" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/hard/SolutionGetLeastNumbers.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/hard/SolutionGetLeastNumbers.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/medium/SolutionFindContinuousSequence.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/medium/GetMedian.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/medium/GetMedian.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/lcmedium/existPaths.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/lcmedium/existPaths.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/hard/GetUglyNumber.java</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/rico/lcmedium/SolutionStringMultiply.java</url>
           <line>71</line>
@@ -5330,10 +5613,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Image/1597571761(1).jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Image/1597571640(1).jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/medium/SolutionFindNumbersWithSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/medium/SolutionFindNumsAppearOnce.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-145">
+          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/tester/TreeNodeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="566">
+          <caret line="117" column="5" lean-forward="true" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#499#500#0" expanded="true" />
@@ -5358,29 +5661,160 @@
             <element signature="e#1226#1227#0" expanded="true" />
             <element signature="docComment;method#create#0;class#TreeNodeTest#0" />
             <element signature="method#create#0;class#TreeNodeTest#0" />
-            <element signature="method#MidTraversal#0;class#TreeNodeTest#0" />
             <element signature="docComment;method#main#0;class#TreeNodeTest#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Answerofjudge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/medium/SolutionMoreThanHalfNum_Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <element signature="e#383#400#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/medium/SolutionPower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4470">
+          <caret line="374" column="26" lean-forward="true" selection-start-line="374" selection-start-column="26" selection-end-line="374" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ReadMedata/leetCode.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
+<<<<<<< HEAD
           <first_editor relative-caret-position="302">
             <caret line="2039" column="9" lean-forward="true" selection-start-line="2039" selection-start-column="9" selection-end-line="2039" selection-end-column="9" />
+=======
+          <first_editor relative-caret-position="301">
+            <caret line="2813" column="17" lean-forward="true" selection-start-line="2813" selection-start-column="17" selection-end-line="2813" selection-end-column="17" />
+            <folding>
+              <element signature="e#669#670#0" expanded="true" />
+              <element signature="e#713#714#0" expanded="true" />
+              <element signature="e#78#79#0" expanded="true" />
+              <element signature="e#121#122#0" expanded="true" />
+              <element signature="e#716#717#0" expanded="true" />
+              <element signature="e#757#758#0" expanded="true" />
+              <element signature="e#785#786#0" expanded="true" />
+              <element signature="e#844#845#0" expanded="true" />
+              <element signature="e#228#229#0" expanded="true" />
+              <element signature="e#285#286#0" expanded="true" />
+              <element signature="e#0#811#0" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="imports" expanded="true" />
+              <element signature="e#528#529#0" expanded="true" />
+              <element signature="e#583#584#0" expanded="true" />
+            </folding>
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Image/1597571761(1).jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Answerofjudge.java">
+    <entry file="file://$PROJECT_DIR$/src/com/rico/hard/SolutionGetLeastNumbers.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="37" column="61" lean-forward="true" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReadMedata/二叉树.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1825">
+            <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="12" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-439">
+          <caret line="555" column="23" lean-forward="true" selection-start-line="555" selection-start-column="23" selection-end-line="555" selection-end-column="23" />
+          <folding>
+            <element signature="e#19296#19297#0" expanded="true" />
+            <element signature="e#19379#19380#0" expanded="true" />
+            <element signature="e#21076#21077#0" expanded="true" />
+            <element signature="e#21103#21104#0" expanded="true" />
+            <element signature="e#21303#21304#0" expanded="true" />
+            <element signature="e#21335#21336#0" expanded="true" />
+            <element signature="e#24298#24299#0" expanded="true" />
+            <element signature="e#24363#24364#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/medium/SolutionFindContinuousSequence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+          <folding>
+            <element signature="e#565#585#0" expanded="true" />
+            <element signature="e#1076#1085#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Comparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="84">
           <caret line="6" column="44" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="44" />
+=======
+        <state relative-caret-position="180">
+          <caret line="149" column="8" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/medium/GetMedian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-304">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding>
+            <element signature="e#176#185#0" expanded="true" />
+            <element signature="e#274#283#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/existPaths.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-484">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding>
+            <element signature="e#394#418#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/hard/GetUglyNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding>
+            <element signature="method#GetUglyNumber_Solution_1#0;class#GetUglyNumber#0" />
+            <element signature="method#isUgly#0;class#GetUglyNumber#0" />
+          </folding>
+>>>>>>> 263c2ea5b13630207a48bfd9d4c58b9935c7303f
         </state>
       </provider>
     </entry>

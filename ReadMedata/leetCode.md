@@ -1107,11 +1107,11 @@ public class TreeNode {
 */
 import java.util.*;
 public class Solution {
-    ArrayList> Print(TreeNode pRoot) {
-        ArrayList> res = new ArrayList>();//需要返回的结果
+    ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();//需要返回的结果
         if (pRoot == null) return res;//返回非法输入
-        ArrayList list = new ArrayList();//保存每一层的节点
-        Queue queue = new LinkedList();//队列
+        ArrayList<Integer> list = new ArrayList<Integer>();//保存每一层的节点
+        Queue<TreeNode> queue = new LinkedList<>();//队列
         queue.add(pRoot);    //先把队首添加进队列
         int toSave = 1, nodeNum = 0; //判断什么时候保存每一层的节点，以及每一层节点的个数
         boolean reverseFlag = false;    //翻转的标志位
@@ -1140,7 +1140,7 @@ public class Solution {
         }
         return res;
     }
-    void reverseList(ArrayList list){//翻转操作函数，时间O(n)，空间O(1)
+    void reverseList(ArrayList<Integer> list){//翻转操作函数，时间O(n)，空间O(1)
         int len = list.size();
         for(int i = 0; i < len / 2; i ++){
             int temp = list.get(i);
@@ -2046,27 +2046,1041 @@ public class Solution {
 
 
 
+### 39、栈的压入、弹出序列
+
+> 栈的压入和弹出：
+
+- 思路；对压入栈序列进行一个入栈的模拟，然后在模拟的过程当中，判断栈顶元素和出栈序列的相等关系，从而判断出对栈顶元素的操作。
+- 提示，代码二较为简洁，代码一理解起来难，建议直接看代码二即可;
+- java代码实现一： 
+
+```java
+import java.util.*;
+public class Solution {
+    public boolean IsPopOrder(int [] pushA,int [] popA) {
+        // 对输入数组的初始判断
+        if(pushA.length != popA.length) return false;
+        // 建立一个栈
+        Stack<Integer> stack = new Stack<>();
+        // 定义传入参数的两个数组的下标索引
+        int pushIndex = 0;
+        int popIndex = 0;
+        // 当入栈的索引小于数组的长度的时候则循环
+        while(pushIndex < pushA.length){
+            // 当栈不为空并且栈顶元素等于弹出序列的元素时则执行
+            if(!stack.isEmpty() && stack.peek() == popA[popIndex]){
+                // 下标自加
+                popIndex ++;
+                // 弹出栈顶元素
+                stack.pop();
+            }
+            // 要是以上条件不成立，则对压栈序列进行入栈操作
+            stack.push(pushA[pushIndex ++]);
+        }
+        // 为防止以上while循环不能处理最后一个序列时的问题
+        while(!stack.isEmpty()){
+            if(!stack.isEmpty() && stack.peek() == popA[popIndex]){
+                popIndex ++;
+                stack.pop();
+            }else {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+```
+- Java代码实现二：
+
+```java
+import java.util.*;
+public class Solution {
+    public boolean IsPopOrder(int [] pushA,int [] popA) {
+        // 对输入数组的初始判断
+        if(pushA.length != popA.length) return false;
+        // 建立一个栈
+        Stack<Integer> stack = new Stack<>();
+        // 定义操作弹出序列的下标
+        int index = 0;
+        // 开始遍历
+        for(int i = 0; i < pushA.length; i ++){
+            // 对于入栈序列的每个元素进行入栈
+            stack.push(pushA[i]);
+            // 当栈不为空并且当栈顶元素等于出栈序列的元素值时，则执行
+            while(!stack.isEmpty() && stack.peek() == popA[index]){
+                // 进入循环说明栈顶元素等于出栈序列的值，此时则需要弹
+                // 出栈顶元素，以及出栈序列的后移操作
+                stack.pop();
+                index ++;
+            }
+        }
+        // 当栈中的元素为空使，说明出栈序列和栈模拟的一样，则返回true，
+        // 若栈不为空，则说明出栈序列和栈模拟的不一致，返回false
+        return stack.isEmpty();
+    }
+}
+```
+
+
+
+###  40、二叉搜索树的后序遍历序列
+
+> 题目：输入一个整数数组，判断该数组是不是某二叉搜索树的后序遍历的结果。如果是则返回true,否则返回false。假设输入的数组的任意两个数字都互不相同。
+
+- 思路，因为关键词：**二叉搜索树、后序遍历**。所以能想到的是这颗树的左节点比右节点要小，并且根节点在最后才会输出（左-右-根）。
+- 所以我们先从数组那到最后一个数作为root根节点，此时判断有没有左节点，要是索引为0的元素比root大则没有左子树，否则就遍历，找到第一个比root大的节点，作为右子树的开端，在遍历右子树的时候要是出现比根节点小的元素，则直接return false即可，因为不满足搜索二叉树的规则，接着递归将左子树和右子树进行调用即可
+
+
+
+> 思路总结：**已知条件**：**后序序列最后一个值为root；二叉搜索树左子树值都比root小，右子树值都比root大。**
+>
+> **1、确定root；**
+>
+> **2、遍历序列（除去root结点），找到第一个大于root的位置，则该位置左边为左子树，右边为右子树；**
+>
+> **3、遍历右子树，若发现有小于root的值，则直接返回false；**
+>
+> **4、分别判断左子树和右子树是否仍是二叉搜索树（即递归步骤1、2、3）。**
+
+
+
+```java
+import java.util.*;
+public class Solution {
+    public boolean VerifySquenceOfBST(int [] sequence) {
+        if(sequence.length == 0) return false;
+        int root = sequence[sequence.length - 1];
+        int i = 0;
+        for(;i < sequence.length - 1; i ++){
+            // 找到第一个大于root的位置,则该位置左边为左子树，右边为右子树；**
+            if(root < sequence[i])break;
+        }
+        int j = i;
+        for(;j < sequence.length - 1; j ++){ // 循环时去除root，因此为len-1
+            if(root > sequence[j])return false; // 有一个小于root，则返回false
+        }
+        boolean left = true;
+        boolean right = true;
+        if(i > 0)left = VerifySquenceOfBST(Arrays.copyOfRange(sequence,0,i));// copyOfRange，包括0，但是不包括i
+        if(i < sequence.length - 1)right = VerifySquenceOfBST(Arrays.copyOfRange(sequence,i,sequence.length - 1));
+        return (left & right);
+    }
+}
+```
+
+
+
+### 41、序列化二叉树
+
+> 请实现两个函数，分别用来序列化和反序列化二叉树
+>
+> 二叉树的序列化是指：把一棵二叉树按照某种遍历方式的结果以某种格式保存为字符串，从而使得内存中建立起来的二叉树可以持久保存。序列化可以基于先序、中序、后序、层序的二叉树遍历方式来进行修改，序列化的结果是一个字符串，序列化时通过 某种符号表示空节点（#），以 ！ 表示一个结点值的结束（value!）。
+>
+> 二叉树的反序列化是指：根据某种遍历顺序得到的序列化字符串结果str，重构二叉树。
+>
+> 
+>
+> 例如，我们可以把一个只有根节点为1的二叉树序列化为"1,"，然后通过自己的函数来解析回这个二叉树
 
 
 
 
 
+- 算法思想：根据**前序遍历**规则完成序列化与反序列化。所谓序列化指的是遍历二叉树为字符串；所谓反序列化指的是依据字符串重新构造成二叉树。
+- 依据前序遍历序列来序列化二叉树，因为前序遍历序列是从根结点开始的。当在遍历二叉树时碰到Null指针时，这些Null指针被序列化为一个特殊的字符“#”。
+- 另外，结点之间的数值用逗号隔开。
 
 
 
+```java
+public class Solution {
+    int index = -1; // 计数变量,字符串数组的角标
+    String Serialize(TreeNode root){
+        StringBuilder sb = new StringBuilder();
+        if(root == null){
+            sb.append("#,");//当今节点为空，就添加一个#做标记
+            return sb.toString();
+        }
+        sb.append(root.val + ",");//前序遍历根节点
+        sb.append(Serialize(root.left));//然后调用左子树递归
+        sb.append(Serialize(root.right));//最后调用右子树递归
+        return sb.toString();
+    }
+    TreeNode Deserialize(String str){
+       index++; // 索引每次加一
+       // int len = str.length();
+       // if(index >= len){
+       //     return null;
+       // }
+        String[] strr = str.split(",");// 将序列化之后的序列用，分隔符转化为数组
+        TreeNode node = null;
+        if(!strr[index].equals("#")){ // 不是叶子节点 继续走 是叶子节点出递归
+            node = new TreeNode(Integer.valueOf(strr[index]));
+            node.left = Deserialize(str);
+            node.right = Deserialize(str);
+        }
+         
+        return node;
+    }
+}
+```
 
 
 
+### 42、对称的二叉树
+
+> 请实现一个函数，用来判断一棵二叉树是不是对称的。注意，如果一个二叉树同此二叉树的镜像是同样的，定义其为对称的。
+
+> 解法一：思路：当两个子树完全对称的时候，左子树的左节点等于右子树的右节点，左子树的右节点等于右子树的左节点，此时可以通过递归来进行下去，请看代码实现：
+
+- java实现
+
+```java
+/*
+public class TreeNode {
+    int val = 0;
+    TreeNode left = null;
+    TreeNode right = null;
+    public TreeNode(int val) {
+        this.val = val;
+    }
+}
+*/
+public class Solution {
+    boolean isSymmetrical(TreeNode pRoot){
+        return Helper(pRoot, pRoot);// 借助这个辅助函数去实现
+    }
+    boolean Helper(TreeNode p1, TreeNode p2){
+        if(p1 == null && p2 == null)return true;// 要是等于空，则返回true
+        if(p1 == null || p2 == null)return false;// 要是只有一个为空则返回false
+        if(p1.val != p2.val)return false;// 要是值不相等则返回false
+        // 继续进行递归，也就是左子树的左节点等于右子树的右节点，左子树的右节点等于右子树的左节点，才是对称的二叉树
+        return (Helper(p1.left,p2.right) && Helper(p1.right,p2.left));
+    }
+}
+```
+
+> 解法二:
+>
+> //===================**非递归算法，利用DFS和BFS**=============================//
+>  /*
+>  \* **DFS使用stack**来保存成对的节点
+>
+>   \* 1.**出栈**的时候也是**成对**成对的 ， 
+>
+>    1.若都为空，继续；  
+>
+>    2.一个为空，返回false;  
+>
+>    3.不为空，比较当前值，值不等，返回false；  
+>
+>  \* 2.确定入栈顺序，每次**入栈**都是成对**成对**的，如left.left， right.right ;left.rigth,right.left
+>  */
+
+- java代码如下：
+
+```java
+ boolean isSymmetricalDFS(TreeNode pRoot)
+    {
+        if(pRoot == null) return true;
+        Stack<TreeNode> s = new Stack<>();
+        s.push(pRoot.left);
+        s.push(pRoot.right);
+        while(!s.empty()) {
+            TreeNode right = s.pop();//成对取出
+            TreeNode left = s.pop();
+            if(left == null && right == null) continue;
+            if(left == null || right == null) return false;
+            if(left.val != right.val) return false;
+            //成对插入
+            s.push(left.left);
+            s.push(right.right);
+            s.push(left.right);
+            s.push(right.left);
+        }
+        return true;
+    }
+```
+
+> 解法三 ：
+>
+> /*
+>  \* **BFS使用Queue**来保存成对的节点，代码和上面极其相似
+>
+>   \* 1.**出队的时候也是成对成对**的 
+>
+>    1.若都为空，继续；  
+>
+>    2.一个为空，返回false;  
+>
+>    3.不为空，比较当前值，值不等，返回false；  
+>
+>  \* 2.确定入队顺序，**每次入队都是成对成对的**，如left.left， right.right ;left.rigth,right.left
+>  */ 
+
+- java代码如下：
+
+```java
+ boolean isSymmetricalBFS(TreeNode pRoot)
+    {
+        if(pRoot == null) return true;
+        Queue<TreeNode> s = new LinkedList<>();
+        s.offer(pRoot.left);
+        s.offer(pRoot.right);
+        while(!s.isEmpty()) {
+            TreeNode left= s.poll();//成对取出
+            TreeNode right= s.poll();
+            if(left == null && right == null) continue;
+            if(left == null || right == null) return false;
+            if(left.val != right.val) return false;
+            //成对插入
+            s.offer(left.left);
+            s.offer(right.right);
+            s.offer(left.right);
+            s.offer(right.left);
+        }
+        return true;
+    }
+```
+
+### 43、 二叉搜索树的第k个结点
+
+> 题目：给定一棵二叉搜索树，请找出其中的第k小的结点。例如， （5，3，7，2，4，6，8）  中，按结点数值大小顺序第三小结点的值为4。
+
+- 思路：经过观察可知，二叉搜索树的中序遍历可以使节点的值从低往高排列，所以可以先将输入的二叉树中序遍历后保存到队列，利用先进先出的性质输出第k个节点即可。
+
+```java
+/*
+public class TreeNode {
+    int val = 0;
+    TreeNode left = null;
+    TreeNode right = null;
+    public TreeNode(int val) {
+        this.val = val;
+    }
+}
+*/
+import java.util.*;
+public class Solution {
+    Queue<TreeNode> queue = new LinkedList<>(); // 队列，用于保存中序遍历的节点
+    TreeNode KthNode(TreeNode pRoot, int k){
+        if(pRoot == null || k == 0) return null;// 非法输入的判断
+        MidTraversal(pRoot);// 进行中序遍历
+        while(k-- > 0){ // 取出第k个节点，因为队列中节点的值是冲小到大排列的，故第k个就是第k大的值了
+            pRoot = queue.poll();
+        }
+        return pRoot;// 返回这个值即可
+    }
+
+    void MidTraversal(TreeNode node){ // 使用递归的方式进行中序遍历（左-根-右）
+        if (node == null)return;      // 递归终止的条件 
+        MidTraversal(node.left);	// 左节点的遍历
+        queue.offer(node);		    // 保存当前节点
+        MidTraversal(node.right);	// 右节点的遍历
+    }
+}
+```
 
 
 
+### 44、树的子结构
+
+> 输入两棵二叉树A，B，判断B是不是A的子结构。（ps：我们约定空树不是任意一个树的子结构）
+
+- 思路：思路其实是有的，第一想到的就是用前序遍历的方式去遍历树，然后判断子树遍历的结果是否在大二叉树中即可。（感觉使用到KMP算法、查找算法）
+
+- java实现，这可能不是面试官需要考察的答案，我中乱想出来的：
+
+```java
+public class Solution {
+    public boolean HasSubtree(TreeNode root1,TreeNode root2) {
+        if(root2 == null || root1 == null) return false;
+        StringBuffer s1 = new StringBuffer();
+        StringBuffer s2 = new StringBuffer();
+        Helper(root1,s1);// 引用传递，对root1前序遍历后写入s1
+        Helper(root2,s2);
+        return s1.toString().contains(s2.toString());// 判断是否包含子串
+    }
+    void Helper(TreeNode p,StringBuffer s){// 这个函数的左右主要是前序遍历二叉树
+        if(p == null)return;
+        s.append(p.val);
+        if(p.left !=null)Helper(p.left,s);
+        if(p.right != null)Helper(p.right,s);
+    }
+}
+
+```
+
+- 这应该是正确的打开方式：
+
+```java
+public class Solution {
+    public static boolean HasSubtree(TreeNode root1, TreeNode root2) {
+		boolean result = false;
+		//当Tree1和Tree2都不为零的时候，才进行比较。否则直接返回false
+		if (root2 != null && root1 != null) {
+			//如果找到了对应Tree2的根节点的点
+			if(root1.val == root2.val){
+				//以这个根节点为为起点判断是否包含Tree2
+				result = doesTree1HaveTree2(root1,root2);
+			}
+			//如果找不到，那么就再去root的左儿子当作起点，去判断时候包含Tree2
+			if (!result) {
+				result = HasSubtree(root1.left,root2);
+			}
+			
+			//如果还找不到，那么就再去root的右儿子当作起点，去判断时候包含Tree2
+			if (!result) {
+				result = HasSubtree(root1.right,root2);
+			   }
+			}
+		    //返回结果
+		return result;
+	}
+
+	public static boolean doesTree1HaveTree2(TreeNode node1, TreeNode node2) {
+		//如果Tree2已经遍历完了都能对应的上，返回true
+		if (node2 == null) {
+			return true;
+		}
+		//如果Tree2还没有遍历完，Tree1却遍历完了。返回false
+		if (node1 == null) {
+			return false;
+		}
+		//如果其中有一个点没有对应上，返回false
+    	if (node1.val != node2.val) {	
+				return false;
+		}
+    	
+    	//如果根节点对应的上，那么就分别去子节点里面匹配
+    	return doesTree1HaveTree2(node1.left,node2.left) && doesTree1HaveTree2(node1.right,node2.right);
+    }
+```
+
+- 精简版的java代码
+
+```java
+public boolean HasSubtree(TreeNode root1,TreeNode root2) {
+    if(root1==null || root2==null)  return false;
+    return doesTree1HasTree2(root1, root2)|| HasSubtree(root1.left, root2)
+            ||HasSubtree(root1.right, root2);
+}
+
+private boolean doesTree1HasTree2(TreeNode root1,TreeNode root2) {
+    if(root2==null)  return true;
+    if(root1==null)  return false;
+    return root1.val==root2.val && doesTree1HasTree2(root1.left, root2.left)
+            && doesTree1HasTree2(root1.right, root2.right);
+}
+```
+
+### 45、二叉搜索树与双向链表
+
+> 输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的双向链表。要求不能创建任何新的结点，只能调整树中结点指针的指向。
+
+- 思路，二叉搜索树、排序等关键词，应该用中序遍历。
+- java实现
+
+```java
+/**
+解题思路：
+1.核心是中序遍历的非递归算法。
+2.修改当前遍历节点与前一遍历节点的指针指向。
+*/
+import java.util.*;
+public class Solution {
+    public TreeNode Convert(TreeNode pRootOfTree) {
+        if(pRootOfTree == null) return null;
+        Stack<TreeNode> stack = new Stack<>();
+        boolean isFirst = true;
+        TreeNode p = pRootOfTree;
+        TreeNode pre = null;// 用于保存中序遍历序列的上一节点
+        while(p != null || !stack.isEmpty()){
+            while(p != null){
+                stack.push(p);
+                p = p.left;
+            }
+            p = stack.pop();
+            if(isFirst){
+                pRootOfTree = p; //第一次执行，则先将中序遍历序列中的第一个节点记为pRootOfTree
+                pre = p;
+                isFirst = false;
+            }else{
+                p.left = pre;// p的左指向pre，pre <- p
+                pre.right = p;// 而pre的右指向p，pre -> p,故形成双链
+                pre = p;    // 后移一个
+            }
+            p = p.right;
+        }
+        return pRootOfTree;
+    }
+}
+```
+
+- 解法二
+
+```java
+public class Solution {
+    TreeNode pre=null;
+    public TreeNode Convert(TreeNode pRootOfTree) {
+        if(pRootOfTree==null)
+            return null;
+        Convert(pRootOfTree.right);
+        if(pre==null)
+            pre=pRootOfTree;
+        else{
+            pRootOfTree.right=pre;
+            pre.left=pRootOfTree;
+            pre=pRootOfTree;
+        }
+        Convert(pRootOfTree.left);
+        return pre;
+    }
+}
+```
 
 
 
+### 46、最小的K个数
+
+> 输入n个整数，找出其中最小的K个数。例如输入4,5,1,6,2,7,3,8这8个数字，则最小的4个数字是1,2,3,4。
+
+思路一：很容易想到的就是将数组排序，再去取前面k个数字就可以了
+
+```java
+import java.util.*;
+public class Solution {
+    public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k){
+        ArrayList<Integer> res = new ArrayList<Integer>();
+        if(k > input.length)return res;
+        Arrays.sort(input);
+        for(int i = 0; i < k; i ++){
+            res.add(input[i]);
+        }
+        return res;
+    }
+}
+```
+
+- 思路二：用最大堆保存这k个数，每次只和堆顶比，如果比堆顶小，删除堆顶，新数入堆。
+- java实现：
+
+```java
+import java.util.ArrayList;
+import java.util.PriorityQueue;
+import java.util.Comparator;
+public class Solution {
+   public ArrayList<Integer> GetLeastNumbers_Solution(int[] input, int k) {
+       ArrayList<Integer> result = new ArrayList<Integer>();
+       int length = input.length;
+       if(k > length || k == 0){
+           return result;
+       }
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(k, new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o2.compareTo(o1);
+            }
+        });
+        for (int i = 0; i < length; i++) {
+            if (maxHeap.size() != k) {
+                maxHeap.offer(input[i]);
+            } else if (maxHeap.peek() > input[i]) {
+                Integer temp = maxHeap.poll();
+                temp = null;
+                maxHeap.offer(input[i]);
+            }
+        }
+        for (Integer integer : maxHeap) {
+            result.add(integer);
+        }
+        return result;
+    }
+}
+```
 
 
 
+### 47、顺时针打印矩阵
+
+> 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.
+
+- 思路：旋转打印有点难，不过也是有办法的。我们可以把矩阵想象为一个魔方，我读完第一行之后，我就把魔方左转90度，再读取第一行，这样循环，直到最后一行结束。具体看代码中注释。
+- java代码
+
+```java
+import java.util.ArrayList;
+public class Solution {
+    public ArrayList<Integer> printMatrix(int [][] matrix) {
+        //作为存放结果的容器
+        ArrayList<Integer> list = new ArrayList<>();
+        //拿到出事数组的行数
+        int row = matrix.length;
+        while(row != 0){
+            //将数组的第一行先添加进容器中
+            for(int i=0;i<matrix[0].length;i++)
+                list.add(matrix[0][i]);
+            //当行数等于1时就没有必要再继续执行了，在上面打印完之后就可以停止了
+            if(row == 1)
+                break;
+            //删除上面遍历的数组的第一行，然后旋转这个数组并返回
+            matrix = revert(matrix);
+            //更新行数
+            row = matrix.length;
+        }
+        //返回
+        return list;
+    }
+ 
+    private int[][] revert(int[][] matrix){
+        //拿到matrix的行数和列数
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+ //因为我们要将原数组遍历过的第一行删除，然后旋转变成一个新的数组，所以先初始化一下这个新数组
+        int[][] newMatrix = new int[cols][rows-1];
+        //对这个新数组进行赋值
+        for(int j=cols-1;j>=0;j--){
+            for(int i=1;i<rows;i++){
+                newMatrix[cols-j-1][i-1] = matrix[i][j];
+            }
+        }
+        //返回新数组
+        return newMatrix;
+    }
+}
+```
+
+### 48、合并两个排序的链表
+
+> 输入两个单调递增的链表，输出两个链表合成后的链表，当然我们需要合成后的链表满足单调不减规则。
+
+- 我的思路：我先将表头小的元素作为新链表的头结点，接着只要比价头结点的元素即可完成合并
+
+> 代码一实现：
+
+```java
+/*
+public class ListNode {
+    int val;
+    ListNode next = null;
+    ListNode(int val) {
+        this.val = val;
+    }
+}*/
+public class Solution {
+    public ListNode Merge(ListNode list1,ListNode list2) {
+        if(list1 == null) return list2;
+        if(list2 == null) return list1;
+        // 新建一个头节点，用来存合并的链表
+        ListNode node = new ListNode(-1);;
+        node.next = null;
+        ListNode res = node;
+        while(list2 != null && list1 !=null){
+            if(list1.val < list2.val){
+                node.next = list1;
+                node = list1;
+                list1 = list1.next;
+                
+            }else{
+                node.next = list2;
+                node = list2;
+                list2 = list2.next;
+            }
+        }
+		// 把未结束的链表连接到合并后的链表尾部
+        if(list1!=null){
+            node.next=list1;
+        }
+        if(list2!=null){
+            node.next=list2;
+        }
+        return res.next;
+    }
+}
+```
+
+> 代码二实现：
+
+```java
+public class Solution {
+    public ListNode Merge(ListNode list1,ListNode list2) {
+        if(list1 == null) return list2;
+        if(list2 == null) return list1;
+        ListNode Head;
+        ListNode p;
+        //取较小值作头结点
+        if(list1.val <= list2.val){
+            Head = list1;
+            list1 = list1.next;
+        }
+        else{
+            Head = list2;
+            list2 = list2.next;
+        }
+        //p为合并后的链表的工作指针
+        p = Head;
+        //开始遍历合并
+        while(list2 != null && list1 != null){
+            //当有一个链表到结尾时，循环结束
+            if(list1.val <= list2.val){//如果链表1的结点小于链表2的结点
+                p.next = list1;//取这个结点加入合并链表
+                list1 = list1.next; //链表1后移一位
+                p = p.next;//工作指针后移一位
+            }
+            else{//否则取链表2的结点
+                p.next = list2;
+                list2 = list2.next;
+                p = p.next;
+            }
+        }
+        if(list1 == null)  //链表1遍历完了
+            p.next = list2;  //如果链表2也遍历完了，则pHead2=NULL
+        if(list2 == null) //链表2遍历完了
+            p.next = list1;         ///如果链表1也遍历完了，则pHead1=NULL
+        return Head;
+    }
+}
+```
+
+- 我自己的代码：
+
+```java
+public class Solution {
+    public ListNode Merge(ListNode list1,ListNode list2) {
+        if(list1 == null) return list2;// 判断输入
+        if(list2 == null) return list1;
+        ListNode node; // 工作节点指针
+        ListNode res;  // 返回的指针
+        if(list1.val < list2.val){// 头结点的处理，取小者作为头结点。
+            node = list1;
+            list1 = list1.next;
+        } else {
+            node = list2;
+            list2 = list2.next;
+        }
+        res = node;// 保存结果的头结点
+        while(list2 != null && list1 != null){ // 要是都不为空时遍历
+            if(list1.val < list2.val){  // 取小者作为下一节点
+                node.next = list1; // 添加下一节点 
+                list1 = list1.next;	// 后移
+                node = node.next;	// 后移
+            }else{
+                node.next = list2;
+                list2 = list2.next;
+                node = node.next;
+            }
+        }
+        // 要是list2遍历完了，则将list2剩余的全部节点添加到node的后面
+        if(list2 == null)node.next = list1;
+        // 要是list1遍历完了，则将list1剩余的全部节点添加到node的后面
+        if(list1 == null)node.next = list2;
+        return res;
+    }
+}
+```
 
 
 
+- 别人的思路：
+
+
+
+```java
+/*
+public class ListNode {
+    int val;
+    ListNode next = null;
+    ListNode(int val) {
+        this.val = val;
+    }
+}*/
+public class Solution {
+    public ListNode Merge(ListNode list1,ListNode list2) {
+        if(list1 == null) return list2;
+        if(list2 == null) return list1;
+        ListNode node = null;
+        if(list1.val < list2.val){
+            node = list1;
+            node.next = Merge(list1.next,list2);
+        } else {
+            node = list2;
+            node.next = Merge(list1,list2.next);
+        }
+        return node;
+    }
+}
+```
+
+### 49、和为S的连续正数序列
+
+> 小明很喜欢数学,有一天他在做数学作业时,要求计算出9~16的和,他马上就写出了正确答案是100。但是他并不满足于此,他在想究竟有多少种连续的正数序列的和为100(至少包括两个数)。没多久,他就得到另一组连续正数和为100的序列:18,19,20,21,22。现在把问题交给你,你能不能也很快的找出所有和为S的连续正数序列? Good Luck!(输出所有和为S的连续正数序列。序列内按照从小至大的顺序，序列间按照开始数字从小到大的顺序)
+
+- 思路：采用滑动窗口，具体就看代码：
+
+
+
+```java
+/**
+[1    2]    3    4    5    6    7    8    9
+滑动窗口思想，不断去扩大右窗口、或者减小左窗口去计算窗口中和的值
+也可以理解为双指针法
+**/
+import java.util.*;
+public class Solution {
+    public ArrayList<ArrayList<Integer>> FindContinuousSequence(int sum) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();// 结果数组
+        int left = 1, right = 2;// 初始值
+        if(sum < left + right)return res; // 当sum小于3是不满足要求的，直接返回
+        int cur = left + right;        // 记录当前窗口中的值
+        while(right > left && sum > right){ // 主循环
+            while(cur < sum && sum > right){ // 小循环，当窗口和小于目标，则不断向右扩大
+                right ++;    // 移动右边，扩大窗口
+                cur += right;// 更新窗口内值的和
+            }
+            if(sum == cur){  // 满足要求，添加到结果数组
+                res.add(getResList(left, right));
+            }
+            cur -= left;    // 减去最左边窗口的元素值
+            left ++;        // 左窗口移动
+        }
+        return res;
+    }
+    public ArrayList<Integer> getResList(int left, int right){
+        ArrayList<Integer> res = new ArrayList<Integer>();
+        for(int i = left; i <= right; i ++){
+            res.add(i);
+        }
+        return res;
+    }
+}
+```
+
+
+
+### 50、数据流中的中位数
+
+> 如何得到一个数据流中的中位数？如果从数据流中读出奇数个数值，那么中位数就是所有数值排序之后位于中间的数值。如果从数据流中读出偶数个数值，那么中位数就是所有数值排序之后中间两个数的平均值。我们使用Insert()方法读取数据流，使用GetMedian()方法获取当前读取数据的中位数。
+
+- 思路一：使用数组保存数据流中的每一位数据，排序后，分奇数和偶数情况进行取数据即可
+- 思路二：使用一个小顶堆和一个大顶堆；大顶堆用来保存**较小**的数，**从大到小排列**、小顶堆保存**较大**的数，**从小到大排列**，故显然中位数就是**大顶堆的根节点与小顶堆的根节点和的平均数**。
+
+- 大顶堆，根节点最大，需要重写compare方法；小顶堆，根节点最小 ，java中默认的PriorityQueue就是小顶堆。
+
+- ⭐保证：**小顶堆中的元素**都==大于等于==**大顶堆中的元素**，所以每次塞值，并不是直接塞进去，而是从另一个堆中poll出一个最大（最小）的塞值
+- ⭐当数目为偶数的时候，将这个值插入大顶堆中，再将大顶堆中根节点（即最大值）插入到小顶堆中；
+- ⭐当数目为奇数的时候，将这个值插入小顶堆中，再讲小顶堆中根节点（即最小值）插入到大顶堆中；
+- ⭐取中位数的时候，如果当前个数为偶数，显然是取小顶堆和大顶堆根结点的平均值；如果当前个数为奇数，显然是取小顶堆的根节点
+
+```JAVA
+import java.util.PriorityQueue;
+import java.util.Comparator;
+public class Solution {
+    //小顶堆
+    private PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
+    //大顶堆
+    private PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(5, new Comparator<Integer>() {
+        @Override
+        public int compare(Integer o1, Integer o2) {
+            return o2 - o1;
+        }
+    });
+    //记录偶数个还是奇数个
+    int count = 0;
+    //每次插入小顶堆的是当前大顶堆中最大的数
+    //每次插入大顶堆的是当前小顶堆中最小的数
+    //这样保证小顶堆中的数永远大于等于大顶堆中的数
+    //中位数就可以方便地从两者的根结点中获取了
+    public void Insert(Integer num) {
+        if(count % 2 == 0){
+            if(!maxHeap.isEmpty() && maxHeap.peek() > num){
+                int old = maxHeap.poll();
+                maxHeap.offer(num);
+                num = old;
+            }
+            minHeap.offer(num);
+        }else{
+            if(!minHeap.isEmpty() && minHeap.peek() < num){
+                int old = minHeap.poll();
+                minHeap.offer(num);
+                num = old;
+            }
+            maxHeap.offer(num);
+        }
+        count ++;
+    }
+    public Double GetMedian() {
+        //当前为偶数个，则取小顶堆和大顶堆的堆顶元素求平均
+        if(count % 2 == 0){
+            return (minHeap.peek() + maxHeap.peek()) / 2.0;
+        }else{
+            //当前为奇数个，则直接从小顶堆中取元素即可
+            return Double.valueOf(minHeap.peek());
+        }
+    }
+}
+
+```
+
+或者：
+
+```java
+import java.util.PriorityQueue;
+import java.util.Comparator;
+public class Solution {
+    //小顶堆
+    private PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
+    
+    //大顶堆,使用lmabda表达式
+    private PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>((o1,o2)->(o2-o1));
+    
+    //记录偶数个还是奇数个
+    int count = 0;
+    //每次插入小顶堆的是当前大顶堆中最大的数
+    //每次插入大顶堆的是当前小顶堆中最小的数
+    //这样保证小顶堆中的数永远大于等于大顶堆中的数
+    //中位数就可以方便地从两者的根结点中获取了
+    public void Insert(Integer num) {
+        //个数为偶数的话，则先插入到大顶堆，然后将大顶堆中最大的数插入小顶堆中
+        if(count % 2 == 0){
+            maxHeap.offer(num);
+            int max = maxHeap.poll();
+            minHeap.offer(max);
+        }else{
+            //个数为奇数的话，则先插入到小顶堆，然后将小顶堆中最小的数插入大顶堆中
+            minHeap.offer(num);
+            int min = minHeap.poll();
+            maxHeap.offer(min);
+        }
+        count++;
+    }
+    public Double GetMedian() {
+        //当前为偶数个，则取小顶堆和大顶堆的堆顶元素求平均
+        if(count % 2 == 0){
+            return new Double(minHeap.peek() + maxHeap.peek())/2;
+        }else{
+            //当前为奇数个，则直接从小顶堆中取元素即可
+            return new Double(minHeap.peek());
+        }
+    }
+}
+
+```
+
+### 51、矩阵中的路径
+
+> ![图片说明](https://uploadfiles.nowcoder.com/images/20200320/1687_1584718756308_1FC457B1436BF74A67E17C2127AA478C)
+
+思路：回溯、dfs、bfs
+
+```java
+
+class Solution {
+public boolean hasPath(char[] matrix, int rows, int cols, char[] str){
+        char[][] board = new char[rows][cols];
+        int index = 0;
+        for (int i = 0; i < rows; i ++){
+            for (int j = 0; j < cols; j ++){
+                board[i][j] = matrix[index ++];
+            }
+        }
+        // 以上为处理字符串数组一维变成二维的，以下为LeetCode中的代码格式
+        boolean[][] vis = new boolean[board.length][board[0].length];
+        for (int i = 0; i < board.length; i ++){
+            for (int j = 0; j < board[i].length; j ++){
+                if(dfs(board, new String(str), vis, i, j, 0)){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    
+    boolean dfs(char[][] board, String word, boolean[][] vis, int x, int y, int index){
+        // 以下if为截止条件
+        // 越界处理和判断每个方格的访问标志
+        if (x < 0 || x > board.length - 1 || y < 0 || y > board[0].length - 1 || vis[x][y]){
+            return false;
+        }
+        // 当匹配到某个字符不满足条件
+        if (word.charAt(index) != board[x][y]){
+            return false;
+        }
+        // 要是以上两个if都不进入，说明都成功匹配，则判断匹配的长度是否等于字符串的长度
+        if (index == word.length() - 1){
+            return true;
+        }
+        vis[x][y] = true;// 标志位设置
+        boolean flag = dfs(board, word, vis, x + 1, y, index + 1) ||
+                       dfs(board, word, vis, x - 1, y, index + 1) ||
+                       dfs(board, word, vis, x, y + 1, index + 1) ||
+                       dfs(board, word, vis, x, y - 1, index + 1);
+        vis[x][y] = false;// 标志位恢复现场
+        return flag;
+    }
+
+}
+```
+
+
+
+### 52、丑数
+
+> 把只包含质因子2、3和5的数称作丑数（Ugly Number）。例如6、8都是丑数，但14不是，因为它包含质因子7。 习惯上我们把1当做是第一个丑数。求按从小到大的顺序的第N个丑数。
+
+- 思路：**要注意，后面的丑数是有前一个丑数乘以2，3，5中的一个得来。因此可以用动态规划去解**,**同时注意一下，题目意思应该是质数因此，而不是因子，因为8的因子有1，2，4，8**
+
+- 所有的丑数分为三种类型 2*i,3*i,5*i   其中 i是数组中的元素，一开始只有1
+
+  **2\*1** 3*1  5*1
+
+  2*2  **3\*1** 5*1
+  **2\*2** 3*2  5*1
+  2*3  3*2  **5\*1**
+  **2\*3** 3*2  5*2
+  **2\*4** 3*3  5*2
+  2*5  **3\*3** 5*2
+  **2\*5** 3*4  5*2
+  **2\*6** 3*4  5*3
+  2*8  **3\*5** 5*3
+  **2\*8** 3*6  5*4
+
+- 代码一：
+
+```java
+public class Solution {
+    public int GetUglyNumber_Solution(int index) {
+        if(index <= 0) return 0;
+        int[] a = new int[index];
+        a[0] = 1;
+        int index1 = 0, index2 = 0, index3 = 0;
+        for (int i = 1; i < index; i++){
+            a[i] = Math.min(Math.min(a[index1] * 2,a[index2] * 3),a[index3] * 5);
+            if(a[i] == a[index1] * 2) index1 ++;
+            if(a[i] == a[index2] * 3) index2 ++;
+            if(a[i] == a[index3] * 5) index3 ++;
+        }
+        return a[index - 1];
+    }
+}
+```
+
+- 代码二：
+
+```java
+    private static int GetUglyNumber_Solution(int index) {
+        if (index < 0) return 0;
+        int[] uglyArr = new int[index];
+        uglyArr[0] = 1;
+        int p2 = 0, p3 = 0, p5 = 0;
+        for (int i = 1; i < index; i ++){
+            int lastMaxUgly = uglyArr[i - 1];
+            while (lastMaxUgly >= uglyArr[p2] * 2) p2 ++;
+            while (lastMaxUgly >= uglyArr[p3] * 3) p3 ++;
+            while (lastMaxUgly >= uglyArr[p5] * 5) p5 ++;
+            uglyArr[i] = Math.min( Math.min(uglyArr[p2] * 2,uglyArr[p3] * 3),uglyArr[p5] * 5);
+
+        }
+        return uglyArr[index - 1];
+    }
+```
 
