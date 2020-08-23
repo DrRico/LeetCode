@@ -21,9 +21,9 @@ public class findMedianSortedArrays04 {
         Collections.sort(list);
         if((nums1.length + nums2.length) % 2 == 0){
             // 偶数
-            res = (list.get((nums1.length + nums2.length) >> 1) + list.get((nums1.length + nums2.length) >> 1 - 1))  / 2.0;
+            res = (list.get((nums1.length + nums2.length) >> 1) + list.get((nums1.length + nums2.length - 1) >> 1))  / 2.0;
         } else {
-            res = list.get(nums1.length + nums2.length >> 1);
+            res = list.get((nums1.length + nums2.length) >> 1);
         }
         return res;
     }
