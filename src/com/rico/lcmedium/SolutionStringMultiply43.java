@@ -3,16 +3,31 @@ package com.rico.lcmedium;
 /**
  * @author Rico_dds
  * @date 2020/7/29 20:57
+ * 给定两个以字符串形式表示的非负整数 num1 和 num2，
+ * 返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。
+ *
+ *输入: num1 = "2", num2 = "3"
+ *输出: "6"
+ *
+ *输入: num1 = "123", num2 = "456"
+ *输出: "56088"
+ *
+ * num1 和 num2 的长度小于110。
+ * num1 和 num2 只包含数字 0-9。
+ * num1 和 num2 均不以零开头，除非是数字 0 本身。
+ * 不能使用任何标准库的大数类型（比如 BigInteger）或直接将输入转换为整数来处理。
+
+ *
  */
-public class SolutionStringMultiply {
+public class SolutionStringMultiply43 {
 
     public static void main(String[] args) {
-        System.out.println(multiply("123456", "123456"));
+        System.out.println(multiply("123", "456"));
         System.out.println(Mymultiply_01("99", "21"));
-        System.out.println(Mymultiply_01("99", "21"));
+        System.out.println(Mymultiply_01("123", "456"));
         // 56088
     }
-    public static String Mymultiply_01(String num1, String num2){
+    public static String Mymultiply_01(String num1, String num2){ // 推荐
         if (num1.equals("0") || num2.equals("0")) {
             return "0";
         }

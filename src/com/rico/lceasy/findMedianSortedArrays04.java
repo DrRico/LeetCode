@@ -32,5 +32,7 @@ public class findMedianSortedArrays04 {
         int[] a = {1,2};
         int[] b = {3,4};
         System.out.println(findMedianSortedArrays(a,b));
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println(Integer.MIN_VALUE);
     }
 }
