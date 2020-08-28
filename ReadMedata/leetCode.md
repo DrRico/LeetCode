@@ -3084,3 +3084,167 @@ public class Solution {
     }
 ```
 
+### 53、高频面试题[二分查找](https://www.nowcoder.com/practice/7bc4a1c7c371425d9faa9d1b511fe193?tpId=188&&tqId=35175&rp=1&ru=/activity/oj&qru=/ta/job-code-high-week/question-ranking)
+
+- 题目描述
+
+请实现有重复数字的有序数组的二分查找。
+
+输出在数组中第一个**大于等于**查找值的位置，如果数组中不存在这样的数，则输出数组长度加一。
+
+- 输入
+
+```
+5,4,[1,2,4,4,5]			// n,v int[] a，其中n为数组的长度，v为目标，a为输入数组
+```
+
+- 输出
+
+```
+3
+```
+
+思路：二分查找，模板题：**其中**`int mid = left + ((right - left) >> 1);// 写成这样稳定`
+
+```java
+import java.util.*;
+public class Solution {
+    /**
+     * 二分查找
+     * @param n int整型 数组长度
+     * @param v int整型 查找值
+     * @param a int整型一维数组 有序数组
+     * @return int整型
+     */
+    public int upper_bound_ (int n, int v, int[] a) {
+        int left = 0, right = n - 1;
+        while (left < right){
+            int mid = left + ((right - left) >> 1);// 写成这样稳定
+            if(a[mid] >= v){  // 关键点
+                if(mid == 0 || a[mid-1] < v) return mid + 1;// 关键点
+                else right = mid;
+            } else {
+                left = mid + 1;
+            } 
+        }
+        return n + 1;
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

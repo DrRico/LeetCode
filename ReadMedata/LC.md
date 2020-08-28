@@ -677,7 +677,7 @@ n 是正整数,范围在 [1, 10000].
 数组中的元素范围在 [-10000, 10000].
 ```
 
-- 思路：先排序，然后隔一个取一个数据即可；
+- 思路：先排序，然后隔一个取一个数据即可；[证明](https://leetcode-cn.com/problems/array-partition-i/solution/minshu-dui-bi-shi-you-xu-shu-lie-shang-xiang-lin-y/)
 
 ```java
 import java.util.*;
@@ -694,35 +694,323 @@ class Solution {
 }
 ```
 
+### 第八题-1：[84. 柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)
 
+​	给定 *n* 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。
 
+​	求在该柱状图中，能够勾勒出来的矩形的最大面积。
 
+![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/histogram.png)
 
+​	以上是柱状图的示例，其中每个柱子的宽度为 1，给定的高度为 `[2,1,5,6,2,3]`。
 
+![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/histogram_area.png)
 
+​	图中阴影部分为所能勾勒出的最大矩形面积，其面积为 `10` 个单位。
 
+**示例:**
 
+```
+输入: [2,1,5,6,2,3]
+输出: 10
+```
 
+- 解法一：暴力法。
+  - 首先遍历每个数据，判断左边和右边的数是不是大于等于当前数，要是符合条件继续向两边遍历，当不满足条件的时候，则计算左右的宽度乘以当前数据的高度。保存每个最大乘积即可。
 
+```java
+public class Solution {
 
+    public int largestRectangleArea(int[] heights) {
+        int len = heights.length;
+        // 特判
+        if (len == 0) {
+            return 0;
+        }
+        int res = 0;
+        for (int i = 0; i < len; i++) {
+            // 找左边最后 1 个大于等于 heights[i] 的下标
+            int left = i;
+            int curHeight = heights[i];
+            while (left > 0 && heights[left - 1] >= curHeight) {
+                left--;
+            }
+            // 找右边最后 1 个大于等于 heights[i] 的索引
+            int right = i;
+            while (right < len - 1 && heights[right + 1] >= curHeight) {
+                right++;
+            }
+            int width = right - left + 1;
+            res = Math.max(res, width * curHeight);
+        }
+        return res;
+    }
+}
+```
 
+- 解法二：
 
+- 1、单调栈分为单调递增栈和单调递减栈
+  - 1.1单调递增栈即栈内元素保持单调递增的栈
+  - 1.2同理单调递减栈即栈内元素保持单调递减的栈
 
+- 2、操作规则（下面都以单调递增栈为例）
+  - 2.1、如果新的元素比栈顶元素大，就入栈
+  - 2.2、如果新的元素较小，那就一直把栈内元素弹出来，直到栈顶比新元素小
 
+- 3、加入这样一个规则之后，会有什么效果
+  - 3.1、栈内的元素是递增的
+  - 3.2、当元素出栈时，说明这个新元素是出栈元素向后找第一个比其小的元素
 
+> [2,1,5,6,2,3]
+>
+> 举个例子，配合上面，设现在索引在 6 ，栈里是 1 5 6 。
+>
+> 接下来新元素是 2 ，那么 6 需要出栈。
+>
+> 当 6 出栈时，右边 2 代表是 6 右边第一个比 6 小的元素。
+>
+> 当元素出栈后，说明新栈顶元素是出栈元素向前找第一个比其小的元素
+>
+> 当 6 出栈时，5 成为新的栈顶，那么 5 就是 6 左边第一个比 6 小的元素。
 
+- C++代码模板
 
+```c++
+stack<int> st;
+for(int i = 0; i < nums.size(); i++)
+{
+	while(!st.empty() && st.top() > nums[i])
+	{
+		st.pop();
+	}
+	st.push(nums[i]);
+}
+```
 
+- 画图理解
 
+![图片.png](https://pic.leetcode-cn.com/7e876ae756613053b3432cebc9274e9dbdaafd2e6b8492d37fc34ee98f7655ea-%E5%9B%BE%E7%89%87.png)
 
+-  **思路**
+  - 1、对于一个高度，如果能得到向左和向右的边界
+  - 2、那么就能对每个高度求一次面积
+  - 3、遍历所有高度，即可得出最大面积
+  - 4、使用单调栈，在出栈操作时得到前后边界并计算面积
 
+```java
+import java.util.*;
+class Solution {
+    public int largestRectangleArea(int[] heights) {
+        int len = heights.length;
+        // 对特殊条件的判断
+        if (len == 0) return 0;
+        if (len == 1) return heights[0];      
+		// 使原始数据[2,1,5,6,2,3]变成[0,2,1,5,6,2,3,0]的形式
+        int[] newHeights = new int[len + 2];
+        newHeights[0] = 0;
+        // System.arraycopy(heights, 0, newHeights, 1, len);
+        for (int i = 0; i < len; i ++){
+            newHeights[i + 1] = heights[i];
+        }
+        newHeights[len + 1] = 0;
+        len += 2;
+        heights = newHeights;
+		// 使用Deque<>代替Stack<>，底层基于ArrayDeque，所有操作加后加上Last，如
+        // add() -> addLast() ;  peek() -> peekLast()等
+        Deque<Integer> stack = new ArrayDeque<>(len);
+        // 先放入哨兵，在循环里就不用做非空判断
+        stack.addLast(0);
+        int res = 0;	// 保存最大者
+        for (int i = 1; i < len; i ++){ // for循环从1开始
+            // 当新来的元素比栈顶元素大，则将下标插入，stack.addLast(i)，小则进入循环
+            while(heights[i] < heights[stack.peekLast()]){
+                // 保存当前栈顶元素的数据
+                int curH = heights[stack.pollLast()];
+                // 获取宽度，即当前元素左边的下标
+                int curW = i - stack.peekLast() - 1;
+                // 计算面积，保存最大者
+                res = Math.max(res, curH * curW);
+            }
+            stack.addLast(i); // 当新来的元素比栈顶元素大，则将下标插入
+        }
+        return res;// 返回最大者
+    }
+}
+```
 
+### 第八题-2：[85. 最大矩形](https://leetcode-cn.com/problems/maximal-rectangle/)
 
+给定一个仅包含 0 和 1 的二维二进制矩阵，找出只包含 1 的最大矩形，并返回其面积。
 
+**示例:**
 
+```
+输入:
+[
+  ["1","0","1","0","0"],
+  ["1","0","1","1","1"],
+  ["1","1","1","1","1"],
+  ["1","0","0","1","0"]
+]
+输出: 6
+```
 
+- **解法一：暴力破解**
 
+  - 遍历每个点，求以这个点为矩阵右下角的所有矩阵面积。如下图的两个例子，橙色是当前遍历的点，然后虚线框圈出的矩阵是其中一个矩阵。
 
+  ![image.png](https://pic.leetcode-cn.com/28f7b0ae6d95bba9f81ef0236f7448d030cc484453de077a05c5436b557cf223-image.png)
+  - 怎么找出这样的矩阵呢？如下图，如果我们知道了以这个点结尾的连续 1 的个数的话，问题就变得简单了。
 
+  ![image.png](https://pic.leetcode-cn.com/59a6f3369ea805a02e2fc2ec1ca3aeedceba54825dd5b75775cf740a6db85811-image.png)
 
+  - 首先求出高度是 1 的矩形面积，也就是它自身的数，如图中橙色的 4，面积就是 4。
+  - 然后向上扩展一行，高度增加一，选出当前列最小的数字，作为矩阵的宽，求出面积，对应上图的矩形框。
+  - 然后继续向上扩展，重复步骤 2。
+  - 按照上边的方法，遍历所有的点，求出所有的矩阵就可以了。
+
+```java 
+public int maximalRectangle(char[][] matrix) {
+    if (matrix.length == 0) {
+        return 0;
+    }
+    //保存以当前数字结尾的连续 1 的个数
+    int[][] width = new int[matrix.length][matrix[0].length];
+    int maxArea = 0;
+    //遍历每一行
+    for (int row = 0; row < matrix.length; row++) {
+        for (int col = 0; col < matrix[0].length; col++) {
+            //更新 width
+            if (matrix[row][col] == '1') {
+                if (col == 0) {
+                    width[row][col] = 1;
+                } else {
+                    width[row][col] = width[row][col - 1] + 1;
+                }
+            } else {
+                width[row][col] = 0;
+            }
+            //记录所有行中最小的数
+            int minWidth = width[row][col];
+            //向上扩展行
+            for (int up_row = row; up_row >= 0; up_row--) {
+                int height = row - up_row + 1;
+                //找最小的数作为矩阵的宽
+                minWidth = Math.min(minWidth, width[up_row][col]);
+                //更新面积
+                maxArea = Math.max(maxArea, height * minWidth);
+            }
+        }
+    }
+    return maxArea;
+}
+```
+
+时间复杂度：O（m²n）。
+
+空间复杂度：O（mn）。
+
+- **解法二：借助上一题的思路，使用栈**
+
+![image.png](https://pic.leetcode-cn.com/aabb1b287134cf950aa80526806ef4025e3920d57d237c0369ed34fae83e2690-image.png)
+
+- 算法有了，就是求出每一层的 heights[] 然后传给上一题的函数就可以了。利用上一题的栈解法。
+
+```java
+class Solution {
+    public int maximalRectangle(char[][] matrix) {
+        int len = matrix.length;
+        if(len == 0) return 0;
+        int height = matrix[0].length;
+        int[][] temp = new int[len][height];
+        int res = 0;
+        for (int i = 0; i < len; i ++){
+            for (int j = 0; j < height; j ++){
+                if(matrix[i][j] == '1'){
+                    if (i == 0){
+                        temp[i][j] = 1;// i = 0第一层的情况，赋值为1
+                    } else {
+                        temp[i][j] = temp[i - 1][j] + 1; // 将上一层的数，加上1，得到本层当前的值
+                    }
+                }
+            }
+            // 遍历完一层之后，将这一层一维数组传递进去
+            res = Math.max(res,largestRectangleArea(temp[i]));
+        }
+        return res;
+    }
+// 84题的函数，只需要将每一层的一维数组传递进来即可。
+    public int largestRectangleArea(int[] heights) {
+        int len = heights.length;
+        if (len == 0) return 0;
+        if (len == 1) return heights[0];
+        int[] arr = new int[2 + len];
+        arr[0] = 0;
+        for (int i = 0; i < len; i ++){
+            arr[i + 1] = heights[i];
+        }
+        len = len + 2;
+        arr[len - 1] = 0;
+        Deque<Integer> stack = new ArrayDeque<Integer>(len);
+        stack.addLast(0); // 哨兵
+        int maxSum = 0;
+        for (int i = 1; i < len; i ++){
+            while (arr[i] < arr[stack.peekLast()]){
+                int curH = arr[stack.pollLast()];
+                int curW = i - stack.peekLast() - 1;
+                maxSum = Math.max(maxSum, curH * curW);
+            }
+            stack.addLast(i);
+        }
+        return maxSum;
+    }
+}
+```
+
+### 第九题：[169. 多数元素](https://leetcode-cn.com/problems/majority-element/)
+
+给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素。
+
+你可以假设数组是非空的，并且给定的数组总是存在多数元素。
+
+**示例 1:**
+
+```
+输入: [3,2,3]
+输出: 3
+```
+
+**示例 2:**
+
+```
+输入: [2,2,1,1,1,2,2]
+输出: 2
+```
+
+- 思考：多数元素只会存在一个，因出现的次数一旦大于 ⌊ n/2 ⌋ ，就不能满足第二个数也这样了。
+- 使用两个数保存数组中的元素res和对应出现的次数time，在进行遍历的时候判断res是否等于array的元素，若相等，则对time+1，若不等，则time-1，当time==0时，则将res替换为当前的元素，并赋值time=1，直到遍历结束，此时保存的res应该就是最终结果了，再来个for循环验证一下即可。
+
+```java
+class Solution {
+    public int majorityElement(int[] nums) {
+        int time = 1;
+        int temp = nums[0];
+        for (int i = 1; i < nums.length; i ++){
+            if(temp == nums[i]){
+                time ++;
+            } else {
+                time --;
+                if (time == 0){
+                    time = 1;
+                    temp = nums[i];
+                }
+            }
+        }
+// 题目明确规定会存在这样一个数，所以直接返回即可，若不确定是否存在，则应再加一个for循环进行判断的
+        return temp;
+        
+    }
+}
+```
 
