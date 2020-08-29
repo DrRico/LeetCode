@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91bb8ea3-9a1a-4393-bda2-734192223dcd" name="Default Changelist" comment="conflect">
-      <change afterPath="$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rico/lceasy/plusOne66.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rico/lchard/largestRectangleArea84.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rico/lchard/maximalRectangle85.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rico/tester/Solutionupper_bound.java" afterDir="false" />
+    <list default="true" id="91bb8ea3-9a1a-4393-bda2-734192223dcd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main04.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main05.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main06.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main07.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMedata/LC.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/LC.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMedata/leetCode.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/leetCode.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO1.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,47 +52,36 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="11" />
-          <entry key="java" value="7336" />
+          <entry key="java" value="7486" />
+          <entry key="txt" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7336" />
-          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="JAVA" value="7486" />
+          <entry key="PLAIN_TEXT" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="48" />
+          <entry key="java" value="55" />
           <entry key="jpg" value="3" />
+          <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="Image" value="3" />
-          <entry key="JAVA" value="48" />
+          <entry key="JAVA" value="55" />
+          <entry key="Markdown" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Image/1597571711(1).jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Solutionupper_bound.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rico/lceasy/plusOne66.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -111,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="36" selection-end-column="9" />
+            <state relative-caret-position="220">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,19 +113,64 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/NumberFormatException.java">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main01.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="64" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="363">
+              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Integer.java">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main02.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="765" selection-start-line="765" selection-end-line="765" />
+            <state relative-caret-position="308">
+              <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main03.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main04.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main06.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main07.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main05.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -191,6 +225,13 @@
         <option value="$PROJECT_DIR$/src/com/rico/lceasy/plusOne66.java" />
         <option value="$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO2.java" />
         <option value="$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO1.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main01.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main02.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main03.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main04.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main05.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main06.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main07.java" />
       </list>
     </option>
   </component>
@@ -201,10 +242,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="x" value="206" />
+    <option name="y" value="87" />
+    <option name="width" value="1384" />
+    <option name="height" value="745" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -234,7 +275,7 @@
               <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="rico" type="462c0819:PsiDirectoryNode" />
-              <item name="huawei" type="462c0819:PsiDirectoryNode" />
+              <item name="InputOutputTesr" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
@@ -255,7 +296,7 @@
     <property name="SearchEverywhereHistoryKey" value="stack&#9;PSI&#9;JAVA://jdk.nashorn.internal.codegen.Label.Stack" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598624889816" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598707038915" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -269,13 +310,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main08_26_NO1">
-    <configuration name="Main08_26_NO1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.huawei.Main08_26_NO1" />
+  <component name="RunManager" selected="Application.Main07">
+    <configuration name="Main03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.InputOutputTesr.Main03" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.rico.huawei.*" />
+          <option name="PATTERN" value="com.rico.InputOutputTesr.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -283,12 +324,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main08_26_NO2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.huawei.Main08_26_NO2" />
+    <configuration name="Main04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.InputOutputTesr.Main04" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.rico.huawei.*" />
+          <option name="PATTERN" value="com.rico.InputOutputTesr.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -296,12 +337,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solutionupper_bound" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.tester.Solutionupper_bound" />
+    <configuration name="Main05" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.InputOutputTesr.Main05" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.rico.tester.*" />
+          <option name="PATTERN" value="com.rico.InputOutputTesr.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -309,12 +350,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="maximalRectangle85" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.lchard.maximalRectangle85" />
+    <configuration name="Main06" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.InputOutputTesr.Main06" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.rico.lchard.*" />
+          <option name="PATTERN" value="com.rico.InputOutputTesr.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -322,12 +363,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="plusOne66" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.lceasy.plusOne66" />
+    <configuration name="Main07" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.InputOutputTesr.Main07" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.rico.lceasy.*" />
+          <option name="PATTERN" value="com.rico.InputOutputTesr.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -336,19 +377,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.maximalRectangle85" />
-      <item itemvalue="Application.Solutionupper_bound" />
-      <item itemvalue="Application.plusOne66" />
-      <item itemvalue="Application.Main08_26_NO2" />
-      <item itemvalue="Application.Main08_26_NO1" />
+      <item itemvalue="Application.Main03" />
+      <item itemvalue="Application.Main04" />
+      <item itemvalue="Application.Main05" />
+      <item itemvalue="Application.Main06" />
+      <item itemvalue="Application.Main07" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main08_26_NO1" />
-        <item itemvalue="Application.Main08_26_NO2" />
-        <item itemvalue="Application.plusOne66" />
-        <item itemvalue="Application.Solutionupper_bound" />
-        <item itemvalue="Application.maximalRectangle85" />
+        <item itemvalue="Application.Main07" />
+        <item itemvalue="Application.Main06" />
+        <item itemvalue="Application.Main05" />
+        <item itemvalue="Application.Main04" />
+        <item itemvalue="Application.Main03" />
       </list>
     </recent_temporary>
   </component>
@@ -363,19 +404,20 @@
       <option name="presentableId" value="Default" />
       <updated>1598111873100</updated>
       <workItem from="1598111886927" duration="12914000" />
-      <workItem from="1598254362034" duration="60720000" />
+      <workItem from="1598254362034" duration="66697000" />
     </task>
-    <task id="LOCAL-00001" summary="conflect">
-      <created>1598112063372</created>
+    <task id="LOCAL-00001" summary="2020.08.27 -updated">
+      <created>1598624953560</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1598112063372</updated>
+      <updated>1598624953561</updated>
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72136000" />
+    <option name="totallyTimeSpent" value="78113000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -390,8 +432,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28936172" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.37588653" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28936172" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37588653" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -449,7 +491,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="conflect" />
-    <option name="LAST_COMMIT_MESSAGE" value="conflect" />
+    <MESSAGE value="2020.08.27 -updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020.08.27 -updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -576,15 +619,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO1.java</url>
-          <line>24</line>
+          <line>31</line>
           <properties />
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO1.java</url>
-          <line>28</line>
+          <line>35</line>
           <properties />
           <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main06.java</url>
+          <line>11</line>
+          <properties />
+          <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/com/rico/tester/Test.java</url>
@@ -620,48 +669,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/maxArea11.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/threeSum15.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/AbstractMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="530" column="17" selection-start-line="530" selection-start-column="17" selection-end-line="530" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/HashSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="218" column="21" selection-start-line="218" selection-start-column="21" selection-end-line="218" selection-end-column="21" />
-          <folding>
-            <element signature="e#8033#8034#0" expanded="true" />
-            <element signature="e#8081#8082#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
@@ -979,10 +986,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/NumberFormatException.java">
+    <entry file="file://$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="220">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReadMedata/LC.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="1430">
+            <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -993,13 +1013,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO1.java">
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/NumberFormatException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="36" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="277">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main02.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main03.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main05.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main04.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main06.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main07.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
         </state>
       </provider>
     </entry>
