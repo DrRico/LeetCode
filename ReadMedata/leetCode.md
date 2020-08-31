@@ -1511,7 +1511,7 @@ public class Solution {
             count ++; // 计数 + 1
             if(q.next == null || q.next.next == null)return null;// 要是为null则说明wu环，返回null
             q = q.next.next;// q为快指针，走两步
-            if(p.next == null)return null;// 要是为null则说明wu环，返回null
+            if(p.next == null)return null;// 要是为null则说明wu环，返回null，可省略，因为q已经进行了判断
             p = p.next;// p为慢指针，走一步
         }
         // 当以上循环结束，说明有环存在，此时我们得到循环的次数count变量，故再借助两个指针，让一个指针先走count+1步，另一个指针不动，接着让两个指针循环，每次走一步，当两个指针指向同一个节点时，此节点就是环入口。

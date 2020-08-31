@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91bb8ea3-9a1a-4393-bda2-734192223dcd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main03.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main04.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main05.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main06.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main07.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/lceasy/reorderLogFiles937.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/lchard/numberToWords273.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/lcmedium/lengthOfLongestSubstring03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/lcmedium/longestPalindrome05.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/tester/Main8_31_ZTE_01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/tester/Main8_31_ZTE_02.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMedata/LC.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/LC.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMedata/leetCode.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/leetCode.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,30 +51,30 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="11" />
-          <entry key="java" value="7486" />
-          <entry key="txt" value="29" />
+          <entry key="dummy" value="14" />
+          <entry key="java" value="10164" />
+          <entry key="txt" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7486" />
-          <entry key="PLAIN_TEXT" value="40" />
+          <entry key="JAVA" value="10164" />
+          <entry key="PLAIN_TEXT" value="64" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="55" />
-          <entry key="jpg" value="3" />
+          <entry key="java" value="65" />
+          <entry key="jpg" value="7" />
           <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="Image" value="3" />
-          <entry key="JAVA" value="55" />
+          <entry key="Image" value="7" />
+          <entry key="JAVA" value="65" />
           <entry key="Markdown" value="1" />
         </counts>
       </usages-collector>
@@ -83,94 +83,29 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/rico/lceasy/plusOne66.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="25" selection-start-line="25" selection-end-line="27" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="42" column="5" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main01.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main02.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main03.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main04.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main06.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/Image/1597571640(1).jpg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main07.java">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/lchard/numberToWords273.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+            <state relative-caret-position="182">
+              <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main05.java">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/lengthOfLongestSubstring03.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+            <state relative-caret-position="25">
+              <caret line="56" column="46" lean-forward="true" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#lengthOfLongestSubstring_2#0;class#lengthOfLongestSubstring03#0" />
+                <element signature="e#2348#2359#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -232,6 +167,11 @@
         <option value="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main05.java" />
         <option value="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main06.java" />
         <option value="$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main07.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/lcmedium/longestPalindrome05.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/tester/Main8_31_ZTE_01.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/lceasy/reorderLogFiles937.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/lcmedium/lengthOfLongestSubstring03.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/lchard/numberToWords273.java" />
       </list>
     </option>
   </component>
@@ -242,10 +182,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="206" />
-    <option name="y" value="87" />
-    <option name="width" value="1384" />
-    <option name="height" value="745" />
+    <option name="x" value="238" />
+    <option name="y" value="-8" />
+    <option name="width" value="1108" />
+    <option name="height" value="597" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -275,14 +215,21 @@
               <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="rico" type="462c0819:PsiDirectoryNode" />
-              <item name="InputOutputTesr" type="462c0819:PsiDirectoryNode" />
+              <item name="lceasy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="rico" type="462c0819:PsiDirectoryNode" />
-              <item name="tester" type="462c0819:PsiDirectoryNode" />
+              <item name="lchard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="rico" type="462c0819:PsiDirectoryNode" />
+              <item name="lcmedium" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -296,7 +243,7 @@
     <property name="SearchEverywhereHistoryKey" value="stack&#9;PSI&#9;JAVA://jdk.nashorn.internal.codegen.Label.Stack" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598707038915" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598886375619" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -310,13 +257,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main07">
-    <configuration name="Main03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.InputOutputTesr.Main03" />
+  <component name="RunManager" selected="Application.numberToWords273">
+    <configuration name="Main8_31_ZTE_01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.tester.Main8_31_ZTE_01" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.rico.InputOutputTesr.*" />
+          <option name="PATTERN" value="com.rico.tester.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -324,12 +271,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.InputOutputTesr.Main04" />
+    <configuration name="lengthOfLongestSubstring03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.lcmedium.lengthOfLongestSubstring03" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.rico.InputOutputTesr.*" />
+          <option name="PATTERN" value="com.rico.lcmedium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -337,12 +284,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main05" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.InputOutputTesr.Main05" />
+    <configuration name="longestPalindrome05" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.lcmedium.longestPalindrome05" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.rico.InputOutputTesr.*" />
+          <option name="PATTERN" value="com.rico.lcmedium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -350,12 +297,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main06" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.InputOutputTesr.Main06" />
+    <configuration name="numberToWords273" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.lchard.numberToWords273" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.rico.InputOutputTesr.*" />
+          <option name="PATTERN" value="com.rico.lchard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -363,12 +310,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main07" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.InputOutputTesr.Main07" />
+    <configuration name="reorderLogFiles937" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.lceasy.reorderLogFiles937" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.rico.InputOutputTesr.*" />
+          <option name="PATTERN" value="com.rico.lceasy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -377,19 +324,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main03" />
-      <item itemvalue="Application.Main04" />
-      <item itemvalue="Application.Main05" />
-      <item itemvalue="Application.Main06" />
-      <item itemvalue="Application.Main07" />
+      <item itemvalue="Application.longestPalindrome05" />
+      <item itemvalue="Application.Main8_31_ZTE_01" />
+      <item itemvalue="Application.reorderLogFiles937" />
+      <item itemvalue="Application.lengthOfLongestSubstring03" />
+      <item itemvalue="Application.numberToWords273" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main07" />
-        <item itemvalue="Application.Main06" />
-        <item itemvalue="Application.Main05" />
-        <item itemvalue="Application.Main04" />
-        <item itemvalue="Application.Main03" />
+        <item itemvalue="Application.numberToWords273" />
+        <item itemvalue="Application.lengthOfLongestSubstring03" />
+        <item itemvalue="Application.reorderLogFiles937" />
+        <item itemvalue="Application.Main8_31_ZTE_01" />
+        <item itemvalue="Application.longestPalindrome05" />
       </list>
     </recent_temporary>
   </component>
@@ -404,7 +351,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598111873100</updated>
       <workItem from="1598111886927" duration="12914000" />
-      <workItem from="1598254362034" duration="66697000" />
+      <workItem from="1598254362034" duration="96151000" />
     </task>
     <task id="LOCAL-00001" summary="2020.08.27 -updated">
       <created>1598624953560</created>
@@ -413,17 +360,24 @@
       <option name="project" value="LOCAL" />
       <updated>1598624953561</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2020.08.29 -updated InputOutput">
+      <created>1598707094233</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598707094234</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78113000" />
+    <option name="totallyTimeSpent" value="107567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1689008" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18632708" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -432,12 +386,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28936172" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30780143" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37588653" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32907802" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -453,7 +407,7 @@
       <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1689008" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18632708" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -461,9 +415,9 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.18439716" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4638298" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37588653" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -492,7 +446,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="conflect" />
     <MESSAGE value="2020.08.27 -updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020.08.27 -updated" />
+    <MESSAGE value="2020.08.29 -updated InputOutput" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020.08.29 -updated InputOutput" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -635,6 +590,42 @@
           <properties />
           <option name="timeStamp" value="66" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/lcmedium/longestPalindrome05.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/lcmedium/longestPalindrome05.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/lcmedium/longestPalindrome05.java</url>
+          <line>84</line>
+          <properties />
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/lcmedium/longestPalindrome05.java</url>
+          <line>78</line>
+          <properties />
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/tester/Main8_31_ZTE_01.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/lchard/numberToWords273.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/com/rico/tester/Test.java</url>
           <line>11</line>
@@ -669,86 +660,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="646" column="69" lean-forward="true" selection-start-line="646" selection-start-column="69" selection-end-line="646" selection-end-column="69" />
-          <folding>
-            <element signature="e#24298#24299#0" expanded="true" />
-            <element signature="e#24363#24364#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="147" column="32" selection-start-line="147" selection-start-column="26" selection-end-line="147" selection-end-column="32" />
-          <folding>
-            <element signature="e#5748#5749#0" expanded="true" />
-            <element signature="e#5784#5785#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding>
-            <element signature="e#135#136#0" expanded="true" />
-            <element signature="e#189#190#0" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#343#344#0" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/huawei/Main01.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="26" column="3" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/huawei/Main02.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="29" selection-start-line="29" selection-end-line="29" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/huawei/Main03.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/huawei/Main04.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/huawei/Main05.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="19" selection-start-line="19" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/huawei/Main06.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11">
@@ -819,9 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Image/1597571640(1).jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/lceasy/twoSum01.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -864,13 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-506">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Game01OfCows.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -945,9 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Image/1597571711(1).jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Solutionupper_bound.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -979,23 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ReadMedata/LC.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -1017,13 +898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main01.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1064,8 +938,122 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main07.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+        <state relative-caret-position="209">
+          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/huawei/Main08_26_NO2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Image/1597571711(1).jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/longestPalindrome05.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="93" column="58" lean-forward="true" selection-start-line="93" selection-start-column="58" selection-end-line="93" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="3478" column="26" lean-forward="true" selection-start-line="3478" selection-start-column="26" selection-end-line="3478" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Game01OfCows.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="34" selection-start-line="34" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1033#1034#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Main8_31_ZTE_02.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/lceasy/reorderLogFiles937.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="40" selection-start-line="40" selection-end-line="46" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Main8_31_ZTE_01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/HashSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="233" column="19" selection-start-line="233" selection-start-column="19" selection-end-line="233" selection-end-column="19" />
+          <folding>
+            <element signature="e#8033#8034#0" expanded="true" />
+            <element signature="e#8081#8082#0" expanded="true" />
+            <element signature="e#8731#8732#0" expanded="true" />
+            <element signature="e#8776#8777#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/lengthOfLongestSubstring03.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="56" column="46" lean-forward="true" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#lengthOfLongestSubstring_2#0;class#lengthOfLongestSubstring03#0" />
+            <element signature="e#2348#2359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Image/1597571640(1).jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/lchard/numberToWords273.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
         </state>
       </provider>
     </entry>

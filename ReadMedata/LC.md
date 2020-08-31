@@ -1009,8 +1009,407 @@ class Solution {
         }
 // 题目明确规定会存在这样一个数，所以直接返回即可，若不确定是否存在，则应再加一个for循环进行判断的
         return temp;
-        
     }
 }
 ```
+
+
+
+### 第十题：[66. 加一](https://leetcode-cn.com/problems/plus-one/)
+
+ 给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。
+
+最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。
+
+你可以假设除了整数 0 之外，这个整数不会以零开头。
+
+```
+示例 1:
+
+输入: [1,2,3]
+输出: [1,2,4]
+解释: 输入数组表示数字 123。
+示例 2:
+
+输入: [4,3,2,1]
+输出: [4,3,2,2]
+解释: 输入数组表示数字 4321。
+
+```
+
+- 思路
+
+> *执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户*
+>
+> 内存消耗：38.2 MB, 在所有 Java 提交中击败了48.47%的用户*
+
+
+
+- 思路就是要开辟一个新的数据，长度比原来的数组长度多1即可。
+
+- 总的来说有三种情况：
+  - 1、要是给最低位加上1，不产生进位，这个好办，直接返回+1后数组。
+  - 2、要是给最低位加上1，产生进位，这个时候就进行进位的传递，即把本位置为零，高一位加1即可，要去判断最高位的0，去掉后返回即可；
+  - 3、特殊情况，如99、9999、9999等数字，需要不断的处理进位即可。即当只要有一个不产生进位后，后面的直接不进行计算即可（代码break的作用）。
+
+- java实现：
+
+```java
+import java.util.*;
+class Solution {
+    public int[] plusOne(int[] digits) {
+        int[] temp = new int[digits.length + 1];
+        if(++digits[digits.length - 1] == 10){
+            for (int i = 0;i < digits.length; i ++){
+                temp[i + 1] = digits[i];
+            }
+        } else {
+            return digits;  // 情况1
+        }
+        digits = temp;
+        for (int i = digits.length - 1; i >= 0; i --){
+            if(digits[i]>9){    // 因为是加上1而已，所以可以怎么去直接置位即可，
+                digits[i] = 0;  // 若是加上其他的常数，使用取余和取模运算即可。
+                digits[i - 1] ++;
+            } else {    // 加速运算，只要有一个没有进位，后面的运算就可以跳过了
+                break;
+            }
+        }
+        if (digits[0] == 0){
+            return Arrays.copyOfRange(digits,1,digits.length);// 情况二
+        }
+        return digits;  // 情况三
+    }
+}
+```
+
+
+
+### 第十一题：[88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
+
+给你两个有序整数数组 *nums1* 和 *nums2*，请你将 *nums2* 合并到 *nums1* 中*，*使 *nums1* 成为一个有序数组。
+
+**说明:**
+
+初始化 nums1 和 nums2 的元素数量分别为 m 和 n 。
+你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。
+
+**示例:**
+
+```
+输入:
+nums1 = [1,2,3,0,0,0], m = 3
+nums2 = [2,5,6],       n = 3
+
+输出: [1,2,2,3,5,6]
+```
+
+- **思路：双指针 / 从后往前.**
+
+  使用双指针的方式去解决问题：
+
+![image.png](https://pic.leetcode-cn.com/358c5531639dff237d3a5b7d51d101f652d6409ff6a24f4ca601a277a4b859c5-image.png)
+
+```java
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int p1 = m - 1;		// 用于控制num1有效数据的指针
+        int p2 = n - 1;		// 用于控制num2有效数据的指针
+        int p3 = m + n - 1; // 用于控制num1尾部数据的指针
+        while (p2 >= 0){
+            if (p1 >= 0 && nums1[p1] > nums2[p2]){
+                nums1[p3 --] = nums1[p1 --];
+            } else {
+                nums1 [p3 --] = nums2[p2 --];
+            }
+        }
+    }
+}
+```
+
+----------------------
+
+## 二、字符串
+
+### 第一题：[5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)
+
+给定一个字符串 `s`，找到 `s` 中最长的回文子串。你可以假设 `s` 的最大长度为 1000。
+
+```
+示例 1：
+输入: "babad"
+输出: "bab"
+注意: "aba" 也是一个有效答案。
+
+示例 2：
+输入: "cbbd"
+输出: "bb"
+```
+
+- 思路：
+
+> 一：使用暴力解法的话，时间复杂度是O（n^3）,测试用例会不通过的
+
+> 二：使用时间复杂度为O（n^2） 的方法**(中心扩散法)**，思路：遍历一个数，往两边扩散进行判断即可，分偶数和奇数的情况：
+
+> 三：马拉车算法：使用马拉车算法可以优化技术和偶数判断的情况
+
+
+
+- 思路二代码：**(中心扩散法)**
+
+```java
+class Solution {
+    public String longestPalindrome(String s) {
+        if (s.length() == 0) return s;// 特殊条件的判断
+        int res = 1;
+        int left = 0;	// 记录左边界
+        int right = 0;	// 记录右边界
+        for (int i = 0; i < s.length(); i ++){
+            // 判断偶数的情况
+            int l = i - 1;
+            int r = i + 1;
+            while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){
+                int len = r - l + 1;
+                if(res < len){
+                    res = len;
+                    left = l;
+                    right = r;
+                }
+                l --;
+                r ++;
+            }
+            // 判断奇数的情况
+            l = i;
+            r = i + 1;
+            while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){
+                int len = r - l + 1;// 获取当前长度
+                if(res < len){// 更新最大回文子串的长度
+                    res = len;
+                    left = l;
+                    right = r;
+                }
+                l --;
+                r ++;
+            }
+        }
+        return s.substring(left, right + 1);
+    }
+}
+
+```
+
+- 思路三代码：
+- **第 1 步：定义状态**
+  - `dp[i][j]`表示子串 `s[i..j] `是否为回文子串，这里子串 s[i..j] 定义为左闭右闭区间，可以取到 s[i] 和 s[j]。
+- **第 2 步：思考状态转移方程**
+  - 在这一步分类讨论（根据头尾字符是否相等），根据上面的分析得到：
+  - `dp[i][j] = (s[i] == s[j]) and dp[i + 1][j - 1]`
+  - 说明：
+    - 「动态规划」事实上是在填一张二维表格，由于构成子串，因此 i 和 j 的关系是 i <= j ，因此，只需要填这张表格对角线以上的部分。
+    - 看到 dp[i + 1][j - 1] 就得考虑边界情况。
+  - 边界条件是：表达式 [i + 1, j - 1] 不构成区间，即长度严格小于 2，即 j - 1 - (i + 1) + 1 < 2 ，整理得 j - i < 3。
+  - 这个结论很显然：j - i < 3 等价于 j - i + 1 < 4，即当子串 s[i..j] 的长度等于 2 或者等于 3 的时候，其实只需要判断一下头尾两个字符是否相等就可以直接下结论了。
+  - 如果子串 s[i + 1..j - 1] 只有 1 个字符，即去掉两头，剩下中间部分只有 11 个字符，显然是回文；
+  - 如果子串 s[i + 1..j - 1] 为空串，那么子串 s[i, j] 一定是回文子串。
+  - 因此，在 s[i] == s[j] 成立和 j - i < 3 的前提下，直接可以下结论，dp[i][j] = true，否则才执行状态转移。
+- **第 3 步：考虑初始化**
+  - 初始化的时候，单个字符一定是回文串，因此把对角线先初始化为 true，即 dp[i][i] = true 。
+  - 事实上，初始化的部分都可以省去。因为只有一个字符的时候一定是回文，dp[i][i] 根本不会被其它状态值所参考。
+- **第 4 步：考虑输出**
+  - 只要一得到` dp[i][j] = true`，就记录子串的长度和起始位置，没有必要截取，这是因为截取字符串也要消耗性能，记录此时的回文子串的「起始位置」和「回文长度」即可。
+- **第 5 步：考虑优化空间**
+  - 因为在填表的过程中，只参考了左下方的数值。事实上可以优化，但是增加了代码编写和理解的难度，丢失可读和可解释性。在这里不优化空间。
+  - 注意事项：总是先得到小子串的回文判定，然后大子串才能参考小子串的判断结果，即填表顺序很重要。
+  - 大家能够可以自己动手，画一下表格，相信会对「动态规划」作为一种「表格法」有一个更好的理解。
+- **（动态规划）**
+
+```java
+public class Solution {
+
+    public String longestPalindrome(String s) {
+        // 特判
+        int len = s.length();
+        if (len < 2) {
+            return s;
+        }
+
+        int maxLen = 1;
+        int begin = 0;
+
+        // dp[i][j] 表示 s[i, j] 是否是回文串
+        boolean[][] dp = new boolean[len][len];
+        char[] charArray = s.toCharArray();
+
+        for (int i = 0; i < len; i++) {
+            dp[i][i] = true;
+        }
+        for (int j = 1; j < len; j++) {
+            for (int i = 0; i < j; i++) {
+                if (charArray[i] != charArray[j]) {
+                    dp[i][j] = false;
+                } else {
+                    if (j - i < 3) {
+                        dp[i][j] = true;
+                    } else {
+                        dp[i][j] = dp[i + 1][j - 1];
+                    }
+                }
+
+                // 只要 dp[i][j] == true 成立，就表示子串 s[i..j] 是回文，此时记录回文长度和起始位置
+                if (dp[i][j] && j - i + 1 > maxLen) {
+                    maxLen = j - i + 1;
+                    begin = i;
+                }
+            }
+        }
+        return s.substring(begin, begin + maxLen);
+    }
+}
+```
+
+### 第二题：[20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)
+
+给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
+
+有效字符串需满足：
+
+左括号必须用相同类型的右括号闭合。
+左括号必须以正确的顺序闭合。
+注意空字符串可被认为是有效字符串。
+
+```java
+示例 1:
+
+输入: "()"
+输出: true
+示例 2:
+
+输入: "()[]{}"
+输出: true
+示例 3:
+
+输入: "(]"
+输出: false
+示例 4:
+
+输入: "([)]"
+输出: false
+示例 5:
+
+输入: "{[]}"
+输出: true
+```
+
+- 思路：先为题目选择合适的数据结构进行子字符串的保存：考虑到栈先入后出特点恰好与本题括号排序特点一致
+- 判断括号的有效性可以使用「栈」这一数据结构来解决。
+- 我们对给定的字符串 s 进行遍历，当我们遇到一个左括号时，我们会期望在后续的遍历中，有一个相同类型的右括号将其闭合。由于后遇到的左括号要先闭合，因此我们可以将这个左括号放入栈顶。
+- 当我们遇到一个右括号时，我们需要将一个相同类型的左括号闭合。此时，我们可以取出栈顶的左括号并判断它们是否是相同类型的括号。如果不是相同的类型，或者栈中并没有左括号，那么字符串 ss 无效，返回False。为了快速判断括号的类型，我们可以使用哈希映射（HashMap）存储每一种括号。哈希映射的键为右括号，值为相同类型的左括号。
+- 在遍历结束后，如果栈中没有左括号，说明我们将字符串 s 中的所有左括号闭合，返回 True，否则返回False。
+- 注意到有效字符串的长度一定为偶数，因此如果字符串的长度为奇数，我们可以直接返回 False，省去后续的遍历判断过程。
+
+![20.gif](https://pic.leetcode-cn.com/baa8829ac398e665eb645dca29eadd631e2b337e05022aa5a678e091471a4913-20.gif)
+
+- java实现
+
+```java
+import java.util.*;
+class Solution {
+    public boolean isValid(String s) {
+        int len = s.length();
+        if (len == 0) return true;
+        if (len % 2 != 0) return false; // 奇数情况直接返回false
+        Deque<Character> stack = new ArrayDeque<>();
+        char[] arr = s.toCharArray();
+        for (int i = 0; i < len; i ++){
+            if (stack.isEmpty()){
+                stack.addLast(arr[i]);
+                continue;
+            }
+            if(isCorr(stack.peekLast(),arr[i])){
+                stack.pollLast();
+            } else {
+                stack.addLast(arr[i]);
+            }
+        }
+        return stack.isEmpty(); 
+     }
+     // 判断函数
+     boolean isCorr(char i, char j){
+         return (i == '[' && j == ']') || (i == '{' && j == '}') || (i == '(' && j == ')');
+     }
+}
+```
+
+### 第三题[3. 无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
+
+给定一个字符串，请你找出其中不含有重复字符的 **最长子串** 的长度。
+
+```
+示例 1:
+
+输入: "abcabcbb"
+输出: 3 
+解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
+示例 2:
+
+输入: "bbbbb"
+输出: 1
+解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。
+示例 3:
+
+输入: "pwwkew"
+输出: 3
+解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。
+
+请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
+```
+
+- 使用滑动窗口进行计算：请看java代码：
+
+```java
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int len = s.length();
+        if (len < 2) return len;
+        int left = 0;// 左指针初始位置
+        int right = 0;// 右指针初始位置
+        int maxSum = 0;
+        Set<Character> set = new HashSet<Character>();
+        
+        while (left < len){// 先判断长度，再判断是否包含字符，避免越界
+            // right初始位置是0，0号字符已被加入集合，从下一个字符开始计算
+            while (right< len && !set.contains(s.charAt(right))){
+                // 将字符添加进入，并且使right ++来滑动窗口
+                set.add(s.charAt(right));
+                right ++;
+            }
+            maxSum = Math.max(maxSum, right - left);// 取最大的值
+            set.remove(s.charAt(left));// 删除第一个重复的值，
+            left++; 	//并left++使窗口左边右移
+        }
+        return maxSum;
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
