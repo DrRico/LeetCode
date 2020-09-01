@@ -38,16 +38,9 @@ public class largestRectangleArea84 {
 
     public static int largestRectangleArea_1(int[] heights) {
         int len = heights.length;
-        if (len == 0) {
-            return 0;
-        }
-
-        if (len == 1) {
-            return heights[0];
-        }
-
+        if (len == 0) return 0;
+        if (len == 1) return heights[0];
         int res = 0;
-
         int[] newHeights = new int[len + 2];
         newHeights[0] = 0;
         System.arraycopy(heights, 0, newHeights, 1, len);
@@ -72,8 +65,10 @@ public class largestRectangleArea84 {
 
 
     public static void main(String[] args) {
-        //int[] a = {2,1,5,6,6,7};
-        int[] a = {1,2,3,4,5};
+        // int[] a = {2,1,5,6,6,7};
+        //int[] a = {1,2,3,4,5};
+        int[] a = {2,1,5,6,2,3};
+
         System.out.println(largestRectangleArea_1(a));
     }
 }

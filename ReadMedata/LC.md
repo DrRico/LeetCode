@@ -1393,6 +1393,584 @@ class Solution {
 }
 ```
 
+### 第四题 -1：[22. 括号生成](https://leetcode-cn.com/problems/generate-parentheses/)
+
+数字 *n* 代表生成括号的对数，请你设计一个函数，用于能够生成所有可能的并且 **有效的** 括号组合。
+
+ ```
+示例：
+
+输入：n = 3
+输出：[
+       "((()))",
+       "(()())",
+       "(())()",
+       "()(())",
+       "()()()"
+     ]
+ ```
+
+- 思路一：采用DFS深度优先遍历
+
+- 请看代码一：
+
+```java
+class Solution {
+    public List<String> generateParenthesis(int n) {
+        List<String> res = new ArrayList<>();
+        dfs(n,n,new StringBuilder(),res);
+        return res;
+    }
+    void dfs(int left,int right, StringBuilder sb, List<String> res){
+        // 截止条件
+        if(left > right || left < 0 || right < 0)return;
+        if (left == 0 && right == 0){
+            res.add(sb.toString());
+            return;
+        }
+        // 候选节点
+        sb.append("(");
+        dfs(left - 1, right,sb,res);
+        sb.deleteCharAt(sb.length() - 1); // 恢复现场
+		// 候选节点
+        sb.append(")");
+        dfs(left, right - 1,sb,res);
+        sb.deleteCharAt(sb.length() - 1); // 恢复现场
+    }
+}
+```
+
+- ![LeetCode 第 22 题：“括号生出”题解配图.png](https://pic.leetcode-cn.com/7ec04f84e936e95782aba26c4663c5fe7aaf94a2a80986a97d81574467b0c513-LeetCode%20%E7%AC%AC%2022%20%E9%A2%98%EF%BC%9A%E2%80%9C%E6%8B%AC%E5%8F%B7%E7%94%9F%E5%87%BA%E2%80%9D%E9%A2%98%E8%A7%A3%E9%85%8D%E5%9B%BE.png)思路二：还是采用DFS深度优先遍历
+- 
+
+- 请看代码二：
+
+```java
+class Solution {
+    public List<String> generateParenthesis(int n) {
+        List<String> res = new ArrayList<>();
+        dfs(n, n, "", res);// 执行深度优先遍历，搜索可能的结果
+        return res;
+    }
+    void dfs(int left, int right, String s, List<String> res){
+    // 因为每一次尝试，都使用新的字符串变量，所以无需回溯
+    // 在递归终止的时候，直接把它添加到结果集即可，注意与「力扣」第 46 题、第 39 题区分
+        if (left == 0 && right == 0){
+            res.add(s);
+            return;
+        }
+// 剪枝（如图，左括号可以使用的个数严格大于右括号可以使用的个数，才剪枝，注意这个细节）
+        if (left > right) { 
+            return;
+        }
+        if (left > 0){
+            dfs(left - 1, right, s + "(", res);
+        }
+        if (right > 0){
+            dfs(left, right - 1, s + ")", res);
+        }
+    }
+}
+```
+
+### 第四题 - 2: [46. 全排列](https://leetcode-cn.com/problems/permutations/)
+
+给定一个 **没有重复** 数字的序列，返回其所有可能的全排列。
+
+```
+示例:
+
+输入: [1,2,3]
+输出:
+[
+  [1,2,3],
+  [1,3,2],
+  [2,1,3],
+  [2,3,1],
+  [3,1,2],
+  [3,2,1]
+]
+```
+
+- 思路：DFS
+- 判断截止条件
+- 遍历候选节点
+
+- java代码一：借助dp数组：判断是否已经遍历过
+
+```java
+import java.util.*;
+class Solution {
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        boolean[] dp = new boolean[nums.length];
+        dfs(nums, dp, new ArrayList<Integer>(), res);
+        return res;
+    }
+    void dfs(int[] p, boolean[]dp, List<Integer> chain, List<List<Integer>> res){
+        //1 截止条件
+        if(p.length == chain.size()){
+            res.add(new ArrayList(chain));
+            return;
+        }
+        //2 候选节点
+        for(int i = 0; i < p.length; i++){
+            int c = p[i];
+            if(!dp[i]){		// 2.1 判断候选节点
+                dp[i] = true;
+                chain.add(c);
+                dfs(p,dp,chain,res);
+                chain.remove(chain.size() - 1);
+                dp[i] = false;
+            }
+        }
+    }
+}
+
+```
+
+- java代码二：可省略dp数组，用自身元素保存遍历的标志
+
+```java
+import java.util.*;
+class Solution {
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (nums.length == 0) return res;
+        dfs(nums,new ArrayList(), res);
+        return res;
+    }
+    void dfs(int[] nums,List<Integer> list, List<List<Integer>> res){
+        // 1 截止条件
+        if (nums.length == list.size()){
+            res.add(new ArrayList(list));
+            return;
+        }
+        // 2 遍历候选节点
+        for (int i = 0; i < nums.length; i ++){
+            int n = nums[i];
+            if (nums[i] != 666666){	// 2.1 判断候选节点
+                list.add(n);
+                nums[i] = 666666;
+                dfs(nums, list, res);
+                nums[i] = n;
+                list.remove(list.size() - 1);
+            }
+        }
+    }
+}
+```
+
+### 第四题 - 3 : [39. 组合总和](https://leetcode-cn.com/problems/combination-sum/)
+
+给定一个**无重复元素**的数组 `candidates` 和一个目标数 `target` ，找出 `candidates` 中所有可以使数字和为 `target` 的组合。
+
+`candidates` 中的数字可以无限制重复被选取。
+
+**说明：**
+
+- 所有数字（包括 `target`）都是正整数。
+- 解集不能包含重复的组合。 
+
+```
+示例 1：
+输入：candidates = [2,3,6,7], target = 7,
+所求解集为：
+[
+  [7],
+  [2,2,3]
+]
+
+示例 2：
+输入：candidates = [2,3,5], target = 8,
+所求解集为：
+[
+  [2,2,2,2],
+  [2,3,3],
+  [3,5]
+]
+ 
+提示：
+1 <= candidates.length <= 30
+1 <= candidates[i] <= 200
+candidate 中的每个元素都是独一无二的。
+1 <= target <= 500
+```
+
+- 思路：能想到的也是DFS算法了
+
+列出模板三部曲：
+
+- 1、判断截止条件
+- 2、遍历候选节点
+  - 2.1、判断候选节点
+
+有于题目中给出条件：`candidates` 中的数字可以无限制重复被选取。故2.1步可省略
+
+- java代码实现
+
+```java
+class Solution {
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (candidates.length == 0) return res;
+        dfs(candidates,target,new ArrayList<>(), res);
+        return res;
+    }
+    void dfs(int[] candidates, int target, ArrayList<Integer> list, List<List<Integer>> res){
+        if(target <= 0){
+            if (target == 0){// 去重判断，排列再判断有没有存在即可
+                ArrayList<Integer> tempList = new ArrayList<>(list);
+                Collections.sort(tempList);
+                if (!res.contains(tempList)) res.add(tempList);
+            }
+            return;
+        }
+        for (int i = 0; i < candidates.length; i ++){
+            list.add(candidates[i]);
+            dfs(candidates,target - candidates[i],list,res);
+            list.remove(list.size() - 1);
+        }
+    }
+}
+```
+
+### 第五题：[1249. 移除无效的括号](https://leetcode-cn.com/problems/minimum-remove-to-make-valid-parentheses/)
+
+给你一个由 '('、')' 和小写字母组成的字符串 s。
+
+你需要从字符串中删除最少数目的 '(' 或者 ')' （可以删除任意位置的括号)，使得剩下的「括号字符串」有效。
+
+请返回任意一个合法字符串。
+
+有效「括号字符串」应当符合以下 任意一条 要求：
+
+- 空字符串或只包含小写字母的字符串
+- 可以被写作 AB（A 连接 B）的字符串，其中 A 和 B 都是有效「括号字符串」
+- 可以被写作 (A) 的字符串，其中 A 是一个有效的「括号字符串」
+
+```
+示例 1：
+输入：s = "lee(t(c)o)de)"
+输出："lee(t(c)o)de"
+解释："lee(t(co)de)" , "lee(t(c)ode)" 也是一个可行答案。
+
+示例 2：
+输入：s = "a)b(c)d"
+输出："ab(c)d"
+
+示例 3：
+输入：s = "))(("
+输出：""
+解释：空字符串也是有效的
+
+示例 4：
+输入：s = "(a(b(c)d)"
+输出："a(b(c)d)"
+ 
+提示：
+1 <= s.length <= 10^5
+s[i] 可能是 '('、')' 或英文小写字母
+```
+
+> 思路:
+
+这题其实非常简单，要移除无效的括号，那么只要找到所有无效的括号就行了。怎么找呢？方法类似于经典问题——"括号匹配"，用栈就可以很容易地解决，具体如下：
+
+比如对于这样一个括号串 )(())(()，如果要找到不合法括号的位置，可以这样做：
+
+- 首先，用一个flags组标记无效括号的索引，用一个栈存放所有遍历到的左括号的索引，
+
+然后从前往后扫描这个串，对于第i个括号：
+
+- 若为(，先进栈（栈中存的是下标）
+
+- 若为)，这时先判断栈是否为空：
+  - 若为空，说明右括号)在左括号(之前出现了，那显然是无效括号，即flags[i] = true；
+  - 若不为空，那么这个右括号)和上一个出现的左括号(可以组成合法括号，就从栈中弹出一个元素，将其修正为合法的
+
+- 当for循环完成之后，若stack非空则依次弹出栈中对应元素，并赋值给对应的flags数组标志为删除即可
+
+- 最后遍历flags删除为true的元素即可
+
+通过上述操作，我们可以记录下所有的无效括号的下标，再往后就很简单了。至此，就不难得出如下
+
+- java代码：
+
+```java
+import java.util.*;
+class Solution {
+public String minRemoveToMakeValid(String s) {
+        if (s.length() == 0) return s;
+        boolean[] flags = new boolean[s.length()];		// 建立标志数组
+        ArrayDeque<Integer> stack = new ArrayDeque<>(); // 建立栈
+        for (int i = 0; i < s.length(); i ++){		// 循环遍历整个数组
+            char ch = s.charAt(i);					
+            if(ch == '('){			// 若为'('直接添加进入数组
+                stack.addLast(i);
+            } else if (ch == ')'){	// 若为')'
+                if(stack.isEmpty()){  //且stack为非空，则为非法数组，待删除
+                    flags[i] = true;
+                }
+                else {
+                    stack.pollLast(); //若不为空，则栈中元素有与之匹配，则出栈即可
+                }
+            }
+        }
+    
+        while (!stack.isEmpty()){	// 遍历一遍栈
+            flags[stack.pollLast()] = true;		// 标记栈中所存下标，待删除	
+        }
+        StringBuilder sb = new StringBuilder(s);
+        for (int i = s.length() - 1; i >= 0; i --){
+            if(flags[i]) sb.deleteCharAt(i);	// 删除不匹配的括号
+        }
+        return sb.toString();
+    }
+}
+```
+
+### 第六题：[49. 字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/)
+
+给定一个字符串数组，将字母异位词组合在一起。字母异位词指字母相同，但排列不同的字符串。
+
+```
+示例:
+
+输入: ["eat", "tea", "tan", "ate", "nat", "bat"]
+输出:
+[
+  ["ate","eat","tea"],
+  ["nat","tan"],
+  ["bat"]
+]
+```
+
+- 思路：维护一个映射 ans : {String -> List}，其中每个键 \text{K}K 是一个排序字符串，每个值是初始输入的字符串列表，排序后等于 K。
+
+![Anagrams](https://pic.leetcode-cn.com/Figures/49/49_groupanagrams1.png)
+
+```java
+import java.util.*;
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        if (strs.length == 0) return new ArrayList();
+        HashMap<String,List> map = new HashMap<>();
+        for (String str : strs){
+            char[] chars = str.toCharArray();
+            Arrays.sort(chars);
+            String key = String.valueOf(chars);
+            if (!map.containsKey(key)){
+                map.put(key, new ArrayList());
+            }
+            map.get(key).add(str);
+        }
+        return new ArrayList(map.values());
+    }
+}
+```
+
+### 第七题：[415. 字符串相加](https://leetcode-cn.com/problems/add-strings/)
+
+给定两个字符串形式的非负整数 `num1` 和`num2` ，计算它们的和。
+
+```java
+提示：
+
+num1 和num2 的长度都小于 5100
+num1 和num2 都只包含数字 0-9
+num1 和num2 都不包含任何前导零
+你不能使用任何內建 BigInteger 库， 也不能直接将输入的字符串转换为整数形式
+```
+
+- 思路：单个同一位进行相加，相加时先不进位；在第二轮遍历的时候处理进位问题即可，最后按照格式进行输出即可；
+
+```java
+class Solution {
+	public String addStrings(String num1, String num2) {
+        // 特殊条件判断；
+        int len1 = num1.length();
+        int len2 = num2.length();
+        if (len1 == 0) return num2;
+        if (len2 == 0) return num1;
+        // 建立新数组，只需要在原来最大数值上加1即可
+        int maxLen = Math.max(len1,len2) + 1;
+        // 建立新数组，将参数传入到新数组上
+        int[] res = new int[maxLen];
+        int[] resTemp = new int[maxLen];
+        // 进行对其操作如 99 和  999
+        // 令新数组为:  0099 和 0999
+        int k = maxLen - 1;
+        for (int i = len1 - 1; i >= 0; i --){
+            res[k --] = num1.charAt(i) - '0';
+        }
+        k = maxLen - 1;
+        for (int i = len2 - 1; i >= 0; i --){
+            resTemp[k -- ] = num2.charAt(i) - '0';
+        }
+        // 进行同位相加，并且不进行进位处理
+        int i = 0;
+        while (i < maxLen){
+            res[maxLen - 1 - i] += resTemp[maxLen - 1 - i];
+            i ++;
+        }
+        // 进行进位处理
+        for (int j = maxLen - 1; j >= 1 ; j --){
+            res[j - 1] += res[j] / 10;
+            res[j] %= 10;
+        }
+        // 按格式输出
+        StringBuilder sb = new StringBuilder();
+        for (int j = 0; j < maxLen ; j ++){
+            if (j == 0 && res[j] == 0) continue;
+            sb.append(res[j]);
+        }
+        return sb.toString();
+    }
+}
+```
+
+- 或者采用双指针的形式：
+
+```java
+class Solution {
+public String addStrings(String num1, String num2) {
+        int len1 = num1.length() - 1;
+        int len2 = num2.length() - 1;
+        StringBuilder sb = new StringBuilder();
+        int carry = 0;
+        while (len1 >= 0 || len2 >= 0 || carry != 0){
+            int n1 = len1 >= 0 ? num1.charAt(len1) - '0' : 0;
+            int n2 = len2 >= 0 ? num2.charAt(len2) - '0' : 0;
+            int sum = n1 + n2 + carry;
+            sb.append(sum % 10);
+            carry = sum / 10;
+            len1 --;
+            len2 --;
+        }
+        return sb.reverse().toString();
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -73,19 +73,22 @@ public class lengthOfLongestSubstring03 {
     public static int lengthOfLongestSubstring_2(String s) {
         int len = s.length();
         if (len < 2) return len;
+
         int left = 0;
         int right = 0;
         int maxSum = 0;
+
         Set<Character> set = new HashSet<Character>();
-        // set.add(s.charAt(0));
+
         while (left < len){
             while (right < len && !set.contains(s.charAt(right))){
                 set.add(s.charAt(right));
                 right ++;
             }
             maxSum = Math.max(maxSum, right - left);
-            set.remove(s.charAt(left++));
+            set.remove(s.charAt(left++));   // 将第一个出现重复字符的头去掉如abcdaqwe,将b前面的a去掉
         }
+
         return maxSum;
     }
 }

@@ -17,7 +17,7 @@ package com.rico.lcmedium;
  * 据了矩阵中的第一行第二个格子之后，路径不能再次进入这个格子。
  */
 @SuppressWarnings("ALL")
-public class existPaths {
+public class existPathsOffer12 {
 
     public static boolean exist(char[][] board, String word) {
        boolean[][] isvis = new boolean[board.length][board[0].length];
