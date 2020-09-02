@@ -555,7 +555,7 @@ public class Solution {
 
 
 
-### 18、字符串的排列
+### 18、字符串的全排列
 
 - 输入一个字符串,按字典序打印出该字符串中字符的所有排列。例如输入字符串abc,则按字典序打印出由字符a,b,c所能排列出来的所有字符串abc,acb,bac,bca,cab和cba。
 
@@ -585,7 +585,7 @@ public class Solution {
             char c = s.charAt(i);
             if(c != '0'){		//判断是否被访问过
                 s.setCharAt(i, '0');
-                sb.a(c);
+                sb.add(c);
                 dfs(s, index + 1, sb, res);
                 sb.deleteCharAt(sb.length()-1);
                 s.setCharAt(i, c);   
