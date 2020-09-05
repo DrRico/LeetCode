@@ -146,6 +146,160 @@ class Solution {
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```
 
+### 第四题：[42. 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)
+
+给定 *n* 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。
+
+![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rainwatertrap.png)
+
+上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）。 感谢 Marcos 贡献此图。
+
+**示例:**
+
+```
+输入: [0,1,0,2,1,0,1,3,2,1,2,1]
+输出: 6
+```
+
+- 思路一：先找到最大值，然后往两边遍历，遍历的过程还需要一直带有递归求解
+
+- java代码
+
+```java
+public static int left(int mid, int[] height) {
+        if (mid == 0) {
+            return 0;
+        }
+        // 依次找左侧最高点
+        int index = mid - 1;
+        int max = 0;
+        int idx = 0;
+        for (; index >= 0; index--) {// 继续求最大值
+            if (height[index] >= max) {
+                max = height[index];
+                idx = index;
+            }
+        }
+
+        // 求总面积
+        int area = max * (mid - (idx + 1));
+
+        int pillars = 0;
+        int i = idx + 1;
+        for (; i < mid; i++) { // 求石头部分，即数组中非空的部分
+            pillars += height[i] * 1;
+        }
+        int water = (area - pillars) + left(idx, height);  // 求有效面积
+        return water;
+    }
+
+
+    public static int right(int mid, int[] height) {
+        if (mid == height.length - 1) {
+            return 0;
+        }
+        // 依次找左侧最高点
+        int index = mid + 1;
+        int max = 0;
+        int idx = 0;
+        for (; index < height.length; index++) {// 继续求最大值
+            if (height[index] >= max) {
+                max = height[index];
+                idx = index;
+            }
+        }
+        // 求总面积
+        int area = max * ((idx - 1) - mid);
+
+        int pillars = 0;
+        int i = idx - 1;
+        for (; i > mid; i--) { // 求石头部分，即数组中非空的部分
+            pillars += height[i] * 1;
+        }
+        int water = (area - pillars) + right(idx, height); // 求有效面积
+        return water;
+    }
+
+
+    public static int trap_left_right(int[] height){
+        int len = height.length;
+        if (len <= 2) return 0;
+        int max = 0;
+        int index = 0;
+        for (int i = 0; i < len; i++) {
+            if (height[i] > max) {
+                max = height[i];
+                index = i;
+            }
+
+        }
+        int left = left(index,height);
+        int right = right(index,height);
+
+
+        return left + right;
+    }
+```
+
+- 思路二：动态规划
+- ![trapping_rain_water.png](https://pic.leetcode-cn.com/53ab7a66023039ed4dce42b709b4997d2ba0089077912d39a0b31d3572a55d0b-trapping_rain_water.png)
+
+- java实现：
+
+```java
+class Solution {
+    public int trap(int[] height) {
+        int len = height.length;
+        if (len <= 2) return 0;
+        int res = 0;
+        int[] leftArr = new int[len];
+        int[] rightArr = new int[len];
+        int max = 0;
+        // 从左边遍历的最大值
+        for (int i = 0; i < len; i++) {
+            if (max <= height[i]){
+                max = height[i];
+            }
+            leftArr[i] = max;
+        }
+        // 从右边遍历的最大值
+        max = 0;
+        for (int i = len - 1; i >= 0; i--) {
+            if (max <= height[i]){
+                max = height[i];
+            }
+            rightArr[i] = max;
+        }
+// 求出有效值，有效值（雨水）= min(leftArr[i],rightArr[i]) - 石头部分(height[i])
+        for (int i = 0; i < len; i++) {
+            res += Math.min(leftArr[i],rightArr[i]) - height[i];
+        }
+        return res;
+    }
+}
+```
+
+- 思路三：使用栈：
+
+```java
+   //方法 3：栈的应用
+        int ans = 0, current = 0;
+        Stack<Integer> st = new Stack<Integer>();
+        while (current < height.length) {
+            while (!st.empty() && height[current] > height[st.peek()]) {
+                int top = st.peek();
+                st.pop();
+                if (st.empty())
+                    break;
+                int distance = current - st.peek() - 1;
+                int bounded_height = Math.min(height[current], height[st.peek()]) - height[top];
+                ans += distance * bounded_height;
+            }
+            st.push(current++);
+        }
+        return ans;
+```
+
 
 
 
@@ -2008,6 +2162,108 @@ class Solution {
     }
 }
 ```
+
+### 第九题：[17. 电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)
+
+给定一个仅包含数字 `2-9` 的字符串，返回所有它能表示的字母组合。给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
+
+![img](https://assets.leetcode-cn.com/aliyun-lc-upload/original_images/17_telephone_keypad.png)
+
+```
+示例:
+输入："23"
+输出：["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+说明:
+尽管上面的答案是按字典序排列的，但是你可以任意选择答案输出的顺序。
+```
+
+- 思路：使用DFS进行解决即可
+- java代码如下：
+
+```java
+import java.util.*;
+class Solution {
+    static char[][] m = {{},{},{'a', 'b', 'c'}, {'d', 'e', 'f'},
+            {'g', 'h', 'i'}, {'j', 'k', 'l'}, {'m', 'n', 'o'},
+            {'p', 'q', 'r', 's'},{'t', 'u', 'v'},
+            {'w', 'x', 'y', 'z'}}; //0和1是空的，值是从2开始
+    public List<String> letterCombinations(String digits) {
+        List<String> res = new ArrayList<>();
+        if (digits.length() == 0) return res;
+        dfs(0,digits,new StringBuilder(),res);
+        return res;
+    }
+    void dfs(int index, String s, StringBuilder sb,List<String> res){
+         // 1、截止条件
+        if(index == s.length()){
+            res.add(sb.toString());
+            return;
+        }
+         // 2、候选节点
+        for(char c : m[s.charAt(index) - '0']){ //取二维数组中的值
+            sb.append(c);  						//增加到数组
+            dfs(index+1, s, sb, res);			// dfs
+            sb.deleteCharAt(sb.length() - 1); 	// 恢复现场
+        }
+    }
+}
+```
+
+### 第十题：[91. 解码方法](https://leetcode-cn.com/problems/decode-ways/)
+
+一条包含字母 `A-Z` 的消息通过以下方式进行了编码：
+
+```
+'A' -> 1
+'B' -> 2
+...
+'Z' -> 26
+给定一个只包含数字的非空字符串，请计算解码方法的总数。
+
+示例 1:
+输入: "12"
+输出: 2
+解释: 它可以解码为 "AB"（1 2）或者 "L"（12）。
+
+示例 2:
+输入: "226"
+输出: 3
+解释: 它可以解码为 "BZ" (2 26), "VF" (22 6), 或者 "BBF" (2 2 6) 。
+```
+
+- 思路：使用DP动态规划进行求解
+
+![image.png](https://pic.leetcode-cn.com/c09dc70d3085792b2b8417843e297f6841fd12f921b0e4fe28a2c4a8dc86dd1e-image.png)
+
+- Java代码：
+
+```java
+class Solution {
+    public int numDecodings(String s) {
+        // 特殊情况的判断
+        int len = s.length();
+        if (len == 0) return 0;
+        int pre = 1, curr = 1;  // dp[-1] = dp[0] = 1
+        char[] chars = s.toCharArray();
+        if (chars[0] == '0') return 0;
+        for (int i = 1; i < len; i++) {
+            int tmp = curr;
+            if (chars[i] == '0'){
+                if (chars[i-1] == '1' || chars[i-1] == '2') curr = pre;
+                else return 0;
+            } else if (chars[i-1] == '1' || (chars[i-1] == '2' && chars[i] >= '1' && chars[i] <= '6')){
+                curr += pre;
+            }
+             pre = tmp;
+        }
+        return curr;
+    }
+}
+```
+
+
+
+
 
 
 
