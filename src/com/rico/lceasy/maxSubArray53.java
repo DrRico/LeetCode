@@ -1,6 +1,9 @@
 package com.rico.lceasy;
 
+import java.beans.IntrospectionException;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 
 /**
  * @author Rico
@@ -38,5 +41,8 @@ public class maxSubArray53 {
     public static void main(String[] args) {
         int[] a = {-2,1,-3,4,-1,2,1,-5,4};
         System.out.println(maxSubArray(a));
+//        HashSet<Integer> set = new HashSet<>();
+//        set.add(1);
+
     }
 }

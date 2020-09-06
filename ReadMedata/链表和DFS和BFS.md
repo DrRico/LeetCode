@@ -478,7 +478,7 @@ public class Solution {
 1234567891011121314151617181920212223242526272829
 ```
 
-### leetcode17. 电话号码的字母组合
+### leetcode-17. 电话号码的字母组合
 
 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。
 
@@ -528,7 +528,7 @@ class Solution {
 123456789101112131415161718192021222324252627282930313233
 ```
 
-### leetcode39. 组合总和
+### leetcode-39. 组合总和
 
 给定一个无重复元素的数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。
 
@@ -689,7 +689,12 @@ class Solution {
   [3,1,2],
   [3,2,1]
 ]
-12345678910
+
+```
+
+代码：
+
+```java
 import java.util.*;
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
@@ -717,12 +722,18 @@ class Solution {
         }
     }
 }
-123456789101112131415161718192021222324252627
+
+
 执行用时：
 1 ms, 在所有 Java 提交中击败了99.76%的用户
 内存消耗：
 39.9 MB, 在所有 Java 提交中击败了71.61%的用户
-1234
+
+```
+
+代码二：
+
+```java
 import java.util.*;
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
@@ -749,7 +760,6 @@ class Solution {
         }
     }
 }
-1234567891011121314151617181920212223242526
 ```
 
 去掉了标志数组之后，直接用传入的数组给某一个下标设置标志：
