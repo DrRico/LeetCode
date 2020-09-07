@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91bb8ea3-9a1a-4393-bda2-734192223dcd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/rico/lcmedium/numDecodings91.java" afterDir="false" />
+    <list default="true" id="91bb8ea3-9a1a-4393-bda2-734192223dcd" name="Default Changelist" comment="2020.09.05 -updated">
+      <change afterPath="$PROJECT_DIR$/src/com/rico/tester/DeadLockTest01.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMedata/InteviewData/敖丙三太子的面试笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/InteviewData/敖丙三太子的面试笔记.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMedata/InteviewData/面经01.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/InteviewData/面经01.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMedata/LC.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/LC.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rico/lchard/trapWaterDrop42.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rico/lchard/trapWaterDrop42.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,20 +54,20 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="29" />
-          <entry key="java" value="20419" />
-          <entry key="txt" value="97" />
+          <entry key="java" value="20710" />
+          <entry key="txt" value="129" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="20419" />
-          <entry key="PLAIN_TEXT" value="126" />
+          <entry key="JAVA" value="20710" />
+          <entry key="PLAIN_TEXT" value="158" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="104" />
+          <entry key="java" value="105" />
           <entry key="jpg" value="11" />
           <entry key="md" value="3" />
         </counts>
@@ -77,7 +76,7 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="Image" value="11" />
-          <entry key="JAVA" value="104" />
+          <entry key="JAVA" value="105" />
           <entry key="Markdown" value="3" />
         </counts>
       </usages-collector>
@@ -90,14 +89,23 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/numDecodings91.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+            <state relative-caret-position="122">
+              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/tester/DeadLockTest01.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
         </entry>
@@ -127,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/rico/huawei/Main03.java" />
         <option value="$PROJECT_DIR$/src/com/rico/huawei/Main04.java" />
         <option value="$PROJECT_DIR$/src/com/rico/huawei/Main05.java" />
         <option value="$PROJECT_DIR$/src/com/rico/huawei/Main06.java" />
@@ -178,6 +185,7 @@
         <option value="$PROJECT_DIR$/src/com/rico/lchard/candy135.java" />
         <option value="$PROJECT_DIR$/src/com/rico/lchard/trapWaterDrop42.java" />
         <option value="$PROJECT_DIR$/src/com/rico/lcmedium/numDecodings91.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/tester/DeadLockTest01.java" />
       </list>
     </option>
   </component>
@@ -187,7 +195,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="781" />
     <option name="y" value="456" />
     <option name="width" value="1109" />
@@ -226,7 +234,7 @@
               <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="rico" type="462c0819:PsiDirectoryNode" />
-              <item name="lcmedium" type="462c0819:PsiDirectoryNode" />
+              <item name="tester" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -240,7 +248,7 @@
     <property name="SearchEverywhereHistoryKey" value="stack&#9;PSI&#9;JAVA://jdk.nashorn.internal.codegen.Label.Stack" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1599203992223" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1599483274694" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -254,16 +262,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.numDecodings91">
-    <configuration name="Tester (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Tester" />
-      <module name="LeetCode" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.tester.Tester" />
+  <component name="RunManager" selected="Application.DeadLockTest01">
+    <configuration name="DeadLockTest01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.tester.DeadLockTest01" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
@@ -271,6 +272,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tester (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Tester" />
+      <module name="LeetCode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -315,19 +323,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Tester" />
       <item itemvalue="Application.Tester (1)" />
       <item itemvalue="Application.candy135" />
       <item itemvalue="Application.trapWaterDrop42" />
       <item itemvalue="Application.numDecodings91" />
+      <item itemvalue="Application.DeadLockTest01" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DeadLockTest01" />
         <item itemvalue="Application.numDecodings91" />
         <item itemvalue="Application.trapWaterDrop42" />
         <item itemvalue="Application.candy135" />
         <item itemvalue="Application.Tester (1)" />
-        <item itemvalue="Application.Tester" />
       </list>
     </recent_temporary>
   </component>
@@ -343,7 +351,7 @@
       <updated>1598111873100</updated>
       <workItem from="1598111886927" duration="12914000" />
       <workItem from="1598254362034" duration="143814000" />
-      <workItem from="1599094848351" duration="21842000" />
+      <workItem from="1599094848351" duration="23116000" />
     </task>
     <task id="LOCAL-00001" summary="2020.08.27 -updated">
       <created>1598624953560</created>
@@ -387,17 +395,24 @@
       <option name="project" value="LOCAL" />
       <updated>1599146068027</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="2020.09.05 -updated - 面经、numDecodings91、trapWaterDrop42 and LC.md">
+      <created>1599271952807</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1599271952807</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177072000" />
+    <option name="totallyTimeSpent" value="178346000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21648793" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21648793" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -406,7 +421,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22553192" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22553192" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.22978723" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -471,7 +486,8 @@
     <MESSAGE value="2020.09.01 -updated InputOutput" />
     <MESSAGE value="2020.09.02 -updated InputOutput" />
     <MESSAGE value="2020.09.03 -updated - lc.md - candy135 and trapWaterDrop42(undone)" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020.09.03 -updated - lc.md - candy135 and trapWaterDrop42(undone)" />
+    <MESSAGE value="2020.09.05 -updated - 面经、numDecodings91、trapWaterDrop42 and LC.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020.09.05 -updated - 面经、numDecodings91、trapWaterDrop42 and LC.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -786,13 +802,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main03.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/InputOutputTesr/Main05.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -1195,11 +1204,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/numDecodings91.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        <state relative-caret-position="122">
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/tester/DeadLockTest01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
