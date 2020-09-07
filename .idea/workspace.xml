@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="91bb8ea3-9a1a-4393-bda2-734192223dcd" name="Default Changelist" comment="2020.09.05 -updated">
       <change afterPath="$PROJECT_DIR$/src/com/rico/tester/DeadLockTest01.java" afterDir="false" />
+=======
+<<<<<<< HEAD
+    <list default="true" id="91bb8ea3-9a1a-4393-bda2-734192223dcd" name="Default Changelist" comment="conflect">
+      <change afterPath="$PROJECT_DIR$/src/com/rico/tester/FinderK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMedata/leetCode.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/leetCode.md" afterDir="false" />
+=======
+    <list default="true" id="91bb8ea3-9a1a-4393-bda2-734192223dcd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/rico/lcmedium/numDecodings91.java" afterDir="false" />
+>>>>>>> ab377de1422ea932f8f03d5cb0a6a727d7cbe1d5
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMedata/InteviewData/敖丙三太子的面试笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/InteviewData/敖丙三太子的面试笔记.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMedata/InteviewData/面经01.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/InteviewData/面经01.md" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/ReadMedata/LC.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/LC.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rico/lchard/trapWaterDrop42.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rico/lchard/trapWaterDrop42.java" afterDir="false" />
+>>>>>>> origin/master
+>>>>>>> ab377de1422ea932f8f03d5cb0a6a727d7cbe1d5
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,22 +40,33 @@
     <session id="2136672724">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="3" />
+          <entry key="java" value="4" />
+          <entry key="md" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="3" />
+          <entry key="JAVA" value="4" />
+          <entry key="Markdown" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="962" />
+          <entry key="java" value="1080" />
+          <entry key="md" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="962" />
+          <entry key="JAVA" value="1080" />
+          <entry key="Markdown" value="32" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.46" value="1" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -83,6 +111,112 @@
     </session>
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/threeSum15.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/lceasy/maxSubArray53.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ReadMedata/二叉树.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="-3888" />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ReadMedata/链表和DFS和BFS.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="24">
+                <caret line="393" column="35" selection-start-line="393" selection-start-column="28" selection-end-line="393" selection-end-column="35" />
+                <folding>
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="e#0#531#0" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ReadMedata/leetCode.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="203">
+                <caret line="3084" column="3" lean-forward="true" selection-start-line="3084" selection-start-column="3" selection-end-line="3084" selection-end-column="3" />
+                <folding>
+                  <element signature="e#0#730#0" expanded="true" />
+                  <element signature="e#669#670#0" expanded="true" />
+                  <element signature="e#713#714#0" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="e#0#1892#0" expanded="true" />
+                  <element signature="e#78#79#0" expanded="true" />
+                  <element signature="e#121#122#0" expanded="true" />
+                  <element signature="e#716#717#0" expanded="true" />
+                  <element signature="e#757#758#0" expanded="true" />
+                  <element signature="e#785#786#0" expanded="true" />
+                  <element signature="e#844#845#0" expanded="true" />
+                  <element signature="e#228#229#0" expanded="true" />
+                  <element signature="e#285#286#0" expanded="true" />
+                  <element signature="e#0#811#0" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="imports" expanded="true" />
+                  <element signature="e#528#529#0" expanded="true" />
+                  <element signature="e#583#584#0" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="imports" expanded="true" />
+                  <element signature="e#352#353#0" expanded="true" />
+                  <element signature="e#390#391#0" expanded="true" />
+                  <element signature="imports" expanded="true" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/tester/FinderK.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+=======
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Image/1597571640(1).jpg">
@@ -97,6 +231,7 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+>>>>>>> origin/master
             </state>
           </provider>
         </entry>
@@ -135,6 +270,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/com/rico/lcmedium/maxArea11.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/lcmedium/threeSum15.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/lceasy/maxSubArray53.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/tester/FinderK.java" />
+        <option value="$PROJECT_DIR$/ReadMedata/leetCode.md" />
+=======
+        <option value="$PROJECT_DIR$/src/com/rico/huawei/Main03.java" />
+>>>>>>> ab377de1422ea932f8f03d5cb0a6a727d7cbe1d5
         <option value="$PROJECT_DIR$/src/com/rico/huawei/Main04.java" />
         <option value="$PROJECT_DIR$/src/com/rico/huawei/Main05.java" />
         <option value="$PROJECT_DIR$/src/com/rico/huawei/Main06.java" />
@@ -185,7 +332,11 @@
         <option value="$PROJECT_DIR$/src/com/rico/lchard/candy135.java" />
         <option value="$PROJECT_DIR$/src/com/rico/lchard/trapWaterDrop42.java" />
         <option value="$PROJECT_DIR$/src/com/rico/lcmedium/numDecodings91.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/com/rico/tester/DeadLockTest01.java" />
+=======
+>>>>>>> origin/master
+>>>>>>> ab377de1422ea932f8f03d5cb0a6a727d7cbe1d5
       </list>
     </option>
   </component>
@@ -195,11 +346,22 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="7">
+=======
+  <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
+    <option name="x" value="-121" />
+    <option name="y" value="-9" />
+    <option name="width" value="1184" />
+    <option name="height" value="744" />
+=======
+>>>>>>> ab377de1422ea932f8f03d5cb0a6a727d7cbe1d5
     <option name="x" value="781" />
     <option name="y" value="456" />
     <option name="width" value="1109" />
     <option name="height" value="598" />
+>>>>>>> origin/master
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -228,13 +390,25 @@
               <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="rico" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="tester" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> origin/master
             </path>
             <path>
               <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="ReadMedata" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="rico" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="tester" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="lcmedium" type="462c0819:PsiDirectoryNode" />
+>>>>>>> origin/master
+>>>>>>> ab377de1422ea932f8f03d5cb0a6a727d7cbe1d5
             </path>
           </expand>
           <select />
@@ -245,10 +419,20 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598752961698" />
+=======
     <property name="SearchEverywhereHistoryKey" value="stack&#9;PSI&#9;JAVA://jdk.nashorn.internal.codegen.Label.Stack" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1599483274694" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1599203992223" />
+>>>>>>> origin/master
+>>>>>>> ab377de1422ea932f8f03d5cb0a6a727d7cbe1d5
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -262,9 +446,40 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Application.DeadLockTest01">
     <configuration name="DeadLockTest01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.rico.tester.DeadLockTest01" />
+=======
+<<<<<<< HEAD
+  <component name="RunManager" selected="Application.FinderK">
+    <configuration name="FinderK" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.tester.FinderK" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rico.tester.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+=======
+  <component name="RunManager" selected="Application.numDecodings91">
+    <configuration name="Tester (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Tester" />
+      <module name="LeetCode" />
+>>>>>>> origin/master
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+<<<<<<< HEAD
+    <configuration name="maxSubArray53" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.lceasy.maxSubArray53" />
+=======
+    <configuration name="Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.tester.Tester" />
+>>>>>>> origin/master
+>>>>>>> ab377de1422ea932f8f03d5cb0a6a727d7cbe1d5
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
@@ -323,6 +538,21 @@
       </method>
     </configuration>
     <list>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <item itemvalue="Application.threeSum15" />
+      <item itemvalue="Application.maxSubArray53" />
+      <item itemvalue="Application.FinderK" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FinderK" />
+        <item itemvalue="Application.maxSubArray53" />
+        <item itemvalue="Application.threeSum15" />
+=======
+      <item itemvalue="Application.Tester" />
+>>>>>>> ab377de1422ea932f8f03d5cb0a6a727d7cbe1d5
       <item itemvalue="Application.Tester (1)" />
       <item itemvalue="Application.candy135" />
       <item itemvalue="Application.trapWaterDrop42" />
@@ -336,6 +566,11 @@
         <item itemvalue="Application.trapWaterDrop42" />
         <item itemvalue="Application.candy135" />
         <item itemvalue="Application.Tester (1)" />
+<<<<<<< HEAD
+=======
+        <item itemvalue="Application.Tester" />
+>>>>>>> origin/master
+>>>>>>> ab377de1422ea932f8f03d5cb0a6a727d7cbe1d5
       </list>
     </recent_temporary>
   </component>
@@ -349,9 +584,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598111873100</updated>
+<<<<<<< HEAD
+      <workItem from="1598111886927" duration="13595000" />
+      <workItem from="1598713299527" duration="3229000" />
+=======
       <workItem from="1598111886927" duration="12914000" />
       <workItem from="1598254362034" duration="143814000" />
+<<<<<<< HEAD
       <workItem from="1599094848351" duration="23116000" />
+=======
+      <workItem from="1599094848351" duration="21842000" />
+>>>>>>> origin/master
+>>>>>>> ab377de1422ea932f8f03d5cb0a6a727d7cbe1d5
     </task>
     <task id="LOCAL-00001" summary="2020.08.27 -updated">
       <created>1598624953560</created>
@@ -406,13 +650,31 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="178346000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="15326000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15879828" />
+=======
+    <option name="totallyTimeSpent" value="177072000" />
+>>>>>>> ab377de1422ea932f8f03d5cb0a6a727d7cbe1d5
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21648793" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21648793" />
+>>>>>>> origin/master
+>>>>>>> ab377de1422ea932f8f03d5cb0a6a727d7cbe1d5
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -420,6 +682,19 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32918552" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37669683" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32832617" />
+=======
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22553192" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.22978723" />
@@ -431,6 +706,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32765958" />
+>>>>>>> origin/master
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -905,8 +1181,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/permute46.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="648">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+=======
         <state relative-caret-position="396">
           <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+>>>>>>> origin/master
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -915,6 +1196,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/generateParenthesis22.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="552">
+          <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReadMedata/二叉树.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="-3888" />
+          <second_editor />
+=======
         <state relative-caret-position="220">
           <caret line="37" selection-start-line="37" selection-end-line="38" />
         </state>
@@ -1018,19 +1311,85 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10">
           <caret line="72" column="20" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ReadMedata/链表和DFS和BFS.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+<<<<<<< HEAD
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="24">
+            <caret line="393" column="35" selection-start-line="393" selection-start-column="28" selection-end-line="393" selection-end-column="35" />
+            <folding>
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="e#0#531#0" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+            </folding>
+=======
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="233">
             <caret line="503" column="45" lean-forward="true" selection-start-line="503" selection-start-column="45" selection-end-line="503" selection-end-column="45" />
+>>>>>>> origin/master
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/com/rico/tester/FinderK.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReadMedata/leetCode.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="203">
+            <caret line="3084" column="3" lean-forward="true" selection-start-line="3084" selection-start-column="3" selection-end-line="3084" selection-end-column="3" />
+            <folding>
+              <element signature="e#0#730#0" expanded="true" />
+              <element signature="e#669#670#0" expanded="true" />
+              <element signature="e#713#714#0" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="e#0#1892#0" expanded="true" />
+              <element signature="e#78#79#0" expanded="true" />
+              <element signature="e#121#122#0" expanded="true" />
+              <element signature="e#716#717#0" expanded="true" />
+              <element signature="e#757#758#0" expanded="true" />
+              <element signature="e#785#786#0" expanded="true" />
+              <element signature="e#844#845#0" expanded="true" />
+              <element signature="e#228#229#0" expanded="true" />
+              <element signature="e#285#286#0" expanded="true" />
+              <element signature="e#0#811#0" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="imports" expanded="true" />
+              <element signature="e#528#529#0" expanded="true" />
+              <element signature="e#583#584#0" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="imports" expanded="true" />
+              <element signature="e#352#353#0" expanded="true" />
+              <element signature="e#390#391#0" expanded="true" />
+              <element signature="imports" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor />
+=======
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/StringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1209,6 +1568,7 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
