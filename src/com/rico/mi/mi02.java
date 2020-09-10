@@ -6,6 +6,10 @@ package com.rico.mi;
  */
 
 class mi02 {
+    public static void main(String[] args) {
+
+
+    }
     public boolean exist(char[][] board, String word) {
         if (board == null || board.length == 0 || board[0].length == 0) {
             return false;
