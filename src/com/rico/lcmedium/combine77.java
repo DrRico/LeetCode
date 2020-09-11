@@ -1,6 +1,5 @@
 package com.rico.lcmedium;
 
-import java.awt.*;
 import java.util.*;
 import java.util.List;
 
@@ -23,15 +22,8 @@ import java.util.List;
 
 public class combine77 {
     public static void main(String[] args) {
-        //System.out.println(combine(4,2));
-        byte a = 2;byte b = 2;
-        b = (byte) (a + b);
-        System.out.println(b);
-        String s = "314";
-        String ss = new String("314");
-        System.out.println(s == ss);
-        System.out.println(s.equals(ss));
-        
+        System.out.println(combine(4,2));
+
     }
 
     public static List<List<Integer>> combine(int n, int k) {
@@ -54,10 +46,8 @@ public class combine77 {
         // 只有这里 i <= n - (k - path.size()) + 1 与参考代码 1 不同
         for (int i = index; i <= n; i++) {
             list.add(i);
-            System.out.println("递归之前 => " + list);
             dfs(n, k, i + 1, list, res);
             list.remove(list.size() - 1);
-            System.out.println("递归之后 => " + list);
         }
     }
 

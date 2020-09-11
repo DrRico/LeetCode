@@ -2334,13 +2334,134 @@ class Solution {
 }
 ```
 
+### 第二题-1：[77. 组合](https://leetcode-cn.com/problems/combinations/)
+
+给定两个整数 *n* 和 *k*，返回 1 ... *n* 中所有可能的 *k* 个数的组合。
+
+示例:
+
+```java
+输入: n = 4, k = 2
+输出:
+[
+  [2,4],
+  [3,4],
+  [2,3],
+  [1,2],
+  [1,3],
+  [1,4],
+]
+```
+
+- 思路：使用回溯：其实组合和子集问题都可以抽象为一个树形结构，如下：
+
+![77.组合.png](https://pic.leetcode-cn.com/1599530938-bWgopL-77.%E7%BB%84%E5%90%88.png)
+
+可以看一下这个棵树，一开始集合是 1，2，3，4， 从左向右去数，取过的数，不在重复取。
+
+第一取1，集合变为2，3，4 ，因为k为2，我们只需要去一个数就可以了，分别取，2，3，4， 得到集合[1,2] [1,3] [1,4]，以此类推。
+
+如何在这个树上遍历，然后收集到我们要的结果集呢，用的就是回溯搜索法，可以发现，每次搜索到了叶子节点，我们就找到了一个结果。
+
+分析完过程，我们来看一下 回溯算法的模板框架如下：
+
+```java
+dfs() {
+    if (终止条件) {
+        存放结果;
+    }
+
+    for (选择：选择列表（可以想成树中节点孩子的数量）) {
+        递归，处理节点;
+        dfs();
+        回溯，撤销处理结果
+    }
+}
+```
+
+- 分析模板：
+  - 什么是达到了终止条件，树中就可以看出，搜到了叶子节点了，就找到了一个符合题目要求的答案，就把这个答案存放起来。
+  - 看一下这个for循环，这个for循环是做什么的，for 就是处理树中节点各个孩子的情况， 一个节点有多少个孩子，这个for循环就执行多少次。
+  - 最后就要看这个递归的过程了，注意这个dfs就是自己调用自己，实现递归。一些同学对递归操作本来就不熟练，递归上面又加上一个for循环，可能就更迷糊了， 我来给大家捋顺一下。
+  - 这个dfs其实就是向树的叶子节点方向遍历， for循环可以理解是横向遍历，dfs就是纵向遍历，这样就把这棵树全遍历完了。
+  - 那么dfs就是一直往深处遍历，总会遇到叶子节点，遇到了叶子节点，就要返回，那么dfs的下面部分就是回溯的操作了，撤销本次处理的结果。
+
+```java
+class Solution {
+    public List<List<Integer>> combine(int n, int k) {
+        List<List<Integer>> res = new ArrayList();
+        if (k <= 0 || n < k) {
+            return res;
+        }
+        List<Integer> list = new ArrayList<>();
+        dfs(n, k, 1, list, res);
+        return res;
+    }
+    void dfs(int n, int k, int index, List<Integer> list, List<List<Integer>> res){
+        // 截止条件
+        if (list.size() == k){
+            res.add(new ArrayList<>(list));
+            return;
+        }
+        // 遍历候选节点
+        // 只有这里 i <= n - (k - path.size()) + 1 与参考代码 1 不同
+        for (int i = index; i <= n; i ++){
+            list.add(i);
+            dfs(n, k, i + 1, list, res);
+            list.remove(list.size() - 1);
+        }
+    }
+}
+```
 
 
 
+### 第二题-2：[216. 组合总和 III](https://leetcode-cn.com/problems/combination-sum-iii/)
 
+找出所有相加之和为 n 的 k 个数的组合。组合中只允许含有 1 - 9 的正整数，并且每种组合中不存在重复的数字。
 
+```
+说明：
+所有数字都是正整数。
+解集不能包含重复的组合。
 
+示例 1:
+输入: k = 3, n = 7
+输出: [[1,2,4]]
 
+示例 2:
+输入: k = 3, n = 9
+输出: [[1,2,6], [1,3,5], [2,3,4]]
+```
+
+- 思路和上一题相识的，请看Java代码：
+
+```java
+class Solution {
+    public List<List<Integer>> combinationSum3(int k, int n) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (n <= 0 || k >= n) return res;
+        dfs(n,k,1,new ArrayList(), res);
+        return res;
+    }
+    void dfs(int n,int k, int index, List<Integer> list, List<List<Integer>> res){
+        // 截止条件，当list的长度大于等于k或者list中的数和大于等于时进入
+        if (list.size() >= k || 0 >= n){
+            if(list.size() == k && 0 == n){//当满足条件说明符合要求，添加到结果
+                res.add(new ArrayList(list));
+            }
+            return;
+        }
+        // 遍历候选节点
+        for (int i = index; i <= 9; i ++){
+            list.add(i);
+            // 注意将n-i的i传进去，即累加各个值，i+1为遍历1-9的值
+            dfs(n - i, k, i + 1, list, res);
+            list.remove(list.size() - 1);
+        }
+    }
+}
+```
 
 
 

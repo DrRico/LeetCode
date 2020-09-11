@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91bb8ea3-9a1a-4393-bda2-734192223dcd" name="Default Changelist" comment="2020.09.10 -updated">
-      <change afterPath="$PROJECT_DIR$/src/com/rico/tester/SingletonLazyMan.java" afterDir="false" />
+    <list default="true" id="91bb8ea3-9a1a-4393-bda2-734192223dcd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/rico/lcmedium/combinationSum3_216.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMedata/InteviewData/面经01.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/InteviewData/面经01.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMedata/MSB/100+面试题.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/MSB/100+面试题.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMedata/LC.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/LC.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LeetCode/com/rico/lcmedium/combine77.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCode/com/rico/lcmedium/combine77.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCode/com/rico/mi/Test01.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCode/com/rico/mi/Test01.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/rico/lcmedium/combine77.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rico/lcmedium/combine77.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rico/tester/Te.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rico/tester/Te.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,14 +25,14 @@
     <session id="-1627830408">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="10" />
+          <entry key="java" value="13" />
           <entry key="md" value="2" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="10" />
+          <entry key="JAVA" value="13" />
           <entry key="Markdown" value="2" />
           <entry key="XML" value="1" />
         </counts>
@@ -41,14 +40,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="13" />
-          <entry key="java" value="3278" />
+          <entry key="java" value="3347" />
           <entry key="md" value="67" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3278" />
+          <entry key="JAVA" value="3347" />
           <entry key="Markdown" value="67" />
           <entry key="PLAIN_TEXT" value="16" />
         </counts>
@@ -60,8 +59,48 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/combine77.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+            <state relative-caret-position="325">
+              <caret line="45" column="50" selection-start-line="45" selection-end-line="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+              <folding>
+                <element signature="e#135#136#0" expanded="true" />
+                <element signature="e#189#190#0" expanded="true" />
+                <element signature="e#266#267#0" expanded="true" />
+                <element signature="e#301#302#0" expanded="true" />
+                <element signature="e#343#344#0" expanded="true" />
+                <element signature="e#384#385#0" expanded="true" />
+                <element signature="e#789#790#0" expanded="true" />
+                <element signature="e#838#839#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Te.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/combinationSum3_216.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,20 +149,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/rico/mi/mi02.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="40" column="18" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ReadMedata/MSB/100+面试题.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="376">
-                <caret line="1130" lean-forward="true" selection-start-line="1130" selection-end-line="1130" />
+              <first_editor relative-caret-position="90">
+                <caret line="1117" column="36" lean-forward="true" selection-start-line="1117" selection-start-column="36" selection-end-line="1117" selection-end-column="36" />
               </first_editor>
               <second_editor />
             </state>
@@ -133,8 +163,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rico/mi/Test02.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-176">
-              <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="39" />
+            <state relative-caret-position="250">
+              <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -157,6 +187,7 @@
       <find>PriorityQueue</find>
       <find>LinkedList</find>
       <find>ArrayList</find>
+      <find>77</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -168,8 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/rico/lceasy/maxProfit121.java" />
-        <option value="$PROJECT_DIR$/src/com/rico/lceasy/maxProfit122.java" />
         <option value="$PROJECT_DIR$/src/com/rico/lceasy/findMedianSortedArrays04.java" />
         <option value="$PROJECT_DIR$/src/com/rico/lcmedium/SolutionStringMultiply43.java" />
         <option value="$PROJECT_DIR$/src/com/rico/lchard/maximalRectangle85.java" />
@@ -216,9 +245,11 @@
         <option value="$PROJECT_DIR$/src/com/rico/mi/Test02.java" />
         <option value="$PROJECT_DIR$/src/com/rico/mi/Test01.java" />
         <option value="$PROJECT_DIR$/src/com/rico/mi/mi02.java" />
-        <option value="$PROJECT_DIR$/src/com/rico/lcmedium/combine77.java" />
         <option value="$PROJECT_DIR$/src/com/rico/tester/SingletonLazyMan.java" />
         <option value="$PROJECT_DIR$/ReadMedata/MSB/100+面试题.md" />
+        <option value="$PROJECT_DIR$/src/com/rico/lcmedium/combine77.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/lcmedium/combinationSum3_216.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/tester/Te.java" />
       </list>
     </option>
   </component>
@@ -262,6 +293,13 @@
               <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="rico" type="462c0819:PsiDirectoryNode" />
+              <item name="lcmedium" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="rico" type="462c0819:PsiDirectoryNode" />
               <item name="tester" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -276,7 +314,7 @@
     <property name="SearchEverywhereHistoryKey" value="stack&#9;PSI&#9;JAVA://jdk.nashorn.internal.codegen.Label.Stack" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1599827798717" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1599834971276" />
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
     <UpdatedFiles>
@@ -425,9 +463,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SingletonLazyMan">
-    <configuration name="Help01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.tester.Help01" />
+  <component name="RunManager" selected="Application.Te">
+    <configuration name="SingletonLazyMan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.tester.SingletonLazyMan" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
@@ -439,8 +477,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SingletonLazyMan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.tester.SingletonLazyMan" />
+    <configuration name="Te" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.tester.Te" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
@@ -465,12 +503,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.mi.Test02" />
+    <configuration name="combinationSum3_216" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.lcmedium.combinationSum3_216" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.rico.mi.*" />
+          <option name="PATTERN" value="com.rico.lcmedium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -492,19 +530,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Help01" />
       <item itemvalue="Application.combine77" />
-      <item itemvalue="Application.Test02" />
       <item itemvalue="Application.Test01" />
       <item itemvalue="Application.SingletonLazyMan" />
+      <item itemvalue="Application.combinationSum3_216" />
+      <item itemvalue="Application.Te" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SingletonLazyMan" />
+        <item itemvalue="Application.Te" />
+        <item itemvalue="Application.combinationSum3_216" />
         <item itemvalue="Application.combine77" />
+        <item itemvalue="Application.SingletonLazyMan" />
         <item itemvalue="Application.Test01" />
-        <item itemvalue="Application.Test02" />
-        <item itemvalue="Application.Help01" />
       </list>
     </recent_temporary>
   </component>
@@ -520,7 +558,7 @@
       <updated>1598111873100</updated>
       <workItem from="1598111886927" duration="12914000" />
       <workItem from="1598254362034" duration="143814000" />
-      <workItem from="1599094848351" duration="47366000" />
+      <workItem from="1599094848351" duration="52094000" />
     </task>
     <task id="LOCAL-00001" summary="2020.09.10 -updated">
       <created>1599699482302</created>
@@ -529,12 +567,12 @@
       <option name="project" value="LOCAL" />
       <updated>1599699482302</updated>
     </task>
-    <task id="LOCAL-00002" summary="2020.08.29 -updated InputOutput">
-      <created>1598707094233</created>
+    <task id="LOCAL-00002" summary="2020.09.10 -updated">
+      <created>1599827816045</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1598707094234</updated>
+      <updated>1599827816045</updated>
     </task>
     <task id="LOCAL-00003" summary="2020.08.31 -updated InputOutput">
       <created>1598886466662</created>
@@ -571,17 +609,17 @@
       <option name="project" value="LOCAL" />
       <updated>1599271952807</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23586000" />
+    <option name="totallyTimeSpent" value="28314000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.21648793" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2077748" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -590,7 +628,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.15886524" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.29929078" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -668,6 +706,24 @@
           <properties />
           <option name="timeStamp" value="158" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/lcmedium/combinationSum3_216.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/lcmedium/combinationSum3_216.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rico/lcmedium/combinationSum3_216.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="165" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -719,13 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/mi/Test02.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-176">
-          <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/mi/Test01.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -754,16 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/combine77.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/tester/SingletonLazyMan.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -778,10 +817,61 @@
     <entry file="file://$PROJECT_DIR$/ReadMedata/MSB/100+面试题.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="376">
-            <caret line="1130" lean-forward="true" selection-start-line="1130" selection-end-line="1130" />
+          <first_editor relative-caret-position="90">
+            <caret line="1117" column="36" lean-forward="true" selection-start-line="1117" selection-start-column="36" selection-end-line="1117" selection-end-column="36" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/mi/Test02.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/combine77.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="45" column="50" selection-start-line="45" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/combinationSum3_216.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding>
+            <element signature="e#135#136#0" expanded="true" />
+            <element signature="e#189#190#0" expanded="true" />
+            <element signature="e#266#267#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/tester/Te.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
