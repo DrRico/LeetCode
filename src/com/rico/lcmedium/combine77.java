@@ -1,6 +1,8 @@
 package com.rico.lcmedium;
 
+import java.awt.*;
 import java.util.*;
+import java.util.List;
 
 /**
  * @author Rico_dds
@@ -21,7 +23,15 @@ import java.util.*;
 
 public class combine77 {
     public static void main(String[] args) {
-        System.out.println(combine(4,2));
+        //System.out.println(combine(4,2));
+        byte a = 2;byte b = 2;
+        b = (byte) (a + b);
+        System.out.println(b);
+        String s = "314";
+        String ss = new String("314");
+        System.out.println(s == ss);
+        System.out.println(s.equals(ss));
+        
     }
 
     public static List<List<Integer>> combine(int n, int k) {
