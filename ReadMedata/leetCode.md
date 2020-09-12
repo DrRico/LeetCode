@@ -196,9 +196,86 @@ String.prototype.len=function(){return this.replace(/[^\x00-\xff]/g,"aa").length
 | ?            | 匹配0或1个正好在它之前的那个字符。注意：这个元字符不是所有的软件都支持的。 |
 | {i} {i,j}    | 匹配指定数目的字符，这些字符是在它之前的表达式定义的。例如正则表达式A[0-9]{3} 能够匹配字符"A"后面跟着正好3个数字字符的串，例如A123、A348等，但是不匹配A1234。而正则表达式[0-9]{4,6} 匹配连续的任意4个、5个或者6个数字 |
 
+### 1、单例模式
+
+请手写一个单例模式：
+
+- 饿汉式单例：不管你需不需要，都会提前给你创建好等你使用
+
+```java
+/**
+ * @author Rico_dds
+ * @date 2020/9/12 22:43
+ */
+// 饿汉式单例
+// 就是当你无论需不需都会加载
+public class SingletonHungry {
+
+    private  SingletonHungry(){}
+
+    private final static SingletonHungry SINGLETON_HUNGRY = new SingletonHungry();
+
+    public static SingletonHungry getInstance(){
+
+        return SINGLETON_HUNGRY;
+
+    }
 
 
-### 1、回文数
+}
+
+```
+
+- 懒汉式单例：当你需要的时候我再去创建
+
+```java
+
+/**
+ * @author Rico_dds
+ * @date 2020/9/12 22:43
+ */
+
+
+// 懒汉式单例模式
+
+// 只有当你需要的时候才去创建
+
+public class SingletonLazyMan {
+    private SingletonLazyMan(){}
+
+    private volatile static SingletonLazyMan singletonLazyMan;
+
+    public static SingletonLazyMan getInstance(){
+        if (singletonLazyMan == null){
+            synchronized (SingletonLazyMan.class){
+                if (singletonLazyMan == null){
+                    singletonLazyMan = new SingletonLazyMan();
+                    /*
+                    * 1、分配内存空间
+                    * 2、执行构造方法、初始化对象
+                    * 3、把这个对象指向这个空间
+                    *
+                    * 如 1 2 3
+                    * 可能由于指令重排导致1 3 2
+                    *
+                    * 为了保证多线程下的安全。需要在单例前面加上 volatile 关键字即可
+                    *
+                    * */
+                }
+            }
+        }
+        return singletonLazyMan;
+    }
+}
+```
+
+
+
+
+
+
+
+### 2、回文数
 
 判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
 
@@ -983,17 +1060,15 @@ public class Solution {
 
 - 从上往下打印出二叉树的每个节点，同层节点从左至右打印。
 
-> 思路 (宽搜思想)
-
-
+> 思路 (宽搜思想)BFS
 
 - 思路是用arraylist模拟一个队列来存储相应的TreeNode,每一次打印一个节点的时候，如果该节点有子节点，则把该节点的子节点放到一个队列的尾部。接下来到对队列的头部取出最早进入队列的节点放到ArrayList 中，重复前面的操作，直至队列中所有的节点都存到ArrayList中。
 
   在Java中Queue是和List、Map同等级别的接口，LinkedList中也实现了Queue接口，该接口中的主要函数有：
 
-  - 容量不够或队列为空时不会抛异常：offer（添加队尾元素）、peek（访问队头元素）、poll（访问队头元素并移除）
+  - 容量不够或队列为空时**不会抛异常**：offer（添加队尾元素）、peek（访问队头元素）、poll（访问队头元素并移除）
 
-  - 容量不够或队列为空时抛异常：add、element（访问队列元素）、remove（访问队头元素并移除）
+  - 容量不够或队列为空时**抛异常**：add、element（访问队列元素）、remove（访问队头元素并移除）
 
 ```java
 public class Solution {
@@ -1079,6 +1154,48 @@ public class Solution {
     }
 }
 ```
+
+- ![Picture1.png](https://pic.leetcode-cn.com/59e0600588ffdc2f34b4b563193b56c1f678743637e2754e2a9be0e7facc5d48-Picture1.png)
+- 解法二：算法流程：
+  - 特例处理： 当根节点为空，则返回空列表 [] ；
+  - 初始化： 打印结果列表 res = [] ，包含根节点的队列 queue = [root] ；
+  - BFS 循环： 当队列 queue 为空时跳出；
+    - 新建一个临时列表 tmp ，用于存储当前层打印结果；
+    - 当前层打印循环： 循环次数为当前层节点数（即队列 queue 长度）；
+      - 出队： 队首元素出队，记为 node；
+      - 打印： 将 node.val 添加至 tmp 尾部；
+      - 添加子节点： 若 node 的左（右）子节点不为空，则将左（右）子节点加入队列 queue ；
+    - 将当前层结果 tmp 添加入 res 。
+  - 返回值： 返回打印结果列表 res 即可。
+
+```java
+import java.util.*;
+class Solution {
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        // 创建变量
+        List<List<Integer>> res = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        List<Integer> list = new ArrayList<>();
+        // 对非空的判断
+        if (root != null) queue.add(root);
+        // 循环进行处理
+        while (!queue.isEmpty()){
+            // 遍历条件次数为队列的大小
+            for (int i = queue.size(); i > 0; i --){ // 关键代码、灵活使用队列大小进行遍历
+                TreeNode p = queue.poll();
+                list.add(p.val);
+                if(p.left != null) queue.add(p.left);   // 不为空则加入到队列当中去
+                if(p.right != null) queue.add(p.right); // 不为空则加入到队列当中去
+            }
+            res.add(new ArrayList(list));   // 遍历一遍则说明已经完成了一层，保存到结果数组当中去
+            list.clear();
+        }
+        return res;                         // 返回结果
+    }
+}
+```
+
+
 
 
 
