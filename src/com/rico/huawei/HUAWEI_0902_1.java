@@ -14,7 +14,7 @@ public class HUAWEI_0902_1 {
         int body = sc.nextInt();
         TreeMap<Integer, Integer> rMap = new TreeMap<>();
         TreeMap<Integer, Integer> bMap = new TreeMap<>();
-        for (int i = 0; i <body;i ++){
+        for (int i = 0; i < body;i ++){
             int cnt = sc.nextInt();
             int color = sc.nextInt();
             if(color == 1){
@@ -33,7 +33,6 @@ public class HUAWEI_0902_1 {
                 Map.Entry<Integer,Integer> entry = rMap.lastEntry();
                 rCnt += entry.getKey();
                 rMax[i] = entry.getValue();
-
             }
         }
         int[] bMax = new int[3];
@@ -44,7 +43,6 @@ public class HUAWEI_0902_1 {
                 bCnt += entry.getKey();
                 bMax[i] = entry.getValue();
                 bMap.remove(entry.getKey());
-
             }
         }
         if (rCnt > bCnt){
@@ -58,10 +56,6 @@ public class HUAWEI_0902_1 {
         } else {
             out(bMax,2,bCnt);
         }
-
-
-
-
     }
     public static void out(int[] n,int color,int cnt){
         System.out.print(n[0] + " ");

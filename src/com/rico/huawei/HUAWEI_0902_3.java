@@ -1,9 +1,5 @@
 package com.rico.huawei;
 
-import jdk.nashorn.internal.runtime.FindProperty;
-import org.omg.PortableInterceptor.INACTIVE;
-import sun.nio.cs.ext.IBM037;
-
 import java.util.Scanner;
 
 /**
@@ -24,7 +20,6 @@ public class HUAWEI_0902_3 {
             for (int i = 0; i < n; i ++){
                 v[i] = scanner.nextInt();
             }
-
             System.out.println(maxValue(k,w,v));
         }
 
@@ -34,9 +29,9 @@ public class HUAWEI_0902_3 {
         for (int i = 1; i < v.length; i ++){
             for (int j = 1;j <= k; j ++){
                 if(j >= w[i]){
-                    m[i][j] = m[i-1][j -w[i]] + v[i] > m[i-1][j] ? m[i-1][j-w[i]]+v[i] :m[i-1][j];
+                    m[i][j] = m[i-1][j - w[i]] + v[i] > m[i-1][j] ? m[i-1][j - w[i]] + v[i] : m[i - 1][j];
                 } else {
-                    m[i][j] = m[i -1][j];
+                    m[i][j] = m[i - 1][j];
                 }
             }
         }

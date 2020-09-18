@@ -1,9 +1,5 @@
 package com.rico.huawei;
 
-import com.sun.org.apache.bcel.internal.generic.RET;
-
-import javax.security.auth.callback.CallbackHandler;
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
