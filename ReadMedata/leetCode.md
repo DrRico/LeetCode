@@ -878,6 +878,64 @@ public class Solution {
 }
 ```
 
+### 20 - 1 重建二叉树（根据中序和后续）
+
+```java
+class Solution {
+    Map<Integer, Integer> map = new HashMap<Integer,Integer>();
+
+    public TreeNode buildTree(int[] inorder, int[] postorder) {
+        int lenIn = inorder.length, lenPost = postorder.length;
+        for (int i = 0; i < lenIn; i ++){
+            map.put(inorder[i], i);
+        }
+        return buildTree(postorder, 0, lenIn - 1, 0, lenPost - 1);
+    }
+
+    public TreeNode buildTree(int[] postorder, int post_left, int post_right, int in_left, int in_right) {
+        if (post_left > post_right || in_left > in_right) return null;
+
+        int rootVal = postorder[post_right];
+        TreeNode node = new TreeNode(rootVal);
+        int index = map.get(rootVal);
+
+        node.left = buildTree(postorder, post_left, index - in_left + post_left - 1, in_left, index);
+        node.right = buildTree(postorder, index - in_left + post_left, post_right - 1, index + 1, in_right);
+        
+        return node;
+    }
+}
+```
+
+### 20 - 2 重建二叉树（根据前序和中续）
+
+```java
+class Solution {
+    Map<Integer,Integer> map = new HashMap<Integer,Integer>();
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        for (int i = 0; i < inorder.length; i ++){
+            map.put(inorder[i], i);
+        }
+        return buildTree(preorder, 0, preorder.length - 1, 0, inorder.length - 1);
+    }
+    public TreeNode buildTree(int[] preorder,int left_pre, int right_pre, int left_in, int right_in) {
+
+        if(left_pre > right_pre || left_in > right_in) return null;
+
+        int rootVal = preorder[left_pre];
+        TreeNode node = new TreeNode(rootVal);
+        int pIndex = map.get(rootVal);
+
+        node.left = buildTree(preorder, left_pre+1, pIndex-left_in+left_pre, left_in, pIndex-1);
+        node.right = buildTree(preorder, pIndex-left_in+left_pre+1, right_pre, pIndex+1, right_in);
+        return node;
+    }
+
+}
+```
+
+
+
 
 
 ### 21 、二叉树的下一个节点
