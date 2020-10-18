@@ -2269,7 +2269,7 @@ class Solution {
 
 ## 三、深度优先搜索BFS
 
-### 第一题：[200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)
+### 第一题-1：[200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)
 
 给你一个由 '1'（陆地）和 '0'（水）组成的的二维网格，请你计算网格中岛屿的数量。
 
@@ -2333,6 +2333,192 @@ class Solution {
     }
 }
 ```
+
+### 第一题-2：[104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
+
+给定一个二叉树，找出其最大深度。
+
+二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
+
+说明: 叶子节点是指没有子节点的节点。
+
+```
+示例：
+给定二叉树 [3,9,20,null,null,15,7]，
+    3
+   / \
+  9  20
+    /  \
+   15   7
+   
+返回它的最大深度 3
+```
+
+- 使用深度优先搜索算法以此递归下去即可。
+
+>- 标签：DFS
+>- 找出终止条件：当前节点为空
+>- 找出返回值：节点为空时说明高度为 0，所以返回 0；节点不为空时则分别求左右子树的高度的最大值，同时加1表示当前节点的高度，返回该数值
+>- 某层的执行过程：在返回值部分基本已经描述清楚
+>- 时间复杂度O(n)
+
+```java
+class Solution {
+    public int maxDepth(TreeNode root) {
+        if(root == null) return 0;
+        return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+    }
+}
+```
+
+### 第一题-3：[108. 将有序数组转换为二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/)
+
+将一个按照升序排列的有序数组，转换为一棵高度平衡二叉搜索树。
+
+本题中，一个高度平衡二叉树是指一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过 1。
+
+示例:
+
+```
+给定有序数组: [-10,-3,0,5,9],
+
+一个可能的答案是：[0,-3,9,-10,null,5]，它可以表示下面这个高度平衡二叉搜索树：
+
+      0
+     / \
+   -3   9
+   /   /
+ -10  5
+```
+
+- 使用深度优先遍历的思想，其实就是递归进行下去，因为是二叉平衡搜索树，可知其中序遍历为排序数组，再分别处理左子树和右子树并递归下去即可
+
+```java
+class Solution {
+    public TreeNode sortedArrayToBST(int[] nums) {
+        return healper(0, nums.length - 1, nums);
+    }
+    public TreeNode healper(int i, int j, int[] nums){
+        if (i > j) return null;	// 截止的条件
+        int mid = (i + j) >> 1;	// 求中心下标的位置
+        TreeNode node = new TreeNode(nums[mid]); // mid 为根节点
+        node.left = healper(i, mid - 1, nums); 	 // 递归进行处理左子树
+        node.right = healper(mid + 1, j, nums);	 // 递归进行处理右子树
+        return node;
+    }
+}
+```
+
+### 第一题-4：[1382. 将二叉搜索树变平衡](https://leetcode-cn.com/problems/balance-a-binary-search-tree/)
+
+给你一棵二叉搜索树，请你返回一棵 平衡后 的二叉搜索树，新生成的树应该与原来的树有着相同的节点值。如果一棵二叉搜索树中，每个节点的两棵子树高度差不超过 1 ，我们就称这棵二叉搜索树是 平衡的 。如果有多种构造方法，请你返回任意一种。
+
+示例：
+
+```
+输入：root = [1,null,2,null,3,null,4,null,null]
+输出：[2,1,3,null,null,null,4]
+解释：这不是唯一的正确答案，[3,1,4,null,2,null,null] 也是一个可行的构造方案。
+
+提示：
+树节点的数目在 1 到 10^4 之间。
+树节点的值互不相同，且在 1 到 10^5 之间。
+```
+
+<img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/03/15/1515_ex1.png"/>
+
+<img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/03/15/1515_ex1_out.png"/>
+
+- 思路一：最优解思路和上一题一样的思路，只不过本题中给出的是一颗二叉搜索树而不是一个排序数组，很简单只需要将此二叉搜索树中序遍历出来，再进行重建即可；
+- **利用二叉搜索树的性质，中序遍历输出，然后以中间为root，递归构造树**;
+
+```java
+class Solution {
+    public TreeNode balanceBST(TreeNode root) {
+        if (root == null) return null;
+        List<Integer> list = new ArrayList<Integer>();
+        inorder(root, list); // 中序遍历构造有序链表
+        return healper(list, 0, list.size() - 1);// 有序链表构造平衡二叉树
+    }
+    void inorder(TreeNode root, List<Integer> list){
+        if (root == null) return;	// 使用递归的方式中序遍历二叉树
+        inorder(root.left, list);	// 左
+        list.add(root.val);			// 根
+        inorder(root.right, list);	// 右
+    }
+    public TreeNode healper(List<Integer> list, int i, int j){
+        if (i > j) return null;		// 截止的条件
+        int mid = (i + j) >> 1;		// 求中心下标的位置,中间节点为root
+        TreeNode node = new TreeNode(list.get(mid));// mid 为根节点
+        node.left = healper(list, i, mid - 1);		// 递归进行处理左子树
+        node.right = healper(list, mid + 1, j);		// 递归进行处理右子树
+        return node;
+    }
+}
+```
+
+
+
+### 第一题-5 ：
+
+给定一个二叉树，判断它是否是高度平衡的二叉树。本题中，一棵高度平衡二叉树定义为：一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过1。
+
+
+
+    示例 1:
+    给定二叉树 [3,9,20,null,null,15,7]
+    
+    	3
+       / \
+      9  20
+        /  \
+       15   7
+       
+    返回 true 。
+
+
+    示例 2:
+    给定二叉树 [1,2,2,3,3,null,null,4,4]
+    
+       	   1
+          / \
+         2   2
+        / \
+       3   3
+      / \
+     4   4
+     
+     返回 false 。
+- 思路：根据平衡二叉树的定义，伪代码如下：
+  
+
+```
+if abs(高度(root.left) - 高度(root.right)) <= 1 and root.left 也是平衡二叉树 and root.right 也是平衡二叉树:
+    print('是平衡二叉树')
+else:
+    print('不是平衡二叉树')
+```
+
+- 而且root.left 和 root.right **如何判断是否是二叉平衡树就和 root 是一样的了**，可以看出这个问题有明显的递归性。
+
+- Java实现如下:
+
+```java
+class Solution {
+    public boolean isBalanced(TreeNode root) {
+        if (root == null) return true;	// 要是数为空，是平衡二叉树
+        if (Math.abs(getDepth(root.left) - getDepth(root.right)) >= 2) return false; // 要是树的左子树和右子树的最大深度超过2，则不是平衡二叉树
+        return isBalanced(root.left) && isBalanced(root.right);// 递归求左右子树是不是平衡二叉树
+    }
+    public int getDepth(TreeNode root){ // 求二叉树的最大深度   
+        if (root == null) return 0;		// 为空则返回 0
+        // 否则一直递归左子树和右子树求深度
+        return Math.max(getDepth(root.left), getDepth(root.right)) + 1;
+    }
+}
+```
+
+
 
 ### 第二题-1：[77. 组合](https://leetcode-cn.com/problems/combinations/)
 
@@ -2463,23 +2649,150 @@ class Solution {
 }
 ```
 
+### 第三题-3：[79. 单词搜索](https://leetcode-cn.com/problems/word-search/)
 
+给定一个二维网格和一个单词，找出该单词是否存在于网格中。单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。
 
+- 示例:
 
+```
+board =[
+  	['A','B','C','E'],
+  	['S','F','C','S'],
+  	['A','D','E','E']]
+给定 word = "ABCCED", 返回 true
+给定 word = "SEE", 返回 true
+给定 word = "ABCB", 返回 false
+```
 
+- 提示：
 
+```
+board 和 word 中只包含大写和小写英文字母。
+1 <= boa rd.length <= 200
+1 <= board[i].length <= 200
+1 <= word.length <= 10^3
+```
 
+- 思路：回溯算法实际上一个类似枚举的搜索尝试过程，也就是一个个去试，我们解这道题也是通过一个个去试，下面就用示例1来画个图看一下
 
+![](https://pic.leetcode-cn.com/b13c34a26060e7eea8ba5001928bcf6972abc65df05eca3b5a29e5fc483b9a94-image.png)
 
+- 我们看到他是从矩形中的一个点开始往他的上下左右四个方向查找，这个点可以是矩形中的任何一个点，所以代码的大致轮廓我们应该能写出来，就是遍历矩形所有的点，然后从这个点开始往他的4个方向走，因为是二维数组，所以有两个for循环，代码如下 
 
+```java
+public boolean exist(char[][] board, String word) {
+    char[] words = word.toCharArray();
+    for (int i = 0; i < board.length; i++) {
+        for (int j = 0; j < board[0].length; j++) {
+            //从[i,j]这个坐标开始查找
+            if (dfs(board, words, i, j, 0))
+                return true;
+        }
+    }
+    return false;
+}
+```
 
+- 这里关键代码是dfs这个函数，因为每一个点我们都可以往他的4个方向查找，所以我们可以把它想象为一棵4叉树，就是每个节点有4个子节点，而树的遍历我们最容易想到的就是递归，我们来大概看一下  
 
+```java
+boolean dfs(char[][] board, char[] word, int i, int j, int index) {
+    if (边界条件的判断) {
+        return;
+    }
 
+    一些逻辑处理
 
+    boolean res;
+    //往右
+    res = dfs(board, word, i + 1, j, index + 1)
+    //往左
+    res |= dfs(board, word, i - 1, j, index + 1)
+    //往下
+    res |= dfs(board, word, i, j + 1, index + 1)
+    //往上
+    res |= dfs(board, word, i, j - 1, index + 1)
+    //上面4个方向，只要有一个能查找到，就返回true；
+    return res;
+}
+```
 
+- 最终的完整代码如下  
 
+```java
+public boolean exist(char[][] board, String word) {
+    char[] words = word.toCharArray();
+    for (int i = 0; i < board.length; i++) {
+        for (int j = 0; j < board[0].length; j++) {
+            //从[i,j]这个坐标开始查找
+            if (dfs(board, words, i, j, 0))
+                return true;
+        }
+    }
+    return false;
+}
 
+boolean dfs(char[][] board, char[] word, int i, int j, int index) {
+    //边界的判断，如果越界直接返回false。index表示的是查找到字符串word的第几个字符，
+    //如果这个字符不等于board[i][j]，说明验证这个坐标路径是走不通的，直接返回false
+    if (i >= board.length || i < 0 || j >= board[0].length || j < 0 || board[i][j] != word[index])
+        return false;
+    //如果word的每个字符都查找完了，直接返回true
+    if (index == word.length - 1)
+        return true;
+    //把当前坐标的值保存下来，为了在最后复原
+    char tmp = board[i][j];
+    //然后修改当前坐标的值
+    board[i][j] = '.';
+    //走递归，沿着当前坐标的上下左右4个方向查找
+    boolean res = dfs(board, word, i + 1, j, index + 1) || dfs(board, word, i - 1, j, index + 1) ||
+            dfs(board, word, i, j + 1, index + 1) || dfs(board, word, i, j - 1, index + 1);
+    //递归之后再把当前的坐标复原
+    board[i][j] = tmp;
+    return res;
+}
 
+```
+
+- 我自己的版本：
+
+```java
+class Solution {
+    int n;
+    int m;
+    int w;
+    char[] letters;
+    char[][] board;
+
+    public boolean exist(char[][] board, String word) {
+        this.n = board.length;
+        this.m = board[0].length;
+        this.w = word.length();
+        this.letters = word.toCharArray();
+        this.board = board;
+
+        for (int i = 0; i < n; i ++){
+            for (int j = 0; j < m; j ++){
+                boolean res = dfs(i,j,0);
+                if (res) return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean dfs(int i,int j,int k){
+        if (k >= w) return true;
+        if (i < 0 || j < 0 || i >= n || j >= m || letters[k] != board[i][j])return false;
+        board[i][j] += 128;
+
+        boolean res = dfs(i+1,j,k+1) || dfs(i,j+1,k+1) || dfs(i-1,j,k+1)  || dfs(i,j-1,k+1);
+
+        board[i][j] -= 128;
+        return res;
+    }
+}
+```
 
 
 

@@ -816,6 +816,50 @@ public class Main{
 }
 ```
 
+### 20-0 [104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
+
+给定一个二叉树，找出其最大深度。
+
+二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
+
+说明: 叶子节点是指没有子节点的节点。
+
+示例：
+给定二叉树 [3,9,20,null,null,15,7]，
+
+```
+    3
+   / \
+  9  20
+    /  \
+   15   7
+```
+
+返回它的最大深度 3 。
+
+- 思路：使用递归即可：
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public int maxDepth(TreeNode root) {
+        if(root == null) return 0; 			// 当遍历到根节点的时候，返回0
+        // 否则将左子树和右子树分别递归下去求最大的深度即可
+        return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+    }
+}
+```
+
+
+
 ### 20 、重建二叉树
 
 - 输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序**（根-左-右）**遍历序列{1,2,4,7,3,5,6,8}和中序遍历**（左-根-右**）序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。
