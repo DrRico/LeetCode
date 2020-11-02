@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91bb8ea3-9a1a-4393-bda2-734192223dcd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/rico/lcmedium/findKthLargest215.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rico/HELLO/Tencent_01.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMedata/InteviewData/已投公司.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMedata/InteviewData/已投公司.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCode/com/rico/Sort/Sort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCode/com/rico/Sort/Sort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCode/com/rico/tester/Dahua.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCode/com/rico/tester/Dahua.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rico/lcmedium/combinationSum39.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rico/lcmedium/combinationSum39.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rico/tester/Dahua.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rico/tester/Dahua.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCode/com/rico/lcmedium/combinationSum39.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCode/com/rico/lcmedium/combinationSum39.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,9 +23,9 @@
     <session id="-1627830408">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="95" />
+          <entry key="java" value="96" />
           <entry key="jpg" value="21" />
-          <entry key="md" value="2" />
+          <entry key="md" value="3" />
           <entry key="png" value="1" />
           <entry key="xml" value="1" />
         </counts>
@@ -36,24 +33,24 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="22" />
-          <entry key="JAVA" value="95" />
-          <entry key="Markdown" value="2" />
+          <entry key="JAVA" value="96" />
+          <entry key="Markdown" value="3" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="49" />
-          <entry key="java" value="19441" />
-          <entry key="md" value="76" />
-          <entry key="txt" value="99" />
+          <entry key="java" value="20152" />
+          <entry key="md" value="138" />
+          <entry key="txt" value="127" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="19441" />
-          <entry key="Markdown" value="76" />
-          <entry key="PLAIN_TEXT" value="148" />
+          <entry key="JAVA" value="20152" />
+          <entry key="Markdown" value="138" />
+          <entry key="PLAIN_TEXT" value="176" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -113,11 +110,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/combinationSum39.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="84" column="55" lean-forward="true" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="55" />
+            <state relative-caret-position="528">
+              <caret line="83" column="39" lean-forward="true" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rico/HELLO/Tencent_01.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="176">
+                <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -158,8 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/rico/tester/TestInteger.java" />
-        <option value="$PROJECT_DIR$/src/com/rico/huawei/HUAWEI_0902_2.java" />
         <option value="$PROJECT_DIR$/src/com/rico/huawei/HUAWEI_0902_1.java" />
         <option value="$PROJECT_DIR$/src/com/rico/huawei/HUAWEI_0902_3.java" />
         <option value="$PROJECT_DIR$/src/com/rico/tester/QuickSort.java" />
@@ -209,6 +225,8 @@
         <option value="$PROJECT_DIR$/src/com/rico/tester/Dahua.java" />
         <option value="$PROJECT_DIR$/src/com/rico/lcmedium/findKthLargest215.java" />
         <option value="$PROJECT_DIR$/src/com/rico/lcmedium/combinationSum39.java" />
+        <option value="$PROJECT_DIR$/src/com/rico/HELLO/Tencent_01.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -247,13 +265,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="rico" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="rico" type="462c0819:PsiDirectoryNode" />
-              <item name="lcmedium" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -266,7 +277,7 @@
     <property name="SearchEverywhereHistoryKey" value="stack&#9;PSI&#9;JAVA://jdk.nashorn.internal.codegen.Label.Stack" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1604127634802" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1604284918397" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../halo" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -287,7 +298,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.combinationSum39">
+  <component name="RunManager" selected="Application.Tencent_01">
     <configuration name="Dahua" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.rico.tester.Dahua" />
       <module name="LeetCode" />
@@ -301,12 +312,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="YueWen_01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.YueWen.YueWen_01" />
+    <configuration name="Tencent_01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.HELLO.Tencent_01" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.rico.YueWen.*" />
+          <option name="PATTERN" value="com.rico.HELLO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -314,8 +325,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="YueWen_04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rico.YueWen.YueWen_04" />
+    <configuration name="YueWen_01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rico.YueWen.YueWen_01" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
@@ -354,19 +365,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.YueWen_04" />
       <item itemvalue="Application.YueWen_01" />
       <item itemvalue="Application.Dahua" />
       <item itemvalue="Application.findKthLargest215" />
       <item itemvalue="Application.combinationSum39" />
+      <item itemvalue="Application.Tencent_01" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Tencent_01" />
         <item itemvalue="Application.combinationSum39" />
         <item itemvalue="Application.findKthLargest215" />
         <item itemvalue="Application.Dahua" />
         <item itemvalue="Application.YueWen_01" />
-        <item itemvalue="Application.YueWen_04" />
       </list>
     </recent_temporary>
   </component>
@@ -388,7 +399,7 @@
       <workItem from="1603176072042" duration="3972000" />
       <workItem from="1603277033115" duration="25742000" />
       <workItem from="1603977911737" duration="2038000" />
-      <workItem from="1604048207499" duration="3811000" />
+      <workItem from="1604048207499" duration="10047000" />
     </task>
     <task id="LOCAL-00001" summary="2020.09.10 -updated">
       <created>1599699482302</created>
@@ -460,17 +471,24 @@
       <option name="project" value="LOCAL" />
       <updated>1601302489709</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="2020.10.31 -last day of Oct and Happy Halloween!">
+      <created>1604131488074</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1604131488074</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154270000" />
+    <option name="totallyTimeSpent" value="160506000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21849866" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21849866" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -479,7 +497,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3744681" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28652483" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40141845" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -554,7 +572,8 @@
     <MESSAGE value="2020.09.21 -updated" />
     <MESSAGE value="2020.09.26 -updated KDXF 1-4" />
     <MESSAGE value="2020.09.28 -updated WeBank_Maybe_Rejected" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020.09.28 -updated WeBank_Maybe_Rejected" />
+    <MESSAGE value="2020.10.31 -last day of Oct and Happy Halloween!" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020.10.31 -last day of Oct and Happy Halloween!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -749,20 +768,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/rico/SXF/JTBank_04.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="77" column="62" selection-start-line="77" selection-start-column="62" selection-end-line="77" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rico/SXF/JTBank_03.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/SXF/JTBank_02.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -1062,8 +1067,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rico/lcmedium/combinationSum39.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="84" column="55" lean-forward="true" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="55" />
+        <state relative-caret-position="528">
+          <caret line="83" column="39" lean-forward="true" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rico/HELLO/Tencent_01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="176">
+            <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
