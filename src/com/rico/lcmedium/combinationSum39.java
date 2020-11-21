@@ -93,6 +93,4 @@ public class combinationSum39 {
             list.remove(list.size() - 1);
         }
     }
-
-
 }

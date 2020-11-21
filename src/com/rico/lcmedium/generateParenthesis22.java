@@ -39,8 +39,33 @@ public class generateParenthesis22 {
         }
     }
 
+
+    public static List<String> generateParenthesis_1(int n){
+        List<String> res = new ArrayList<String>();
+        if (n <= 0) return res;
+        dfs_1(n, n, new StringBuffer(), res);
+        return res;
+    }
+
+    private static void dfs_1(int left, int right, StringBuffer sb, List<String> res) {
+        if(left > right || left < 0 || right < 0) return;
+        if(left == 0 && right == 0) {
+            res.add(sb.toString());
+            return;
+        }
+        sb.append('(');
+        dfs_1(left - 1, right, sb, res);
+        sb.deleteCharAt(sb.length() - 1);
+
+        sb.append(')');
+        dfs_1(left, right - 1, sb, res);
+        sb.deleteCharAt(sb.length() - 1);
+    }
+
+
     public static void main(String[] args) {
         System.out.println("[((())), (()()), (())(), ()(()), ()()()]");
         System.out.println(generateParenthesis(3));
+        System.out.println(generateParenthesis_1(3));
     }
 }

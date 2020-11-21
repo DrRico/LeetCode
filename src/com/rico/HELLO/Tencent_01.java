@@ -6,8 +6,8 @@ package com.rico.HELLO;
  */
 public class Tencent_01 {
     public static void main(String[] args) {
-        String a = "9999";
-        String b = "9999";
+        String a = "99";
+        String b = "99";
         char[] a1 = a.toCharArray();
         char[] b1 = b.toCharArray();
         int lenA = a.length();

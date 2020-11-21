@@ -9,17 +9,20 @@ import java.util.PriorityQueue;
  */
 public class findKthLargest215 {
     public static void main(String[] args) {
-        int[] a = {3,4,5,6,4,3,2,1};
-        System.out.println(findKthLargest_1(a,2));
+        //int[] a = {3,4,5,6,4,3,2,1};
+        int[] a = {3,2,5,4,1};
+        System.out.println(findKthLargest(a,2));
     }
+
     public static int findKthLargest(int[] nums, int k) {   // 第K大的数，使用小顶堆
         PriorityQueue<Integer> queue = new PriorityQueue<>();
         for(int i : nums){
             queue.add(i);
             if(queue.size() > k)queue.poll();
         }
-        return queue.poll();
+        return queue.peek();
     }
+
     public static int findKthLargest_1(int[] nums, int k) {// 第K小的数，使用大顶堆
         PriorityQueue<Integer> queue = new PriorityQueue<>(new Comparator<Integer>() {
             @Override
@@ -33,6 +36,6 @@ public class findKthLargest215 {
             if(queue.size() > k)queue.poll();
         }
 
-        return queue.poll();
+        return queue.peek();
     }
 }
