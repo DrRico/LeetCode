@@ -4,6 +4,7 @@ import java.util.*;
 /**
  * @author Rico_dds
  * @date 2020/11/18 20:19
+ * 判断括号是否有效
  */
 public class Main_03 {
     public static void main(String[] args) {

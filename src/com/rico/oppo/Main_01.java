@@ -3,11 +3,16 @@ package com.rico.oppo;
 /**
  * @author Rico_dds
  * @date 2020/11/18 18:36
+ *
  */
 public class Main_01 {
     public static void main(String[] args) {
-        int[][] a = {{1,2,1},{1,3,4},{5,7,8}};
-        System.out.println(getMinPath(a));
+        int[][] a = {
+                {1,2,1},
+                {1,3,4},
+                {5,7,8}};
+        int[][] m = { { 1, 3, 5, 9 }, { 8, 1, 3, 4 }, { 5, 0, 6, 1 }, { 8, 8, 4, 0 } };
+        System.out.println(getMinPath(m));
     }
 
     public static int getMinPath(int[][] grid){
@@ -30,8 +35,6 @@ public class Main_01 {
     }
 
 }
-
-
 
     /*public static int getWidth(TreeNode root){
         if (root == null) return 0;

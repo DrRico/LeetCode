@@ -3,22 +3,23 @@ package com.rico.oppo;
 /**
  * @author Rico_dds
  * @date 2020/11/18 18:36
+ * 判断字符串是否包含子字符串，并返回子字符串所在字符串的下标
  */
 public class Main_02 {
 
     public static void main(String[] args) {
-        //System.out.println(findIndex("remenber","men"));
-        //System.out.println(findIndex("aaaaaaa","bb"));
-        //System.out.println(findIndex("aaaaaaaaa","aaaaa"));
-        long b = 0, c = 1, a = 99;
-        int cnt = 0;
-        while (c <= a) {
-            a -= c;
-            c += b;
-            b = c - b;
-            cnt ++;
-        }
-        System.out.println(cnt);
+        System.out.println(findIndex("remenber","men"));
+        System.out.println(findIndex("aaaaaaa","bb"));
+        System.out.println(findIndex("aaaaaaaaa","aaaaa"));
+//        long b = 0, c = 1, a = 8;
+//        int cnt = 0;
+//        while (c <= a) {
+//            a -= c;
+//            c += b;
+//            b = c - b;
+//            cnt ++;
+//        }
+//        System.out.println(cnt);
     }
 
     public static int findIndex(String a, String b){
