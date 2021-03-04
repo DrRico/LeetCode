@@ -7,7 +7,10 @@ package com.springjobhunting.newcoder;
 public class majorityElement {
     public static void main(String[] args) {
         int[] arr = {1,2,3,2,2,2,5,4,2};
+        int[] arr1 = {3,2,3};
+
         System.out.println(fun(arr));
+        System.out.println(fun(arr1));
     }
     static private int fun(int[] arr){
         int max = 1, cur = arr[0];
@@ -19,6 +22,7 @@ public class majorityElement {
             }
             if (max == 0){
                 cur = arr[i];
+                max = 1;
             }
         }
         if (max != 0) return cur;
