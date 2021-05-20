@@ -196,7 +196,7 @@ String.prototype.len=function(){return this.replace(/[^\x00-\xff]/g,"aa").length
 | ?            | 匹配0或1个正好在它之前的那个字符。注意：这个元字符不是所有的软件都支持的。 |
 | {i} {i,j}    | 匹配指定数目的字符，这些字符是在它之前的表达式定义的。例如正则表达式A[0-9]{3} 能够匹配字符"A"后面跟着正好3个数字字符的串，例如A123、A348等，但是不匹配A1234。而正则表达式[0-9]{4,6} 匹配连续的任意4个、5个或者6个数字 |
 
-### 1、单例模式
+### 1-1、单例模式
 
 请手写一个单例模式：
 
@@ -220,8 +220,6 @@ public class SingletonHungry {
         return SINGLETON_HUNGRY;
 
     }
-
-
 }
 
 ```
@@ -268,6 +266,29 @@ public class SingletonLazyMan {
     }
 }
 ```
+
+- 内部类单例：
+
+```java
+public class SingletonInner {
+
+    private static class InnerClass{
+        private static InnerClass instance = new InnerClass();
+    }
+    
+    private  SingletonInner(){}
+
+    public static SingletonInner getInstance(){
+        return InnerClass.instance; 
+    }
+}
+```
+
+
+
+### 1-2、工厂模式
+
+
 
 
 
